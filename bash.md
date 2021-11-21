@@ -1,3 +1,118 @@
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=3 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [font](#font)
+- [loop](#loop)
+  - [array](#array)
+- [apt](#apt)
+  - [basic](#basic)
+- [x11](#x11)
+  - [VcXsrv](#vcxsrv)
+- [赋值](#赋值)
+  - [缺省](#缺省)
+  - [赋值](#赋值-1)
+- [vim](#vim)
+  - [替换](#替换)
+  - [全局替换缩进](#全局替换缩进)
+  - [杂项](#杂项)
+- [sed](#sed)
+  - [行替换](#行替换)
+  - [替换](#替换-1)
+- [if](#if)
+  - [true or false](#true-or-false)
+  - [文件是否存在](#文件是否存在)
+- [awk](#awk)
+  - [多字符串匹配](#多字符串匹配)
+  - [字符串函数](#字符串函数)
+  - [末尾1](#末尾1)
+  - [正则匹配](#正则匹配)
+  - [skip blank line and line](#skip-blank-line-and-line)
+  - [逻辑算符](#逻辑算符)
+  - [直接编辑](#直接编辑)
+  - [if](#if-1)
+  - [内建变量](#内建变量)
+  - [loop](#loop-1)
+  - [数字比较](#数字比较)
+  - [变量](#变量)
+  - [替换](#替换-2)
+  - [printf](#printf)
+- [wsl2](#wsl2)
+  - [安装](#安装)
+  - [文件系统权限](#文件系统权限)
+  - [wsl命令](#wsl命令)
+  - [link](#link)
+  - [ubuntu换源](#ubuntu换源)
+  - [ssh](#ssh)
+    - [sshd_conf](#sshd_conf)
+    - [ssh自启&外部局域网访问](#ssh自启外部局域网访问)
+  - [screen](#screen)
+  - [latexworkshop](#latexworkshop)
+  - [dns](#dns)
+- [find](#find)
+  - [避开目录](#避开目录)
+  - [第一次终止](#第一次终止)
+  - [不显示权限不足](#不显示权限不足)
+  - [-mindepth -maxdepth](#-mindepth-maxdepth)
+- [grep](#grep)
+  - [多字符匹配](#多字符匹配)
+  - [正则表达式](#正则表达式)
+- [Intel Oneapi](#intel-oneapi)
+  - [local uninstall](#local-uninstall)
+  - [防止 python 退格乱码](#防止-python-退格乱码)
+- [convert](#convert)
+- [gif](#gif)
+  - [ase](#ase)
+  - [png2gif](#png2gif)
+  - [gif2png](#gif2png)
+  - [mp42png](#mp42png)
+  - [批量裁切](#批量裁切)
+- [git](#git)
+  - [构建](#构建)
+  - [维护](#维护)
+  - [contribution 不显示](#contribution-不显示)
+  - [撤销commit](#撤销commit)
+- [alias](#alias)
+  - [chmod递归权限](#chmod递归权限)
+  - [截取snapshot](#截取snapshot)
+  - [bash](#bash)
+  - [pbs](#pbs)
+  - [bash, mv不包括](#bash-mv不包括)
+- [tar](#tar)
+- [LAMMPS](#lammps)
+- [杂项](#杂项-1)
+  - [case](#case)
+  - [sort](#sort)
+  - [array](#array-1)
+    - [for](#for)
+    - [max](#max)
+    - [seq](#seq)
+    - [star](#star)
+  - [退格乱码](#退格乱码)
+    - [python](#python)
+    - [bash read](#bash-read)
+  - [中止](#中止)
+  - [判断](#判断)
+  - [while](#while)
+  - [传参](#传参)
+  - [奇怪字符](#奇怪字符)
+  - [提取目录名](#提取目录名)
+  - [root](#root)
+  - [zip](#zip)
+  - [calculation](#calculation)
+    - [bc](#bc)
+    - [minus](#minus)
+  - [字符串截取](#字符串截取)
+  - [查杀进程](#查杀进程)
+  - [bashrc](#bashrc)
+    - [问题](#问题)
+    - [来源](#来源)
+    - [解决](#解决)
+  - [screen](#screen-1)
+  - [chmod](#chmod)
+
+<!-- /code_chunk_output -->
+
 # font
 
 ```bash
@@ -171,10 +286,12 @@ awk 'NR-6==0{$1=$1" "$1}1' POSCAR
 
 ## 正则匹配
 
+```bash
 awk '$1 ~ /^D/ {print NR}' POSCAR
 awk '$1 !~ /^D/ {print NR}' POSCAR
+```
 
-^ 首字符
+`^` 首字符
 
 <https://www.cnblogs.com/chengmo/archive/2010/10/11/1847772.html>
 
@@ -263,11 +380,15 @@ awk -v awkVar="$var" 'BEGIN{print awkVar}'
 
 ## 替换
 
+```bash
 awk '{$1=$1"abc"}1' test.dat
+```
 
 ## printf
 
+```sh
 awk '{printf "%15.8f\n", $5/2}' a.out
+```
 
 # wsl2
 
@@ -312,6 +433,7 @@ ln -s /mnt/c/Users/feife/OneDrive/mytemp ~/mytemp
 ## ubuntu换源
 
 `~/arxive/myscript/os_repo_speed_test.sh`
+
 ```bash
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 sudo sed -i 's/archive.ubuntu.com/ftp.sjtu.edu.cn/g' /etc/apt/sources.list
@@ -341,8 +463,10 @@ PubkeyAuthentication yes
 PasswordAuthentication yes
 ```
 
+```sh
 sudo service ssh start
 ip addr
+```
 
 ### ssh自启&外部局域网访问
 
@@ -361,7 +485,6 @@ sudo chmod 700 /etc/init.wsl
 
 <https://juejin.im/post/6847902218226499598>
 
-
 ps脚本可执行
 
 ```powershell
@@ -369,6 +492,7 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
 ```
 
 windows
+
 - 计算机管理 - 任务计划程序 - 任务计划程序库 - 新文件夹 'me' - 导入 `C:\Users\laven\OneDrive\arxive\myscript\ubuntu.xml`
 
 <https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.1>
@@ -424,17 +548,23 @@ find test \(-path test/test4 -o -path test/test3 \) -prune -o -name "*.log" -pri
 
 ## 第一次终止
 
+```sh
 find . ... -print -quit
+```
 
 <https://qastack.cn/unix/62880/how-to-stop-the-find-command-after-first-match>
 
 ## 不显示权限不足
 
+```sh
 find ./ -name '*libfftw3.a' 2>/dev/null
+```
 
 ## -mindepth -maxdepth
 
+```sh
 find ./ -mindepth 3 -maxdepth 5 -name passwd
+```
 
 <https://blog.csdn.net/genziisme/article/details/78918495>
 
@@ -442,12 +572,14 @@ find ./ -mindepth 3 -maxdepth 5 -name passwd
 
 ## 多字符匹配
 
+```sh
 grep -E '123|abc' filename
+```
 
 ## 正则表达式
 
-^ 锚定行的开始 如：'^grep'匹配所有以grep开头的行。
-$ 锚定行的结束 如：'grep$'匹配所有以grep结尾的行。
+`^` 锚定行的开始 如：`'^grep'`匹配所有以grep开头的行。
+`$` 锚定行的结束 如：`'grep$'`匹配所有以grep结尾的行。
 
 <https://blog.csdn.net/deyili/article/details/5548603>
 
@@ -467,37 +599,49 @@ $ 锚定行的结束 如：'grep$'匹配所有以grep结尾的行。
 
 # convert
 
+```sh
 convert test.png -draw "font Candice font-size 100 fill dodgerblue  stroke navy  stroke-width 2 text 800,300 'Real'" test_o.png
+```
 
 # gif
 
 ## ase
 
+```sh
 ase gui POSCAR CONTCAR
+```
 
 <https://wiki.fysik.dtu.dk/ase/ase/gui/tools.html#render-scene>
 
 ## png2gif
 
+```sh
 convert -delay 100 temp.*.png temp.gif
+```
 
 ## gif2png
 
+```sh
 convert -coalesce something.gif something.png
 identify -verbose something.gif | grep 'Delay'
+```
 
 <https://tex.stackexchange.com/questions/240243/getting-gif-and-or-moving-images-into-a-latex-presentation>
 <https://liam.page/2017/08/10/importing-animate-in-LaTeX/>
 
 ## mp42png
 
+```sh
 ffmpeg -ss 00:00:30 -to 00:00:40 -i test.mp4 test%04d.png
+```
 
 ## 批量裁切
 
+```sh
 mogrify -crop +0+100 -crop -0-60 -format png -path new *.png
 
 +left+top    -right-bottom
+```
 
 # git
 
@@ -539,7 +683,6 @@ git push
 
 <https://www.jianshu.com/p/82ee1c341456>
 
-
 ## 撤销commit
 
 ```shell
@@ -550,6 +693,7 @@ git reset HEAD^
 
 # alias
 
+```sh
 shopt -s expand_aliases
 if true;then
  alias echo_hello="echo Hello!"
@@ -557,6 +701,7 @@ fi
 if true;then
  echo_hello
 fi
+```
 
 <https://unix.stackexchange.com/questions/531960/why-doesnt-alias-work-inside-if>
 
@@ -564,48 +709,52 @@ fi
 
 ## chmod递归权限
 
+```sh
 chmod -R 700 tianff/
+```
 
 ## 截取snapshot
 
+```sh
 more +2034867 water.pos|head -n 97 >> POSCAR
-
-## linux, bug
-
-*error：ssh频频中断
-*solution：
-source environment.sh
-environment.sh: set -eo pipefial
+```
 
 ## bash
 
+```sh
 du -h --max-depth=1 #文件夹占用磁盘大小
+```
 
 ## pbs
 
+```sh
 qstat -ls
 bjobs
 pestat |grep SBP
 qselect -u <username> | xargs qdel
+```
 
 ## bash, mv不包括
 
-{
+```sh
 shopt -s extglob
 cp -r !(Filename1 | FoldernameX | Filename2) Dest/
-}
 screen -dmS name
 screen -ls
 screen -r name
+```
+
 <https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/index.html> #screen
+
+```sh
 printf "crystal_%03d" $x #格式输出001
 
-ls a*/t.d 通配符
+ls a*/t.d #通配符
 head t.d
-clear 清屏
-sz 下载
-rz 上传
-more 逐页显示文件内容
+clear #清屏
+sz #下载
+rz #上传
+more #逐页显示文件内容
 cp ../e.f90 . #拷贝到当前目录
 gfortran e.f90 -o e.x #编译fortran
 cd #进入用户主目录
@@ -615,26 +764,31 @@ grep ! scf.out | tail -1 #管道
 printf "%5.4f\n","123.12345" #“%5.4lf”指定输出宽度为5，精度为4，由于实际长度超过5故应该按实际位数输出，小数位数超过4位部分被截去。
 mpif90 test.f90 -o test.x -llapack #链接静态库
 diff log2014.log log2013.log -yw #文件内容比较
+```
 
 # tar
 
-压　缩：tar -jcv -f filename.tar.bz2 要被压缩的文件或目录名称
-查　询：tar -jtv -f filename.tar.bz2
-解压缩：tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录
--j  ：透过 bzip2 的支持进行压缩/解压缩：此时档名最好为*.tar.bz2
--z  ：透过 gzip  的支持进行压缩/解压缩：此时档名最好为*.tar.gz
--v  #Verbosely list files processed.
--c  #压缩
--t  #查询
--f  #压缩文件
+压　缩：`tar -jcv -f filename.tar.bz2 要被压缩的文件或目录名称`
+查　询：`tar -jtv -f filename.tar.bz2`
+解压缩：`tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录`
+`-j`  ：透过 bzip2 的支持进行压缩/解压缩：此时档名最好为`*.tar.bz2`
+`-z`  ：透过 gzip  的支持进行压缩/解压缩：此时档名最好为`*.tar.gz`
+`-v`  #Verbosely list files processed.
+`-c`  #压缩
+`-t`  #查询
+`-f`  #压缩文件
 <http://cn.linux.vbird.org/linux_basic/0240tarcompress.php>
+
+```sh
 tar -ztvf /root/etc.tar.gz | grep 'shadow'
 tar -zxvf /root/etc.tar.gz etc/shadow
+```
 
 # LAMMPS
 
 <https://github.com/lammps/lammps/blob/master/cmake/README.md#building-with-intel-compilers>
 
+```sh
 mkdir lammps/build
 cd lammps/build
 cmake [-D OPTION_A=VALUE_A -D OPTION_B=VALUE_B ...] ../cmake
@@ -643,11 +797,13 @@ make
 Building with Intel Compilers
 cmake -D CMAKE_C_COMPILER=icc -D CMAKE_CXX_COMPILER=icpc -D CMAKE_Fortran_COMPILER=ifort ../cmake
 cmake -D FFT=KISS -C ../cmake/presets/minimal.cmake -D CMAKE_C_COMPILER=icc -D CMAKE_CXX_COMPILER=icpc -D CMAKE_Fortran_COMPILER=ifort ../cmake
+```
 
 # 杂项
 
 ## case
 
+```sh
 case expression in  
     pattern_1)  
         statements  
@@ -665,39 +821,49 @@ case expression in
         statements  
         ;;  
 esac
+```
 
 ## sort
 
 去重
+
+```sh
 cat test
-> a
-> b
-> a
+a
+b
+a
 sort -u test
-> a
-> b
+a
+b
+```
 
 ## array
 
 ### for
 
+```sh
 x=(0 1 2)
 for i in ${x[@]}
 
 x='0 1 2'
 for i in $x
+```
 
 ### max
 
+```sh
 echo ${#x[@]}
+```
 
 ### seq
 
+```sh
 x=$(seq 0 0.001 0.01)
+```
 
 ### star
 
-```
+```sh
 ls
 $ f1 f2
 
@@ -714,42 +880,52 @@ $ f1 f2
 
 ### python
 
+```sh
 sudo apt install libreadline-dev
+```
 
 <https://blog.csdn.net/weixin_45309916/article/details/108758168>
 
 ### bash read
 
+```sh
 stty erase ^H
+```
 
 <https://blog.imdst.com/bash-shell-tui-ge-jian-luan-ma/>
 
 ## 中止
 
+```sh
 exit
+```
 
 ## 判断
 
+```sh
 true
+```
 
 ## while
 
+```sh
 while true
 do
 
 done
+```
 
 ## 传参
 
-```
+```sh
 $1
 ```
 
-shift 参数减一
+`shift` 参数减一
 
 ## 奇怪字符
 
-```
+```sh
 cat -v test.sh #查看
 cat old_filename | tr -d "\r" > new_filename 行尾 ^M 替换
 
@@ -758,34 +934,44 @@ sed 's/<copy and paste>/<type what you want>/g' -i <datfile> #普遍替换
 
 ## 提取目录名
 
+```sh
 dirname a/b
 basename a/b
+```
 
 ## root
 
-sudo -s 打开root shell
-su      切换到root
+`sudo -s` 打开root shell
+`su`      切换到root
 
 ## zip
 
+```sh
 zip -r filename.zip folder
+```
 
 ## calculation
 
+```sh
 answer=$(((3 / 2) + (3 % 2 > 0))) #取整
+```
 
 ### bc
 
+```sh
 bc <<< "3.4+7/8-(5.94*3.14)"
 echo "scal=4;0.0527*$x+1"|bc
+```
 
 ### minus
 
+```sh
 bc <<< "(-1)-(-1)"
+```
 
 ## 字符串截取
 
-```
+```sh
 ${string: start :length} 从 string 字符串的左边第 start 个字符开始，向右截取 length 个字符。
 ${string: start} 从 string 字符串的左边第 start 个字符开始截取，直到最后。
 ${string: 0-start :length} 从 string 字符串的右边第 start 个字符开始，向右截取 length 个字符。
@@ -802,8 +988,10 @@ ${string%%chars*} 从 string 字符串最后一次出现 *chars 的位置开始�
 
 ## 查杀进程
 
+```sh
 ll /proc/PID
 kill -s 9 PID
+```
 
 <https://blog.csdn.net/spring21st/article/details/50561550>
 
@@ -815,16 +1003,15 @@ SFTP无法连接
 
 ### 来源
 
-.bashrc中存在echo导致scp和sftp连接失败
+`.bashrc`中存在`echo`导致scp和sftp连接失败
 
 ### 解决
 
-```
+```sh
 if [ $TERM == "xterm" ] || [ $TERM == "xterm-256color" ]; then
   cat ~/0example/README
 fi
 ```
-
 
 <https://qastack.cn/server/485487/use-bashrc-without-breaking-sftp>
 
@@ -832,17 +1019,21 @@ fi
 
 <https://www.cnblogs.com/mchina/archive/2013/01/30/2880680.html>
 
+```sh
 screen -S yourname -> 新建一个叫yourname的session
 screen -ls -> 列出当前所有的session
 screen -r yourname -> 回到yourname这个session
 screen -d -r yourname -> 结束当前session并回到yourname这个session
 C-a d -> detach，暂时离开当前session，将目前的 screen session (可能含有多个 windows) 丢到后台执行，并会回到还没进 screen 时的状态，此时在 screen session 里，每个 window 内运行的 process (无论是前台/后台)都在继续执行，即使 logout 也不影响。
+```
 
 ## chmod
 
+```
 4 r
 2 w
 1 x
 750 drwxr-x--- dir
 640 -rw-r----- other
 750 -rwxr-x--- .sh
+```
