@@ -1,3 +1,38 @@
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [copy](#copy)
+- [File](#file)
+  - [open](#open)
+  - [read](#read)
+- [font](#font)
+- [misc](#misc)
+  - [raise](#raise)
+  - [delete file](#delete-file)
+  - [import](#import)
+- [pip](#pip)
+  - [换源](#换源)
+  - [config](#config)
+  - [install](#install)
+  - [update](#update)
+- [ase](#ase)
+  - [gif](#gif)
+  - [render](#render)
+
+<!-- /code_chunk_output -->
+
+# copy
+
+```python
+import copy
+a=[]
+b=list(a)
+c=copy.copy(a)
+print( id(a), id(b), id(c) )
+```
+
 # File
 
 ## open
