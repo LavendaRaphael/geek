@@ -3,6 +3,7 @@
 
 <!-- code_chunk_output -->
 
+- [subprocess](#subprocess)
 - [copy](#copy)
 - [File](#file)
   - [open](#open)
@@ -22,6 +23,13 @@
   - [render](#render)
 
 <!-- /code_chunk_output -->
+
+# subprocess
+
+```python
+import subprocess
+subprocess.run( ['python','test.py'] )
+```
 
 # copy
 
