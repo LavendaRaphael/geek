@@ -14,6 +14,7 @@
   - [赋值](#赋值-1)
 - [vim](#vim)
   - [替换](#替换)
+  - [换行替换](#换行替换)
   - [全局替换缩进](#全局替换缩进)
   - [杂项](#杂项)
 - [sed](#sed)
@@ -186,28 +187,36 @@ $()
 对特殊字符诸如`$ % [ ] .`等都需要在前面加上转义才可以。
 注意替换中只需要在需要被查找的部分加上转义字符，后面替换的内容不用加。
 
+## 换行替换
+
+`\r`
+
 ## 全局替换缩进
 
-```vim
-:set ts=8 sts=8 noet    设置tab格数
-:retab!                 空格替换为tab
-:set ts=4 sts=4 et      更换tab个数
-:retab                  tab替换空格
-```
+`:set ts=8 sts=8 noet`    设置tab格数
+
+`:retab!`                 空格替换为tab
+
+`:set ts=4 sts=4 et`      更换tab个数
+
+`:retab`                  tab替换空格
 
 <https://www.itranslater.com/qa/details/2123239368239350784>
 
 ## 杂项
 
-```
-:scriptnames #查看配置文件载入列表
-:set textwidth=0 #禁用自动换行
-p #粘贴
-y #复制
-v #选择
-```
+`:scriptnames` #查看配置文件载入列表
+
+`:set textwidth=0` #禁用自动换行
+
+`p` #粘贴
+
+`y` #复制
+
+`v` #选择
 
 `:let i=0 | g/zcc/s//\=i/ | let i=i+1`
+
 行编号，zcc为替换点
 
 # sed
@@ -404,10 +413,7 @@ sudo vim /etc/wsl.conf
 
 ```conf
 [automount]
-enabled = true
-root = /mnt/
-options = "metadata,umask=22,fmask=11"
-mountFsTab = false
+options = "metadata,umask=22,fmask=11,uid=1000,gid=1000"
 ```
 
 <https://www.jianshu.com/p/f9efb4c1e0bb>
