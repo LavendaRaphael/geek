@@ -38,7 +38,7 @@ EDGE K
 SCF 7.0
 
 * p80
-*EXCHANGE 0 0 1.0
+*EXCHANGE 0 0.0 0.0
 
 * p83
 *CHWIDTH 0.45
@@ -107,7 +107,7 @@ EDGE K
 SCF 7.0
 
 * p80
-*EXCHANGE 0 0 1.0
+*EXCHANGE 0 0 0.0
 
 *--------------------------------------[ifms: fms, mkgtr]
 
