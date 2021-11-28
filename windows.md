@@ -11,7 +11,7 @@
     - [SSR](#ssr)
     - [clash](#clash)
   - [Shop](#shop)
-    - [anycast](#anycast)
+    - [ssrcloud](#ssrcloud)
     - [stc](#stc)
     - [renzheyun](#renzheyun)
     - [Justmysocks](#justmysocks)
@@ -79,11 +79,13 @@
 
 ## Shop
 
-### anycast
+### ssrcloud
 
 <https://sgi.anycast.gay>
 
-20/month
+9.9/month
+
+ssr, clash
 
 ### stc
 
@@ -147,7 +149,7 @@ win+r WSReset.exe
 ## 调用cmd
 
 ```
-cmd /C
+cmd /Cl
 ```
 
 ## mklink
