@@ -75,7 +75,7 @@
 
 ### clash
 
-- git代理: 关闭 service mode
+- git代理: 关闭 service mode, socks代理失效
 
 ## Shop
 
