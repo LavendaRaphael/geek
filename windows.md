@@ -4,6 +4,14 @@
 <!-- code_chunk_output -->
 
 - [重装前](#重装前)
+- [wsl2](#wsl2)
+  - [安装](#安装)
+  - [文件系统权限](#文件系统权限)
+  - [wsl命令](#wsl命令)
+  - [link](#link)
+    - [ssh自启&外部局域网访问](#ssh自启外部局域网访问)
+  - [screen](#screen)
+  - [latexworkshop](#latexworkshop)
 - [proxy](#proxy)
   - [Win-gui](#win-gui)
     - [v2rayN](#v2rayn)
@@ -55,6 +63,97 @@
 - sharpkeys
 - tampermonkey
 - displayfusion
+
+
+# wsl2
+
+## 安装
+
+<https://docs.microsoft.com/en-us/windows/wsl/install>
+
+## 文件系统权限
+
+```bash
+sudo vim /etc/wsl.conf
+```
+
+```conf
+[automount]
+options = "metadata,umask=22,fmask=11,uid=1000,gid=1000"
+```
+
+<https://www.jianshu.com/p/f9efb4c1e0bb>
+
+## wsl命令
+
+```powershell
+wsl -help
+wsl -l -v
+wsl --update
+wsl --shutdown
+```
+
+## link
+
+```bash
+ln -s /mnt/c/Users/feife/OneDrive/Research ~/Research
+ln -s /mnt/c/Users/feife/OneDrive/Doc ~/Doc
+ln -s /mnt/c/Users/feife/OneDrive/Doc/script/server.me.sh ~/server.me.sh
+ln -s /mnt/c/Users/feife/OneDrive/SynTemp ~/SynTemp
+```
+
+### ssh自启&外部局域网访问
+
+```bash
+sudo vim /etc/init.wsl
+```
+
+```bash
+#!/bin/bash
+service ssh start
+```
+
+```bash
+sudo chmod 700 /etc/init.wsl
+```
+
+<https://juejin.im/post/6847902218226499598>
+
+ps脚本可执行
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
+```
+
+windows
+
+- 计算机管理 - 任务计划程序 - 任务计划程序库 - 新文件夹 'me' - 导入 `C:\Users\laven\OneDrive\arxive\myscript\ubuntu.xml`
+
+<https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.1>
+<https://www.zhihu.com/question/40596907>
+<https://gist.github.com/daehahn/497fa04c0156b1a762c70ff3f9f7edae>
+<https://www.hanselman.com/blog/how-to-ssh-into-wsl2-on-windows-10-from-an-external-machine>
+
+## screen
+
+```shell
+sudo screen
+sudo chmod 777 /run/screen/
+```
+
+<https://github.com/microsoft/WSL/issues/1245>
+
+## latexworkshop
+
+```bash
+vim .profile
+```
+
+```bash
+export PATH=~/software/texlive/2021/bin/x86_64-linux:$PATH
+```
+
+<https://github.com/James-Yu/LaTeX-Workshop/wiki/Install#using-wsl>
 
 # proxy
 

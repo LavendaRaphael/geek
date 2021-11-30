@@ -12,6 +12,15 @@
 - [font](#font)
 - [中文](#中文)
 - [cite](#cite)
+  - [biblatex](#biblatex)
+  - [footcite](#footcite)
+    - [多引用,](#多引用)
+    - [字号](#字号)
+    - [notitle](#notitle)
+    - [footcitetext](#footcitetext)
+  - [footfullcite](#footfullcite)
+    - [多引用,](#多引用-1)
+    - [footfullcitetext](#footfullcitetext)
 - [overpic](#overpic)
 - [variable](#variable)
 - [0补全](#0补全)
@@ -49,8 +58,9 @@
 - [equation](#equation)
   - [big bracket](#big-bracket)
 - [listings](#listings)
+  - [listing style](#listing-style)
   - [example](#example)
-  - [in beamer](#in-beamer)
+  - [Note in beamer](#note-in-beamer)
   - [multicol](#multicol)
   - [listing内命令](#listing内命令)
 - [proof](#proof)
@@ -324,20 +334,30 @@
 
 # cite
 
+## biblatex
+
 ```tex
-%-------------------------------------------------------------------------------------[biblatex]
-% compile chain
-% pdflatex - biber - pdflatex - pdflatex
 \usepackage[style=phys,autocite=plain]{biblatex}
 \addbibresource{references.bib}
+```
 
+```tex
 \autocite{}
-%-------------------------------------------------------------------------------------[bibliography]
+```
+
+```tex
 \printbibliography
-%-------------------------------------------------------------------------------------[footcite]
+```
+
+## footcite
+
+```tex
 \usepackage[style=verbose,autocite=footnote,doi=false,url=false]{biblatex}
-\addbibresource{references.bib}
-%-----------------------------------------------------------------[多引用,]
+```
+
+### 多引用,
+
+```tex
 \usepackage{fnpct}
 \AdaptNote\autocite{oo+m}[footnote]{%
 \setfnpct{dont-mess-around}%
@@ -345,17 +365,28 @@
 {#NOTE{#3}}
 {\IfNoValueTF{#2}{#NOTE[#1]{#3}}{#NOTE[#1][#2]{#3}}}%
 }
-%-----------------------------------------------------------------[字号]
+```
+
+### 字号
+
+```tex
 % 7pt 字号，9pt baselineskip
 \renewcommand{\footnotesize}{\fontsize{7pt}{9pt}\selectfont}
-%-----------------------------------------------------------------[notitle]
+```
+
+### notitle
+
+```tex
 \AtEveryBibitem{\clearfield{title}}
 \AtEveryCitekey{\clearfield{title}}
-%-----------------------------------------------------------------[footnotemark]
+```
+
+### footcitetext
+
+```tex
 \newcounter{colcites}
 
 \addtocounter{colcites}{-\thecolcites}
-
 
 \footnotemark
 \addtocounter{colcites}{1}
@@ -368,14 +399,17 @@
 \footcitetext{test1}
 \addtocounter{footnote}{1}
 \footcitetext{test2}
-%-----------------------------------------------------------------[]
-% a=1
-% \caption{\addtocounter{a}{1}}
-% a=2
-%-------------------------------------------------------------------------------------[footfullcite]
+```
+
+## footfullcite
+
+```tex
 \usepackage[style=chem-acs,doi=false,url=false]{biblatex}
-\addbibresource{references.bib}
-%-----------------------------------------------------------------[多引用,]
+```
+
+### 多引用,
+
+```tex
 \usepackage{fnpct}
 \AdaptNote\footfullcite{oo+m}[footnote]{%
 \setfnpct{dont-mess-around}%
@@ -383,10 +417,11 @@
 {#NOTE{#3}}
 {\IfNoValueTF{#2}{#NOTE[#1]{#3}}{#NOTE[#1][#2]{#3}}}%
 }
-%-----------------------------------------------------------------[字号]
-% 7pt 字号，9pt baselineskip
-\renewcommand{\footnotesize}{\fontsize{7pt}{9pt}\selectfont}
-%-----------------------------------------------------------------[footnotemark]
+```
+
+### footfullcitetext
+
+```tex
 % https://tex.stackexchange.com/questions/420162/footfullcite-not-showing-when-used-within-a-wrapfigure
 \DeclareCiteCommand{\footfullcitetext}[\mkbibfootnotetext]
   {\usebibmacro{prenote}}
@@ -395,21 +430,10 @@
      {\thefield{entrytype}}}
   {\multicitedelim}
   {\usebibmacro{postnote}}
+```
 
-\newcounter{colcites}
-
-\addtocounter{colcites}{-\thecolcites}
-\footnotemark
-\addtocounter{colcites}{1}
-\footnotemark
-\addtocounter{colcites}{1}
-
-\addtocounter{footnote}{-\thecolcites}
-
-\addtocounter{footnote}{1}
+```tex
 \footfullcitetext{test1}
-\addtocounter{footnote}{1}
-\footfullcitetext{test2}
 ```
 
 # overpic
@@ -780,6 +804,8 @@ $
 
 # listings
 
+## listing style
+
 ```tex
 \usepackage{listings}
 \usepackage{xcolor}
@@ -813,14 +839,16 @@ $
 
 ```tex
 \lstinputlisting[language=bash,caption=]{file}
+```
 
+```tex
 \begin{lstlisting}[language=bash]
 \end{lstlisting}
 ```
 
 <https://www.overleaf.com/learn/latex/Code_listing>
 
-## in beamer
+## Note in beamer
 
 ```tex
 \begin{frame}[fragile]
