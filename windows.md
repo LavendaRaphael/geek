@@ -36,6 +36,8 @@
 - [邮件客户端](#邮件客户端)
 - [文献管理](#文献管理)
   - [endnote](#endnote)
+    - [shortage](#shortage)
+    - [notes](#notes)
   - [sciwheel](#sciwheel)
   - [Mendeley](#mendeley)
 - [andoid emulator](#andoid-emulator)
@@ -48,7 +50,7 @@
 - [word](#word)
   - [bug](#bug)
 - [anjian](#anjian)
-  - [notes](#notes)
+  - [notes](#notes-1)
 
 <!-- /code_chunk_output -->
 
@@ -322,31 +324,32 @@ outlook uwp
 
 ## endnote
 
-文献缩写不规范，格式老旧更新慢
+### shortage
 
-没有浏览器插件
+- 文献缩写不规范，格式老旧更新慢
+- 没有浏览器插件
 
-1.output style
+### notes
 
-modify
-
-2.Journals term list
-
-update手动添加
-
-<https://woodward.library.ubc.ca/research-help/journal-abbreviations/>
-<https://jcr.incites.thomsonreuters.com/JCRLandingPageAction.action>
-<https://www.ncbi.nlm.nih.gov/nlmcatalog/journals>
+- output style
+  - modify
+- Journals term list
+  - update手动添加
+  - <https://woodward.library.ubc.ca/research-help/journal-abbreviations/>
+  - <https://jcr.incites.thomsonreuters.com/JCRLandingPageAction.action>
+  - <https://www.ncbi.nlm.nih.gov/nlmcatalog/journals>
 
 ## sciwheel
 
-word插件卡的不能自理
-删除文献删不干净
-导出bib有问题
+- word插件卡的不能自理
+- 删除文献删不干净
+- 导出bib有问题
 
 ## Mendeley
 
-word插件，PRB 引用格式不符
+- word插件，PRB 引用格式不符
+- 排序自动被重置
+- 文献看不到归属分组
 
 # andoid emulator
 
