@@ -3,6 +3,7 @@
 
 <!-- code_chunk_output -->
 
+- [timer](#timer)
 - [Table of contents](#table-of-contents)
 - [template](#template)
   - [beamer](#beamer)
@@ -32,6 +33,8 @@
   - [页边距](#页边距)
 - [filecontents](#filecontents)
 - [logo](#logo)
+  - [method1](#method1)
+  - [method2](#method2)
 - [换行](#换行)
 - [常见错误](#常见错误)
 - [comment](#comment)
@@ -84,6 +87,19 @@
 
 <!-- /code_chunk_output -->
 
+# timer
+
+<https://amito.me/2019/Adding-Timer-and-Logo-in-Beamer/>
+
+```tex
+\usepackage[timeinterval=60, timeduration=10]{tdclock}
+
+\begin{frame}
+    \titlepage
+    \initclock
+\end{frame}
+\date{\today \crono}
+```
 
 # Table of contents
 
@@ -545,6 +561,8 @@
 
 # logo
 
+## method1
+
 ```tex
 \usepackage{tikz}
 \newcommand{\mylogo}{
@@ -561,6 +579,20 @@
 ```
 
 <https://tex.stackexchange.com/questions/16357/how-can-i-position-an-image-in-an-arbitrary-position-in-beamer>
+
+## method2
+
+<https://amito.me/2019/Adding-Timer-and-Logo-in-Beamer/>
+
+```tex
+\setbeamertemplate{frametitle}
+{\begin{beamercolorbox}[wd=\paperwidth]{frametitle}
+      \strut\hspace{0.5em}\insertframetitle\strut
+      \hfill
+      \raisebox{-2mm}{\includegraphics[width=1cm]{$logo$}}
+    \end{beamercolorbox}
+}
+```
 
 # 换行
 
