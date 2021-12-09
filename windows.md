@@ -9,7 +9,8 @@
   - [文件系统权限](#文件系统权限)
   - [wsl命令](#wsl命令)
   - [link](#link)
-    - [ssh自启&外部局域网访问](#ssh自启外部局域网访问)
+    - [ssh自启](#ssh自启)
+    - [外部局域网访问](#外部局域网访问)
   - [screen](#screen)
   - [latexworkshop](#latexworkshop)
 - [proxy](#proxy)
@@ -104,7 +105,7 @@ ln -s /mnt/c/Users/feife/OneDrive/Doc/script/server.me.sh ~/server.me.sh
 ln -s /mnt/c/Users/feife/OneDrive/SynTemp ~/SynTemp
 ```
 
-### ssh自启&外部局域网访问
+### ssh自启
 
 ```bash
 sudo vim /etc/init.wsl
@@ -120,6 +121,8 @@ sudo chmod 700 /etc/init.wsl
 ```
 
 <https://juejin.im/post/6847902218226499598>
+
+### 外部局域网访问
 
 ps脚本可执行
 
