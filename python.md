@@ -1,37 +1,48 @@
+# python
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [subprocess](#subprocess)
-- [copy](#copy)
-- [File](#file)
-  - [open](#open)
-  - [read](#read)
-- [font](#font)
-- [misc](#misc)
-  - [raise](#raise)
-  - [delete file](#delete-file)
-  - [import](#import)
-- [pip](#pip)
-  - [换源](#换源)
-  - [config](#config)
-  - [install](#install)
-  - [update](#update)
-- [ase](#ase)
-  - [gif](#gif)
-  - [render](#render)
+- [python](#python)
+  - [json](#json)
+  - [subprocess](#subprocess)
+  - [copy](#copy)
+  - [File](#file)
+    - [open](#open)
+    - [read](#read)
+  - [font](#font)
+  - [misc](#misc)
+    - [raise](#raise)
+    - [delete file](#delete-file)
+    - [import](#import)
+  - [pip](#pip)
+    - [换源](#换源)
+    - [config](#config)
+    - [install](#install)
+    - [update](#update)
+  - [ase](#ase)
+    - [gif](#gif)
+    - [render](#render)
 
 <!-- /code_chunk_output -->
 
-# subprocess
+## json
+
+```py
+import json
+json.load( fp )
+json.dump( obj, fp, indent=None )
+```
+
+## subprocess
 
 ```python
 import subprocess
 subprocess.run( ['python','test.py'] )
 ```
 
-# copy
+## copy
 
 ```python
 import copy
@@ -41,9 +52,9 @@ c=copy.copy(a)
 print( id(a), id(b), id(c) )
 ```
 
-# File
+## File
 
-## open
+### open
 
 <https://docs.python.org/3/library/functions.html#open>
 
@@ -59,7 +70,7 @@ with open('file', 'r') as file_open:
 |`'w+'` |clear      |create |rw
 |`'a+'` |open       |create |rw
 
-## read
+### read
 
 ```py
 file_open.readline()
@@ -69,31 +80,31 @@ next( file_open )
 
 Note: `.readline()` can't used with `.next()`.
 
-# font
+## font
 
 ```bash
 rm ~/.cache/matplotlib/
 ```
 
-# misc
+## misc
 
-## raise
+### raise
 
 ```python
 raise [exceptionName [(reason)]]
 ```
 
-## delete file
+### delete file
 
 ```py
 import os
 import shutil
 
-os.remove('test.x')   # file
-shutil.rmtree('temp') # folder
+os.remove('test.x')   ## file
+shutil.rmtree('temp') ## folder
 ```
 
-## import
+### import
 
 a.py
 
@@ -112,17 +123,17 @@ from a import A
 b=A.aaa
 ```
 
-# pip
+## pip
 
 <https://pip.pypa.io/en/stable/user_guide/>
 
-## 换源
+### 换源
 
 ```bash
 python -m pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-## config
+### config
 
 <https://pip.pypa.io/en/stable/topics/configuration/>
 
@@ -137,13 +148,13 @@ pip.conf
 index-url = 'https://pypi.tuna.tsinghua.edu.cn/simple'
 ```
 
-## install
+### install
 
 ```sh
 python -m pip install --user ase
 ```
 
-## update
+### update
 
 ```sh
 python -m pip list --outdated
@@ -153,9 +164,9 @@ python -m pip install --user --upgrade ase
 python -m pip uninstall [options] <package>
 ```
 
-# ase
+## ase
 
-## gif
+### gif
 
 ```python
 from ase.io import read, write
@@ -164,7 +175,7 @@ b=read('CONTCAR')
 write('movie.gif', [a,b], interval=500)
 ```
 
-## render
+### render
 
 ```py
 from ase.io import read,write
@@ -182,36 +193,36 @@ r = [{'O': 0.74, 'Pt': 1.39}[at.symbol] for at in cont]
 
 generic_projection_settings = {
     'bbox':(render_in.x1, render_in.y1, render_in.x2, render_in.y2),
-#   'rotation': rot,  # text string with rotation (default='' )
-#   'rotation': '90y',
+##   'rotation': rot,  ## text string with rotation (default='' )
+##   'rotation': '90y',
     'rotation': '90x,90z',
-#   'rotation': '10x,-10y',
-#   'rotation': '-72x',
-    'radii': .85,  # float, or a list with one float per atom
+##   'rotation': '10x,-10y',
+##   'rotation': '-72x',
+    'radii': .85,  ## float, or a list with one float per atom
     'radii': r,
-    'colors': None,  # List: one (r, g, b) tuple per atom
-    'show_unit_cell': 0,   # 0, 1, or 2 to not show, show, and show all of cell
+    'colors': None,  ## List: one (r, g, b) tuple per atom
+    'show_unit_cell': 0,   ## 0, 1, or 2 to not show, show, and show all of cell
 }
 
-# ase2, ase3, glass, simple, pale, intermediate, vmd, jmol
+## ase2, ase3, glass, simple, pale, intermediate, vmd, jmol
 tex = ['jmol', ] * 288 + ['glass', ] * 288 + ['ase3', ] * 288 + ['vmd', ] * 288
 povray_settings={
-#   'display': False,  # Display while rendering
-#   'pause': True,  # Pause when done rendering (only if display)
-#   'transparent': False,  # Transparent background
-#   'canvas_width': None,  # Width of canvas in pixels
-    'canvas_height': 500,  # Height of canvas in pixels
-#   'camera_dist': 50.,  # Distance from camera to front atom
-#   'image_plane': None,  # Distance from front atom to image plane
-    'camera_type': 'perspective',  # orthographic, perspective, ultra_wide_angle
-    'point_lights': [],             # [[loc1, color1], [loc2, color2],...]
-    'area_light': [(2., 3., 40.),  # location
-                   'White',       # color
-                   .7, .7, 3, 3],  # width, height, Nlamps_x, Nlamps_y
-#   'background': 'White',        # color
-    'textures': ['jmol',]*1000,  # ase2, ase3, glass, simple, pale, intermediate, vmd, jmol
+##   'display': False,  ## Display while rendering
+##   'pause': True,  ## Pause when done rendering (only if display)
+##   'transparent': False,  ## Transparent background
+##   'canvas_width': None,  ## Width of canvas in pixels
+    'canvas_height': 500,  ## Height of canvas in pixels
+##   'camera_dist': 50.,  ## Distance from camera to front atom
+##   'image_plane': None,  ## Distance from front atom to image plane
+    'camera_type': 'perspective',  ## orthographic, perspective, ultra_wide_angle
+    'point_lights': [],             ## [[loc1, color1], [loc2, color2],...]
+    'area_light': [(2., 3., 40.),  ## location
+                   'White',       ## color
+                   .7, .7, 3, 3],  ## width, height, Nlamps_x, Nlamps_y
+##   'background': 'White',        ## color
+    'textures': ['jmol',]*1000,  ## ase2, ase3, glass, simple, pale, intermediate, vmd, jmol
     'textures': tex,
-#   'celllinewidth': 0.1,  # Radius of the cylinders representing the cell
+##   'celllinewidth': 0.1,  ## Radius of the cylinders representing the cell
 }
 
 renderer=write(filename+'.pov',cont,
