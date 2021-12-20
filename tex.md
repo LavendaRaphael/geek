@@ -1,93 +1,102 @@
+# TEX
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [timer](#timer)
-- [Table of contents](#table-of-contents)
-- [template](#template)
-  - [beamer](#beamer)
-  - [article](#article)
-  - [include](#include)
-- [tikz](#tikz)
-- [font](#font)
-- [中文](#中文)
-- [cite](#cite)
-  - [biblatex](#biblatex)
-  - [footcite](#footcite)
-    - [多引用,](#多引用)
-    - [字号](#字号)
-    - [notitle](#notitle)
-    - [footcitetext](#footcitetext)
-  - [footfullcite](#footfullcite)
-    - [多引用,](#多引用-1)
-    - [footfullcitetext](#footfullcitetext)
-- [overpic](#overpic)
-- [variable](#variable)
-- [0补全](#0补全)
-- [loop](#loop)
-- [fileexist](#fileexist)
-- [html](#html)
-- [pagesize](#pagesize)
-  - [首行缩进](#首行缩进)
-  - [页边距](#页边距)
-- [filecontents](#filecontents)
-- [logo](#logo)
-  - [method1](#method1)
-  - [method2](#method2)
-- [换行](#换行)
-- [常见错误](#常见错误)
-- [comment](#comment)
-- [date](#date)
-- [item](#item)
-  - [nobullet](#nobullet)
-- [symbol](#symbol)
-  - [pvec](#pvec)
-  - [双分数](#双分数)
-  - [space](#space)
-  - [unit](#unit)
-  - [braket](#braket)
-  - [chem](#chem)
-  - [integral](#integral)
-  - [subscript](#subscript)
-  - [overline](#overline)
-  - [degree](#degree)
-  - [angstrom](#angstrom)
-  - [arrow](#arrow)
-  - [icon](#icon)
-- [highlight](#highlight)
-  - [superlink](#superlink)
-- [double column](#double-column)
-- [equation](#equation)
-  - [big bracket](#big-bracket)
-- [listings](#listings)
-  - [listing style](#listing-style)
-  - [example](#example)
-  - [Note in beamer](#note-in-beamer)
-  - [multicol](#multicol)
-  - [listing内命令](#listing内命令)
-- [proof](#proof)
-- [table](#table)
-- [figure](#figure)
-  - [gif](#gif)
-  - [subfigure](#subfigure)
-  - [wrap figure](#wrap-figure)
-- [软件体验](#软件体验)
-  - [texpad](#texpad)
-  - [SWiftlatex](#swiftlatex)
-    - [localhost-local](#localhost-local)
-    - [swift-google](#swift-google)
-    - [`\ref{}`未定义](#ref未定义)
-  - [BakoMa Tex](#bakoma-tex)
-    - [win64](#win64)
-    - [china](#china)
-    - [无限试用](#无限试用)
-    - [bug](#bug)
-  - [texmacs](#texmacs)
+- [TEX](#tex)
+  - [常见错误](#常见错误)
+  - [timer](#timer)
+  - [Table of contents](#table-of-contents)
+  - [template](#template)
+    - [beamer](#beamer)
+    - [article](#article)
+    - [include](#include)
+  - [tikz](#tikz)
+  - [font](#font)
+  - [中文](#中文)
+  - [cite](#cite)
+    - [biblatex](#biblatex)
+    - [footcite](#footcite)
+      - [多引用,](#多引用)
+      - [字号](#字号)
+      - [notitle](#notitle)
+      - [footcitetext](#footcitetext)
+    - [footfullcite](#footfullcite)
+      - [多引用,](#多引用-1)
+      - [footfullcitetext](#footfullcitetext)
+  - [overpic](#overpic)
+  - [variable](#variable)
+  - [0补全](#0补全)
+  - [loop](#loop)
+  - [fileexist](#fileexist)
+  - [html](#html)
+  - [pagesize](#pagesize)
+    - [首行缩进](#首行缩进)
+    - [页边距](#页边距)
+  - [filecontents](#filecontents)
+  - [logo](#logo)
+    - [method1](#method1)
+    - [method2](#method2)
+  - [换行](#换行)
+  - [comment](#comment)
+  - [date](#date)
+  - [item](#item)
+    - [nobullet](#nobullet)
+  - [symbol](#symbol)
+    - [pvec](#pvec)
+    - [双分数](#双分数)
+    - [space](#space)
+    - [unit](#unit)
+    - [braket](#braket)
+    - [chem](#chem)
+    - [integral](#integral)
+    - [subscript](#subscript)
+    - [overline](#overline)
+    - [degree](#degree)
+    - [angstrom](#angstrom)
+    - [arrow](#arrow)
+    - [icon](#icon)
+  - [highlight](#highlight)
+    - [superlink](#superlink)
+  - [double column](#double-column)
+  - [equation](#equation)
+    - [big bracket](#big-bracket)
+  - [listings](#listings)
+    - [listing style](#listing-style)
+    - [example](#example)
+    - [Note in beamer](#note-in-beamer)
+    - [multicol](#multicol)
+    - [listing内命令](#listing内命令)
+  - [proof](#proof)
+  - [table](#table)
+  - [figure](#figure)
+    - [gif](#gif)
+    - [subfigure](#subfigure)
+    - [wrap figure](#wrap-figure)
+  - [软件体验](#软件体验)
+    - [texpad](#texpad)
+    - [SWiftlatex](#swiftlatex)
+      - [localhost-local](#localhost-local)
+      - [swift-google](#swift-google)
+      - [`\ref{}`未定义](#ref未定义)
+    - [BakoMa Tex](#bakoma-tex)
+      - [win64](#win64)
+      - [china](#china)
+      - [无限试用](#无限试用)
+      - [bug](#bug)
+    - [texmacs](#texmacs)
 
 <!-- /code_chunk_output -->
 
-# timer
+## 常见错误
+
+```tex
+\_
+\&
+```
+
+## timer
 
 <https://amito.me/2019/Adding-Timer-and-Logo-in-Beamer/>
 
@@ -101,7 +110,7 @@
 \date{\today \crono}
 ```
 
-# Table of contents
+## Table of contents
 
 ```tex
 \tableofcontents
@@ -112,9 +121,9 @@
 \chapter*{test}
 ```
 
-# template
+## template
 
-## beamer
+### beamer
 
 ```tex
 %---------------------------------------------------------------------------------------------------[Package]
@@ -199,7 +208,7 @@
 \end{document}
 ```
 
-## article
+### article
 
 ```tex
 %---------------------------------------------------------------------------------------------------[Package]
@@ -226,13 +235,13 @@
 \end{document}
 ```
 
-## include
+### include
 
 ```tex
 \input{~/codes/group/common/beamer_header}
 ```
 
-# tikz
+## tikz
 
 ```tex
 %-------------------------------------------------------------------------------------[flowchart]
@@ -263,7 +272,7 @@
 % https://stackoverflow.com/questions/29963701/latex-flowchart-line-crossing-line
 ```
 
-# font
+## font
 
 % <https://en.wikibooks.org/wiki/LaTeX/Fonts>
 
@@ -315,7 +324,7 @@
 % https://tex.stackexchange.com/questions/24599/what-point-pt-font-size-are-large-etc
 ```
 
-# 中文
+## 中文
 
 ```tex
 %-------------------------------------------------------------------------------------[documentclass]
@@ -348,9 +357,9 @@
     \fi\fi
 ```
 
-# cite
+## cite
 
-## biblatex
+### biblatex
 
 ```tex
 \usepackage[style=phys,autocite=plain]{biblatex}
@@ -365,13 +374,13 @@
 \printbibliography
 ```
 
-## footcite
+### footcite
 
 ```tex
 \usepackage[style=verbose,autocite=footnote,doi=false,url=false]{biblatex}
 ```
 
-### 多引用,
+#### 多引用,
 
 ```tex
 \usepackage{fnpct}
@@ -383,21 +392,21 @@
 }
 ```
 
-### 字号
+#### 字号
 
 ```tex
 % 7pt 字号，9pt baselineskip
 \renewcommand{\footnotesize}{\fontsize{7pt}{9pt}\selectfont}
 ```
 
-### notitle
+#### notitle
 
 ```tex
 \AtEveryBibitem{\clearfield{title}}
 \AtEveryCitekey{\clearfield{title}}
 ```
 
-### footcitetext
+#### footcitetext
 
 ```tex
 \newcounter{colcites}
@@ -417,13 +426,13 @@
 \footcitetext{test2}
 ```
 
-## footfullcite
+### footfullcite
 
 ```tex
 \usepackage[style=chem-acs,doi=false,url=false]{biblatex}
 ```
 
-### 多引用,
+#### 多引用,
 
 ```tex
 \usepackage{fnpct}
@@ -435,7 +444,7 @@
 }
 ```
 
-### footfullcitetext
+#### footfullcitetext
 
 ```tex
 % https://tex.stackexchange.com/questions/420162/footfullcite-not-showing-when-used-within-a-wrapfigure
@@ -452,7 +461,7 @@
 \footfullcitetext{test1}
 ```
 
-# overpic
+## overpic
 
 ```tex
 %-------------------------------------------------------------------------------------[overpic]
@@ -462,7 +471,7 @@
 \end{overpic}
 ```
 
-# variable
+## variable
 
 ```tex
 %------------------------------------------[]
@@ -476,7 +485,7 @@
 \addbibresource{\XasPtO/doc/references.bib}
 ```
 
-# 0补全
+## 0补全
 
 ```tex
 \makeatletter
@@ -486,7 +495,7 @@
 
 <https://tex.stackexchange.com/questions/30930/how-to-output-a-counter-with-leading-zeros>
 
-# loop
+## loop
 
 ```tex
 \newcounter{i}
@@ -510,13 +519,13 @@
 \repeat
 ```
 
-# fileexist
+## fileexist
 
 ```tex
 \IfFileExists{./filename}{true-branch}{false-branch}
 ```
 
-# html
+## html
 
 ```html
 <img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
@@ -525,19 +534,19 @@
 <https://gist.github.com/a-rodin/fef3f543412d6e1ec5b6cf55bf197d7b>
 <https://github.com/TeamMeow/vscode-math-to-image>
 
-# pagesize
+## pagesize
 
 ```tex
 \usepackage[margin=0in,paperwidth=3.25in,paperheight=1.75in]{geometry}
 ```
 
-## 首行缩进
+### 首行缩进
 
 ```tex
 \parindent 0in
 ```
 
-## 页边距
+### 页边距
 
 ```tex
 \usepackage{geometry}
@@ -545,7 +554,7 @@
 ```
 
 
-# filecontents
+## filecontents
 
 强制 overwrite
 
@@ -559,9 +568,9 @@
 \end{filecontents}
 ```
 
-# logo
+## logo
 
-## method1
+### method1
 
 ```tex
 \usepackage{tikz}
@@ -580,7 +589,7 @@
 
 <https://tex.stackexchange.com/questions/16357/how-can-i-position-an-image-in-an-arbitrary-position-in-beamer>
 
-## method2
+### method2
 
 <https://amito.me/2019/Adding-Timer-and-Logo-in-Beamer/>
 
@@ -594,20 +603,13 @@
 }
 ```
 
-# 换行
+## 换行
 
 - 空行 最合理
 - `\par` 等同于空行
 - `\\` 对齐时使用
 
-# 常见错误
-
-```tex
-\_
-\&
-```
-
-# comment
+## comment
 
 ```tex
 \usepackage{comment}
@@ -616,7 +618,7 @@
 \end{comment}
 ```
 
-# date
+## date
 
 ```tex
 \usepackage[USenglish,UKenglish,french,spanish,italian]{babel}
@@ -630,7 +632,7 @@
 
 <https://tex.stackexchange.com/questions/141824/how-to-write-a-non-today-date-in-latex-with-localization-formatting>
 
-# item
+## item
 
 ```tex
 \begin{itemize}
@@ -640,7 +642,7 @@
 
 <https://www.overleaf.com/learn/latex/lists>
 
-## nobullet
+### nobullet
 
 ```tex
 \item[]
@@ -648,21 +650,21 @@
 
 <https://tex.stackexchange.com/questions/50269/itemize-without-bullets>
 
-# symbol
+## symbol
 
-## pvec
+### pvec
 
 ```tex
 \newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
 ```
 
-## 双分数
+### 双分数
 
 ```tex
 \newcommand{\ddfrac}[2]{\frac{\displaystyle #1}{\displaystyle #2}}
 ```
 
-## space
+### space
 
 ```tex
 \quad
@@ -671,49 +673,49 @@
 
 <https://tex.stackexchange.com/questions/74353/what-commands-are-there-for-horizontal-spacing>
 
-## unit
+### unit
 
 ```tex
 \usepackage{siunitx}
 \SI{0.97}{g.cm^{-3}}
 ```
 
-## braket
+### braket
 
 ```tex
 \usepackage{braket}
 \braket{d}
 ```
 
-## chem
+### chem
 
 ```tex
 \usepackage[version=4]{mhchem}
 \ce{H2O\text{*} -> H\text{*} + OH\text{*}}
 ```
 
-## integral
+### integral
 
 ```tex
 \newcommand*{\diff}{\mathop{}\!\mathrm{d}}
 $\diff x$
 ```
 
-## subscript
+### subscript
 
 ```tex
 \textsubscript
 \textsuperscript
 ```
 
-## overline
+### overline
 
 ```tex
 $\overline{2}$
 \bar{2}
 ```
 
-## degree
+### degree
 
 ```tex
 \textdegree
@@ -721,13 +723,13 @@ $\overline{2}$
 
 <https://tex.stackexchange.com/questions/384873/what-is-the-degree-symbol/384874>
 
-## angstrom
+### angstrom
 
 ```tex
 \AA
 ```
 
-## arrow
+### arrow
 
 ```tex
 $
@@ -738,7 +740,7 @@ $
 
 <https://www.cnblogs.com/wt869054461/p/9544846.html>
 
-## icon
+### icon
 
 ```tex
 \usepackage{fontawesome}
@@ -749,7 +751,7 @@ $
 \faGlobe
 ```
 
-# highlight
+## highlight
 
 ```tex
 \begin{frame}{}
@@ -768,7 +770,7 @@ $
 \end{frame}
 ```
 
-## superlink
+### superlink
 
 ```tex
 % 放到 usepackage 最后
@@ -787,7 +789,7 @@ $
 \url{.com}
 ```
 
-# double column
+## double column
 
 ```tex
 \begin{frame}{}
@@ -804,7 +806,7 @@ $
 \end{frame}
 ```
 
-# equation
+## equation
 
 ```tex
 \usepackage{amsmath}
@@ -823,7 +825,7 @@ $
 \end{gather}
 ```
 
-## big bracket
+### big bracket
 
 ```tex
 \begin{align}
@@ -834,9 +836,9 @@ $
 \end{align}
 ```
 
-# listings
+## listings
 
-## listing style
+### listing style
 
 ```tex
 \usepackage{listings}
@@ -867,7 +869,7 @@ $
 \lstset{style=mystyle}
 ```
 
-## example
+### example
 
 ```tex
 \lstinputlisting[language=bash,caption=]{file}
@@ -880,7 +882,7 @@ $
 
 <https://www.overleaf.com/learn/latex/Code_listing>
 
-## Note in beamer
+### Note in beamer
 
 ```tex
 \begin{frame}[fragile]
@@ -889,14 +891,14 @@ $
 
 <https://tex.stackexchange.com/questions/130109/cant-insert-code-in-my-beamer-slide>
 
-## multicol
+### multicol
 
 ```tex
 \usepackage{multicol}
 \lstinputlisting[multicols=4]{data.txt}
 ```
 
-## listing内命令
+### listing内命令
 
 ```tex
 \begin{lstlisting}[escapechar=\%]
@@ -904,13 +906,13 @@ $
 \end{lstlisting}
 ```
 
-# proof
+## proof
 
 ```tex
 \usepackage{amssymb,amsthm}
 ```
 
-# table
+## table
 
 ```tex
 \begin{table}[ht]
@@ -946,7 +948,7 @@ $
 \end{block}
 ```
 
-# figure
+## figure
 
 ```tex
 \usepackage{graphicx}
@@ -959,7 +961,7 @@ $
 \end{figure}
 ```
 
-## gif
+### gif
 
 ```tex
 \usepackage{animate}
@@ -970,7 +972,7 @@ $
 \end{figure}
 ```
 
-## subfigure
+### subfigure
 
 ```tex
 \usepackage{subcaption}
@@ -999,7 +1001,7 @@ $
 \end{figure}
 ```
 
-## wrap figure
+### wrap figure
 
 ```tex
 \usepackage{wrapfig}
@@ -1010,35 +1012,35 @@ $
 \end{wrapfigure}
 ```
 
-# 软件体验
+## 软件体验
 
-## texpad
+### texpad
 
-## SWiftlatex
+### SWiftlatex
 
-### localhost-local
+#### localhost-local
 
 保存后多出空行
 
-### swift-google
+#### swift-google
 
 保存失效
 
-### `\ref{}`未定义
+#### `\ref{}`未定义
 
 强制重新编译
 
-## BakoMa Tex
+### BakoMa Tex
 
-### win64
+#### win64
 
 <http://www.bakoma-tex.com/menu/win64.php>
 
-### china
+#### china
 
 <http://www.bakoma-tex.com/menu/cjk.php>
 
-### 无限试用
+#### 无限试用
 
 在前一次试用期结束之后，用软件管理员权限修改硬盘序列号，在注册表中删去 HKEY_CURRENT_USER\Software\BaKoMa\Keys 这一项，然后启动Bakoma，点击Evaluate重新下载许可证文件，就又能获得30天试用期。
 
@@ -1054,10 +1056,10 @@ $
 
 <https://my.oschina.net/u/4266314/blog/4663380>
 
-### bug
+#### bug
 
 pdf图像显示异常
 
-## texmacs
+### texmacs
 
 非tex格式
