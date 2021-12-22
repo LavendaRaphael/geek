@@ -74,7 +74,6 @@
     - [pbs](#pbs)
     - [bash, mv不包括](#bash-mv不包括)
   - [tar](#tar)
-  - [LAMMPS](#lammps)
   - [杂项](#杂项-1)
     - [case](#case)
     - [sort](#sort)
@@ -565,9 +564,9 @@ git config http.proxy socks://
 ### 维护
 
 ```shell
+git clone -b release --depth 1000 https://github.com/plumed/plumed2.git plumed2
 git status
 git pull
-git pull -b release --depth 1000
 git add .
 git rm test
 git commit -m "test"
@@ -679,21 +678,6 @@ diff log2014.log log2013.log -yw #文件内容比较
 ```sh
 tar -ztvf /root/etc.tar.gz | grep 'shadow'
 tar -zxvf /root/etc.tar.gz etc/shadow
-```
-
-## LAMMPS
-
-<https://github.com/lammps/lammps/blob/master/cmake/README.md#building-with-intel-compilers>
-
-```sh
-mkdir lammps/build
-cd lammps/build
-cmake [-D OPTION_A=VALUE_A -D OPTION_B=VALUE_B ...] ../cmake
-make
-
-Building with Intel Compilers
-cmake -D CMAKE_C_COMPILER=icc -D CMAKE_CXX_COMPILER=icpc -D CMAKE_Fortran_COMPILER=ifort ../cmake
-cmake -D FFT=KISS -C ../cmake/presets/minimal.cmake -D CMAKE_C_COMPILER=icc -D CMAKE_CXX_COMPILER=icpc -D CMAKE_Fortran_COMPILER=ifort ../cmake
 ```
 
 ## 杂项
