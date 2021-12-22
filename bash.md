@@ -547,10 +547,7 @@ mogrify -crop +0+100 -crop -0-60 -format png -path new *.png
 ### 构建
 
 ```shell
-## mypc
-git config --global http.proxy http://10.20.221.131:10808
-## grouppc
-git config --global http.proxy http://10.19.51.34:10809
+git config --global http.proxy http://
 
 git clone https://github.com/LavendaRaphael/common.git
 git clone https://github.com/LavendaRaphael/group.git
@@ -562,7 +559,7 @@ git config -l
 git remote -v
 
 git config --global --unset http.proxy
-git config http.proxy socks://10.19.51.34:10808
+git config http.proxy socks://
 ```
 
 ### 维护
@@ -570,6 +567,7 @@ git config http.proxy socks://10.19.51.34:10808
 ```shell
 git status
 git pull
+git pull -b release --depth 1000
 git add .
 git rm test
 git commit -m "test"
