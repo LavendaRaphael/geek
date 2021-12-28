@@ -2,4 +2,4 @@
 
 ## web
 
-## normalization
+## str_temp, str_abname
