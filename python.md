@@ -5,6 +5,8 @@
 <!-- code_chunk_output -->
 
 - [python](#python)
+  - [def](#def)
+    - [Mutable default parameter](#mutable-default-parameter)
   - [json](#json)
   - [subprocess](#subprocess)
   - [copy](#copy)
@@ -26,6 +28,16 @@
     - [render](#render)
 
 <!-- /code_chunk_output -->
+
+## def
+
+### Mutable default parameter
+
+```py
+def def_x(a=None):
+    if a is None:
+        a = []
+```
 
 ## json
 

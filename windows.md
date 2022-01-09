@@ -19,11 +19,6 @@
     - [SwitchOmega](#switchomega)
     - [SSR](#ssr)
     - [clash](#clash)
-  - [Shop](#shop)
-    - [ssrcloud](#ssrcloud)
-    - [stc](#stc)
-    - [renzheyun](#renzheyun)
-    - [Justmysocks](#justmysocks)
 - [词典](#词典)
   - [有道](#有道)
 - [reader](#reader)
@@ -166,8 +161,6 @@ export PATH=~/software/texlive/2021/bin/x86_64-linux:$PATH
 
 ### v2rayN
 
-
-
 ### SwitchOmega
 
 - 莫名屏蔽 journal web
@@ -180,40 +173,6 @@ export PATH=~/software/texlive/2021/bin/x86_64-linux:$PATH
 ### clash
 
 - git代理: 关闭 service mode, socks代理失效
-
-## Shop
-
-### ssrcloud
-
-<https://sgi.anycast.gay>
-
-9.9/month
-
-ssr, clash
-
-### stc
-
-<http://stc-hk.com/>
-
-0.8/G
-
-v2ray, ss
-
-### renzheyun
-
-<https://renzhe.cloud>
-
-9.9/month
-
-clash, ssr
-
-速度不稳定
-
-### Justmysocks
-
-<https://justmysocks.net>
-
-慢
 
 # 词典
 
