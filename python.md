@@ -95,7 +95,7 @@ Note: `.readline()` can't used with `.next()`.
 ## font
 
 ```bash
-rm ~/.cache/matplotlib/
+rm -r ~/.cache/matplotlib/
 ```
 
 ## misc
