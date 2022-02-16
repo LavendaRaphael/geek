@@ -171,8 +171,7 @@ python -m pip install --user ase
 ```sh
 python -m pip list --outdated
 python -m pip install --user --upgrade pip
-python -m pip install --user --upgrade ase
-
+python -m pip install --user robotframework==2.8.7
 python -m pip uninstall [options] <package>
 ```
 

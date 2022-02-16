@@ -5,6 +5,7 @@
 <!-- code_chunk_output -->
 
 - [bash](#bash)
+  - [conda](#conda)
   - [font](#font)
   - [loop](#loop)
     - [array](#array)
@@ -95,6 +96,16 @@
     - [chmod](#chmod)
 
 <!-- /code_chunk_output -->
+
+## gpu
+
+```sh
+nvidia-smi
+```
+
+## conda
+
+<https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf>
 
 ## font
 

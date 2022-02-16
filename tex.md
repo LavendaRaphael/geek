@@ -12,6 +12,7 @@
     - [beamer](#beamer)
     - [article](#article)
     - [include](#include)
+    - [documentclass](#documentclass)
   - [tikz](#tikz)
   - [font](#font)
   - [中文](#中文)
@@ -44,6 +45,7 @@
   - [item](#item)
     - [nobullet](#nobullet)
   - [symbol](#symbol)
+    - [overarc](#overarc)
     - [pvec](#pvec)
     - [双分数](#双分数)
     - [space](#space)
@@ -71,6 +73,7 @@
   - [proof](#proof)
   - [table](#table)
   - [figure](#figure)
+    - [position](#position)
     - [gif](#gif)
     - [subfigure](#subfigure)
     - [wrap figure](#wrap-figure)
@@ -127,16 +130,15 @@
 
 ```tex
 %---------------------------------------------------------------------------------------------------[Package]
-%-------------------------------------------------------------------------------------[type]
 \documentclass[aspectratio=169]{beamer}
 \usepackage[T1]{fontenc}
-%-------------------------------------------------------------------------------------[移除导航]
+% [移除导航]
 \setbeamertemplate{navigation symbols}{}
-%-------------------------------------------------------------------------------------[theme]
+% [theme]
 \usetheme{Madrid}
 \usecolortheme{beaver}
 %---------------------------------------------------------------------------------------------------[Head]
-%-------------------------------------------------------------------------------------[titleset]
+%[titleset]
 \title[] %optional
 {}
 
@@ -190,16 +192,15 @@
 %-------------------------------------------------------------------------------------[begindocument]
 \begin{document}
 
-%-------------------------------------------------------------------------------------[titlepage]
 \frame{\titlepage}
 
 \begin{frame}
   \frametitle{Table of Contents}
   \tableofcontents[subsectionstyle=show/show/hide]
 \end{frame}
-%---------------------------------------------------------------------------------------------------[section]
+%-------------------------------------------------------------------------------------[section]
 \section{First section}
-%-------------------------------------------------------------------------------------[p3]
+
 \begin{frame}{}
 
 \end{frame}
@@ -212,22 +213,19 @@
 
 ```tex
 %---------------------------------------------------------------------------------------------------[Package]
-%-------------------------------------------------------------------------------------[size]
 \documentclass[a4paper]{article}
 \usepackage[T1]{fontenc}
-%-------------------------------------------------------------------------------------[页边距]
+
 \usepackage[cm]{fullpage}
-%---------------------------------------------------------------------------------------------------[Head]
-%-------------------------------------------------------------------------------------[title]
+
 \title{}
 \author{}
 \date{}
 %-------------------------------------------------------------------------------------[begindocument]
 \begin{document}
-%-------------------------------------------------------------------------------------[maketitle]
+
 \maketitle
-%---------------------------------------------------------------------------------------------------[START]
-%-------------------------------------------------------------------------------------[abstract]
+
 \begin{abstract}
 \end{abstract}
 
@@ -240,6 +238,19 @@
 ```tex
 \input{~/codes/group/common/beamer_header}
 ```
+
+### documentclass
+
+<https://en.wikibooks.org/wiki/LaTeX/Document_Structure>
+|Command                            |Level  |Comment
+|---                                |---    |---
+|`\part{''part''}`                  |-1     |not in letters
+|`\chapter{''chapter''}`            |0      |only books and reports
+|`\section{''section''}`            |1      |not in letters
+|`\subsection{''subsection''}`      |2      |not in letters
+|`\subsubsection{''subsubsection''}`|3      |not in letters
+|`\paragraph{''paragraph''}`        |4      |not in letters
+|`\subparagraph{''subparagraph''}`  |5      |not in letters
 
 ## tikz
 
@@ -652,6 +663,19 @@
 
 ## symbol
 
+### overarc
+
+<https://tex.stackexchange.com/questions/96680/a-better-notation-to-denote-arcs-for-an-american-high-school-textbook>
+
+```tex
+\DeclareFontFamily{OMX}{yhex}{}
+\DeclareFontShape{OMX}{yhex}{m}{n}{<->yhcmex10}{}
+\DeclareSymbolFont{yhlargesymbols}{OMX}{yhex}{m}{n}
+\DeclareMathAccent{\wideparen}{\mathord}{yhlargesymbols}{"F3}
+
+\wideparen{AB}
+```
+
 ### pvec
 
 ```tex
@@ -959,6 +983,14 @@ $
     \caption{}
     \label{fig:}
 \end{figure}
+```
+
+### position
+
+<https://www.overleaf.com/learn/latex/Inserting_Images>
+```tex
+\usepackage{float}
+\begin{figure}[H]
 ```
 
 ### gif
