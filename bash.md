@@ -5,6 +5,7 @@
 <!-- code_chunk_output -->
 
 - [bash](#bash)
+  - [gpu](#gpu)
   - [conda](#conda)
   - [font](#font)
   - [loop](#loop)
@@ -98,6 +99,10 @@
 <!-- /code_chunk_output -->
 
 ## gpu
+
+```sh
+export CUDA_VISIBLE_DEVICES="7"
+```
 
 ```sh
 nvidia-smi
