@@ -52,7 +52,7 @@
     - [unit](#unit)
     - [braket](#braket)
     - [chem](#chem)
-    - [integral](#integral)
+    - [diff](#diff)
     - [subscript](#subscript)
     - [overline](#overline)
     - [degree](#degree)
@@ -718,11 +718,13 @@
 \ce{H2O\text{*} -> H\text{*} + OH\text{*}}
 ```
 
-### integral
+### diff
+
+<https://tex.stackexchange.com/questions/203508/d-with-a-little-line-through-the-top-of-it>
 
 ```tex
 \newcommand*{\diff}{\mathop{}\!\mathrm{d}}
-$\diff x$
+\newcommand*{\dbar}{\mathop{}\!\mathrm{d}\hspace*{-0.15em}\bar{}\hspace*{0.1em}}
 ```
 
 ### subscript

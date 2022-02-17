@@ -69,14 +69,14 @@
     - [维护](#维护)
     - [contribution 不显示](#contribution-不显示)
     - [撤销commit](#撤销commit)
-  - [alias](#alias)
+  - [tar](#tar)
+  - [misc](#misc)
+    - [alias](#alias)
     - [chmod递归权限](#chmod递归权限)
     - [截取snapshot](#截取snapshot)
-    - [bash](#bash-1)
+    - [du](#du)
     - [pbs](#pbs)
     - [bash, mv不包括](#bash-mv不包括)
-  - [tar](#tar)
-  - [杂项](#杂项-1)
     - [case](#case)
     - [sort](#sort)
     - [array](#array-1)
@@ -110,7 +110,23 @@ nvidia-smi
 
 ## conda
 
+cheatsheet
+
 <https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf>
+
+换源
+
+<https://docs.conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html>
+
+`.conda/.condarc`
+
+```yaml
+channels:
+  - https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
+  - https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
+  - https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/
+ssl_verify: true
+```
 
 ## font
 
@@ -603,7 +619,28 @@ git reset HEAD^
 
 <https://www.cnblogs.com/lfxiao/p/9378763.html>
 
-## alias
+
+## tar
+
+压　缩：`tar -jcv -f filename.tar.bz2 要被压缩的文件或目录名称`
+查　询：`tar -jtv -f filename.tar.bz2`
+解压缩：`tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录`
+`-j`  ：透过 bzip2 的支持进行压缩/解压缩：此时档名最好为`*.tar.bz2`
+`-z`  ：透过 gzip  的支持进行压缩/解压缩：此时档名最好为`*.tar.gz`
+`-v`  #Verbosely list files processed.
+`-c`  #压缩
+`-t`  #查询
+`-f`  #压缩文件
+<http://cn.linux.vbird.org/linux_basic/0240tarcompress.php>
+
+```sh
+tar -ztvf /root/etc.tar.gz | grep 'shadow'
+tar -zxvf /root/etc.tar.gz etc/shadow
+```
+
+## misc
+
+### alias
 
 ```sh
 shopt -s expand_aliases
@@ -631,10 +668,10 @@ chmod -R 700 tianff/
 more +2034867 water.pos|head -n 97 >> POSCAR
 ```
 
-### bash
+### du
 
 ```sh
-du -h --max-depth=1 #文件夹占用磁盘大小
+sudo du -h --exclude="mnt*" --exclude="proc*" -d 1 /
 ```
 
 ### pbs
@@ -677,26 +714,6 @@ printf "%5.4f\n","123.12345" #“%5.4lf”指定输出宽度为5，精度为4，
 mpif90 test.f90 -o test.x -llapack #链接静态库
 diff log2014.log log2013.log -yw #文件内容比较
 ```
-
-## tar
-
-压　缩：`tar -jcv -f filename.tar.bz2 要被压缩的文件或目录名称`
-查　询：`tar -jtv -f filename.tar.bz2`
-解压缩：`tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录`
-`-j`  ：透过 bzip2 的支持进行压缩/解压缩：此时档名最好为`*.tar.bz2`
-`-z`  ：透过 gzip  的支持进行压缩/解压缩：此时档名最好为`*.tar.gz`
-`-v`  #Verbosely list files processed.
-`-c`  #压缩
-`-t`  #查询
-`-f`  #压缩文件
-<http://cn.linux.vbird.org/linux_basic/0240tarcompress.php>
-
-```sh
-tar -ztvf /root/etc.tar.gz | grep 'shadow'
-tar -zxvf /root/etc.tar.gz etc/shadow
-```
-
-## 杂项
 
 ### case
 
