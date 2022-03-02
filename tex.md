@@ -7,7 +7,7 @@
 - [TEX](#tex)
   - [常见错误](#常见错误)
   - [timer](#timer)
-  - [Table of contents](#table-of-contents)
+  - [TOC](#toc)
   - [template](#template)
     - [beamer](#beamer)
     - [article](#article)
@@ -26,7 +26,6 @@
     - [footfullcite](#footfullcite)
       - [多引用,](#多引用-1)
       - [footfullcitetext](#footfullcitetext)
-  - [overpic](#overpic)
   - [variable](#variable)
   - [0补全](#0补全)
   - [loop](#loop)
@@ -45,6 +44,7 @@
   - [item](#item)
     - [nobullet](#nobullet)
   - [symbol](#symbol)
+    - [math](#math)
     - [overarc](#overarc)
     - [pvec](#pvec)
     - [双分数](#双分数)
@@ -60,9 +60,13 @@
     - [arrow](#arrow)
     - [icon](#icon)
   - [highlight](#highlight)
-    - [superlink](#superlink)
+    - [box](#box)
+    - [beamer](#beamer-1)
+  - [superlink](#superlink)
   - [double column](#double-column)
   - [equation](#equation)
+    - [align](#align)
+    - [gather](#gather)
     - [big bracket](#big-bracket)
   - [listings](#listings)
     - [listing style](#listing-style)
@@ -72,11 +76,15 @@
     - [listing内命令](#listing内命令)
   - [proof](#proof)
   - [table](#table)
+    - [basic](#basic)
+    - [multirow](#multirow)
   - [figure](#figure)
+    - [basic](#basic-1)
     - [position](#position)
     - [gif](#gif)
     - [subfigure](#subfigure)
     - [wrap figure](#wrap-figure)
+    - [overpic](#overpic)
   - [软件体验](#软件体验)
     - [texpad](#texpad)
     - [SWiftlatex](#swiftlatex)
@@ -113,7 +121,7 @@
 \date{\today \crono}
 ```
 
-## Table of contents
+## TOC
 
 ```tex
 \tableofcontents
@@ -472,28 +480,21 @@
 \footfullcitetext{test1}
 ```
 
-## overpic
-
-```tex
-%-------------------------------------------------------------------------------------[overpic]
-\usepackage{overpic}
-\begin{overpic}[width=0.8\textwidth,grid]{render.png}
-    \put(10,1){Li}
-\end{overpic}
-```
-
 ## variable
 
-```tex
-%------------------------------------------[]
-\newcommand{\x}{30}
-%------------------------------------------[]
-\newcommand{\x}[3][d]{(#2 + #3)^#1}
+<https://www.overleaf.com/learn/latex/Commands>
 
-\[ \x{a}{b}{c} \]
-%------------------------------------------[]
-\newcommand{\LLZO}{C:/Users/laven/OneDrive/group/202012_LLZO}
-\addbibresource{\XasPtO/doc/references.bib}
+```tex
+\newcommand{\x}{30}
+```
+
+```tex
+\newcommand{\x}[3][1]{(#2 + #3)^#1}
+\newcommand{\<name of var>}[<num of var>][<default var>]{(#2 + #3)^#1}
+
+\[
+    \x{4}{x}{y}
+\]
 ```
 
 ## 0补全
@@ -663,6 +664,13 @@
 
 ## symbol
 
+### math
+
+```tex
+\usepackage{mathrsfs}
+\mathscr{C}
+```
+
 ### overarc
 
 <https://tex.stackexchange.com/questions/96680/a-better-notation-to-denote-arcs-for-an-american-high-school-textbook>
@@ -779,6 +787,35 @@ $
 
 ## highlight
 
+### box
+
+<https://texample.net/tikz/examples/boxes-with-text-and-math/>
+<https://tex.stackexchange.com/questions/521148/how-can-i-get-the-definition-and-theorem-environment-like-these-in-latex-package>
+
+```tex
+\usepackage{xcolor}
+\definecolor{amber}{rgb}{1.0, 0.49, 0.0}
+
+\usepackage{tikz}
+
+\tikzstyle{boxtitle} = [fill=amber, text=white]
+\tikzstyle{boxstyle} = [draw=amber,fill=gray!17,
+    thick,rectangle,rounded corners,inner sep=10pt, inner ysep=20pt]
+\newcommand{\mybox}[3][\textwidth]{
+    \par\noindent
+    \begin{tikzpicture}
+        \node [boxstyle] (box){%
+            \begin{minipage}{#1}{#3}\end{minipage}
+        };
+        \node[boxtitle,right=10pt] at (box.north west) {#2};
+    \end{tikzpicture}
+}
+
+\mybox{0.5\textwidth}{some title}{something}
+```
+
+### beamer
+
 ```tex
 \begin{frame}{}
 
@@ -796,7 +833,7 @@ $
 \end{frame}
 ```
 
-### superlink
+## superlink
 
 ```tex
 % 放到 usepackage 最后
@@ -834,9 +871,23 @@ $
 
 ## equation
 
+<https://www.overleaf.com/learn/latex/Aligning_equations_with_amsmath>
+
 ```tex
 \usepackage{amsmath}
 ```
+
+### align
+
+```tex
+\begin{align}
+x&=y           &  w &=z              &  a&=b+c\\
+2x&=-y         &  3w&=\frac{1}{2}z   &  a&=b\\
+-4 + 5x&=2+y   &  w+2&=-1+w          &  ab&=cb
+\end{align}
+```
+
+### gather
 
 ```tex
 \begin{gather}
@@ -940,6 +991,8 @@ $
 
 ## table
 
+### basic
+
 ```tex
 \begin{table}[ht]
     \centering
@@ -954,6 +1007,8 @@ $
     \label{table:}
 \end{table}
 ```
+
+### multirow
 
 ```tex
 \usepackage{multirow}
@@ -975,6 +1030,8 @@ $
 ```
 
 ## figure
+
+### basic
 
 ```tex
 \usepackage{graphicx}
@@ -1044,6 +1101,15 @@ $
     \centering
     \includegraphics[width=0.25\textwidth]{mesh}
 \end{wrapfigure}
+```
+
+### overpic
+
+```tex
+\usepackage{overpic}
+\begin{overpic}[width=0.8\textwidth,grid]{render.png}
+    \put(10,1){Li}
+\end{overpic}
 ```
 
 ## 软件体验
