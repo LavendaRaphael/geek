@@ -6,6 +6,7 @@
 
 - [TEX](#tex)
   - [常见错误](#常见错误)
+  - [chem](#chem)
   - [timer](#timer)
   - [TOC](#toc)
   - [template](#template)
@@ -51,7 +52,6 @@
     - [space](#space)
     - [unit](#unit)
     - [braket](#braket)
-    - [chem](#chem)
     - [diff](#diff)
     - [subscript](#subscript)
     - [overline](#overline)
@@ -105,6 +105,18 @@
 ```tex
 \_
 \&
+```
+
+## chem
+
+```tex
+\usepackage[version=4]{mhchem}
+```
+
+adsorption
+
+```tex
+\ce{H2O\text{*} -> H\text{*} + OH\text{*}}
 ```
 
 ## timer
@@ -717,13 +729,6 @@
 ```tex
 \usepackage{braket}
 \braket{d}
-```
-
-### chem
-
-```tex
-\usepackage[version=4]{mhchem}
-\ce{H2O\text{*} -> H\text{*} + OH\text{*}}
 ```
 
 ### diff

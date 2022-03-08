@@ -65,6 +65,7 @@
     - [mp42png](#mp42png)
     - [批量裁切](#批量裁切)
   - [git](#git)
+    - [gitignore](#gitignore)
     - [构建](#构建)
     - [维护](#维护)
     - [contribution 不显示](#contribution-不显示)
@@ -575,6 +576,12 @@ mogrify -crop +0+100 -crop -0-60 -format png -path new *.png
 
 ## git
 
+### gitignore
+
+```sh
+git config --global core.excludesfile $software/src/gitignore/Python.gitignore
+```
+
 ### 构建
 
 ```shell
@@ -618,7 +625,6 @@ git reset HEAD^
 ```
 
 <https://www.cnblogs.com/lfxiao/p/9378763.html>
-
 
 ## tar
 
