@@ -6,6 +6,7 @@
 
 - [TEX](#tex)
   - [常见错误](#常见错误)
+  - [unit](#unit)
   - [chem](#chem)
   - [timer](#timer)
   - [TOC](#toc)
@@ -43,14 +44,12 @@
   - [comment](#comment)
   - [date](#date)
   - [item](#item)
-    - [nobullet](#nobullet)
   - [symbol](#symbol)
     - [math](#math)
     - [overarc](#overarc)
     - [pvec](#pvec)
     - [双分数](#双分数)
     - [space](#space)
-    - [unit](#unit)
     - [braket](#braket)
     - [diff](#diff)
     - [subscript](#subscript)
@@ -105,6 +104,13 @@
 ```tex
 \_
 \&
+```
+
+## unit
+
+```tex
+\usepackage{siunitx}
+\SI{0.97}{g.cm^{-3}}
 ```
 
 ## chem
@@ -658,18 +664,43 @@ adsorption
 
 ## item
 
+<https://www.overleaf.com/learn/latex/lists>
+
+unordered
+
 ```tex
 \begin{itemize}
     \item something
 \end{itemize}
 ```
 
-<https://www.overleaf.com/learn/latex/lists>
-
-### nobullet
+ordered
 
 ```tex
-\item[]
+\begin{enumerate}
+\end{enumerate}
+```
+
+description
+
+```tex
+\begin{description}
+   \item This is an entry \textit{without} a label.
+   \item[Something short] A short one-line description.
+\end{description}
+```
+
+change label
+
+```tex
+\begin{itemize}
+  \item This is my first point
+  \item Another point I want to make 
+  \item[!] A point to exclaim something!
+  \item[$\blacksquare$] Make the point fair and square.
+  \item[NOTE] This entry has no bullet
+  \item[] A blank label?
+\end{itemize}
 ```
 
 <https://tex.stackexchange.com/questions/50269/itemize-without-bullets>
@@ -716,13 +747,6 @@ adsorption
 ```
 
 <https://tex.stackexchange.com/questions/74353/what-commands-are-there-for-horizontal-spacing>
-
-### unit
-
-```tex
-\usepackage{siunitx}
-\SI{0.97}{g.cm^{-3}}
-```
 
 ### braket
 

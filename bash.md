@@ -5,6 +5,7 @@
 <!-- code_chunk_output -->
 
 - [bash](#bash)
+  - [system](#system)
   - [gpu](#gpu)
   - [conda](#conda)
   - [font](#font)
@@ -99,6 +100,12 @@
 
 <!-- /code_chunk_output -->
 
+## system
+
+```sh
+cat /etc/redhat-release
+```
+
 ## gpu
 
 ```sh
@@ -127,6 +134,19 @@ channels:
   - https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
   - https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/
 ssl_verify: true
+```
+
+create
+
+```sh
+conda create -p /path/to/envname
+```
+
+`.conda/.condarc`
+
+```yaml
+envs_dirs:
+  - /path/to
 ```
 
 ## font
