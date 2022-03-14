@@ -5,6 +5,7 @@
 <!-- code_chunk_output -->
 
 - [bash](#bash)
+  - [mpi](#mpi)
   - [system](#system)
   - [gpu](#gpu)
   - [conda](#conda)
@@ -99,6 +100,15 @@
     - [chmod](#chmod)
 
 <!-- /code_chunk_output -->
+
+## mpi
+
+```sh
+mpirun -np {value} -ppn {value}
+```
+
+- `-np` number of processes
+- `-ppn` processes per node
 
 ## system
 

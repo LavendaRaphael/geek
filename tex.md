@@ -125,6 +125,13 @@ adsorption
 \ce{H2O\text{*} -> H\text{*} + OH\text{*}}
 ```
 
+```tex
+\usepackage[version=4]{mhchem}
+
+\ph
+\pka
+```
+
 ## timer
 
 <https://amito.me/2019/Adding-Timer-and-Logo-in-Beamer/>

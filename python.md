@@ -5,6 +5,7 @@
 <!-- code_chunk_output -->
 
 - [python](#python)
+  - [class](#class)
   - [def](#def)
     - [Mutable default parameter](#mutable-default-parameter)
   - [json](#json)
@@ -28,6 +29,15 @@
     - [render](#render)
 
 <!-- /code_chunk_output -->
+
+## class
+
+```py
+class Class_test():
+    class_viariable = 1
+    def __init__(self):
+        self.instance_viaralbe = 2
+```
 
 ## def
 
