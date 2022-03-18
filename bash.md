@@ -104,7 +104,9 @@
 ## mpi
 
 ```sh
-mpirun -np {value} -ppn {value}
+mpirun -np {value} -ppn {value} \
+    -genv OMP_NUM_THREADS=4 -genv OMP_STACKSIZE=512m \
+    <your-vasp-executable>
 ```
 
 - `-np` number of processes
@@ -490,8 +492,8 @@ nameserver 8.8.8.8
 sudo resolvconf -u
 ```
 
-<https://www.cnblogs.com/ArsenalfanInECNU/p/11322602.html>
-<https://blog.skk.moe/post/which-public-dns-to-use/>
+<https://www.cnblogs.com/ArsenalfanInECNU/p/11322602.html>  
+<https://blog.skk.moe/post/which-public-dns-to-use/>  
 <https://github.com/microsoft/WSL/issues/5420>
 
 ## find

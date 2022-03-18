@@ -20,13 +20,12 @@
   - [中文](#中文)
   - [cite](#cite)
     - [biblatex](#biblatex)
-    - [footcite](#footcite)
-      - [多引用,](#多引用)
-      - [字号](#字号)
-      - [notitle](#notitle)
+      - [autocite](#autocite)
+      - [fullcite](#fullcite)
+      - [footnote](#footnote)
+      - [footcite](#footcite)
       - [footcitetext](#footcitetext)
-    - [footfullcite](#footfullcite)
-      - [多引用,](#多引用-1)
+      - [footfullcite](#footfullcite)
       - [footfullcitetext](#footfullcitetext)
   - [variable](#variable)
   - [0补全](#0补全)
@@ -68,17 +67,13 @@
     - [gather](#gather)
     - [big bracket](#big-bracket)
   - [listings](#listings)
-    - [listing style](#listing-style)
-    - [example](#example)
     - [Note in beamer](#note-in-beamer)
     - [multicol](#multicol)
     - [listing内命令](#listing内命令)
   - [proof](#proof)
   - [table](#table)
-    - [basic](#basic)
-    - [multirow](#multirow)
   - [figure](#figure)
-    - [basic](#basic-1)
+    - [basic](#basic)
     - [position](#position)
     - [gif](#gif)
     - [subfigure](#subfigure)
@@ -406,29 +401,52 @@ adsorption
 ### biblatex
 
 ```tex
-\usepackage[style=phys,autocite=plain]{biblatex}
+\usepackage[style=phys]{biblatex}
 \addbibresource{references.bib}
-```
 
-```tex
-\autocite{}
-```
+\cite{}
 
-```tex
 \printbibliography
 ```
 
-### footcite
+#### autocite
 
 ```tex
-\usepackage[style=verbose,autocite=footnote,doi=false,url=false]{biblatex}
+\usepackage[style=phys,autocite=plain]{biblatex}
+
+\autocite{}
 ```
 
-#### 多引用,
+#### fullcite
+
+```tex
+\fullcite{}
+```
+
+#### footnote
+
+```tex
+\footnote{}
+```
+
+字号
+
+```tex
+% 7pt 字号，9pt baselineskip
+\renewcommand{\footnotesize}{\fontsize{7pt}{9pt}\selectfont}
+```
+
+#### footcite
+
+```tex
+\usepackage[style=verbose,doi=false,url=false]{biblatex}
+```
+
+多引用,
 
 ```tex
 \usepackage{fnpct}
-\AdaptNote\autocite{oo+m}[footnote]{%
+\AdaptNote\footcite{oo+m}[footnote]{%
 \setfnpct{dont-mess-around}%
 \IfNoValueTF{#1}
 {#NOTE{#3}}
@@ -436,14 +454,7 @@ adsorption
 }
 ```
 
-#### 字号
-
-```tex
-% 7pt 字号，9pt baselineskip
-\renewcommand{\footnotesize}{\fontsize{7pt}{9pt}\selectfont}
-```
-
-#### notitle
+notitle
 
 ```tex
 \AtEveryBibitem{\clearfield{title}}
@@ -453,16 +464,9 @@ adsorption
 #### footcitetext
 
 ```tex
-\newcounter{colcites}
-
-\addtocounter{colcites}{-\thecolcites}
-
 \footnotemark
-\addtocounter{colcites}{1}
 \footnotemark
-\addtocounter{colcites}{1}
-
-\addtocounter{footnote}{-\thecolcites}
+\addtocounter{footnote}{-2}
 
 \addtocounter{footnote}{1}
 \footcitetext{test1}
@@ -470,13 +474,13 @@ adsorption
 \footcitetext{test2}
 ```
 
-### footfullcite
+#### footfullcite
 
 ```tex
 \usepackage[style=chem-acs,doi=false,url=false]{biblatex}
 ```
 
-#### 多引用,
+多引用`,`
 
 ```tex
 \usepackage{fnpct}
@@ -490,8 +494,9 @@ adsorption
 
 #### footfullcitetext
 
+<https://tex.stackexchange.com/questions/420162/footfullcite-not-showing-when-used-within-a-wrapfigure>
+
 ```tex
-% https://tex.stackexchange.com/questions/420162/footfullcite-not-showing-when-used-within-a-wrapfigure
 \DeclareCiteCommand{\footfullcitetext}[\mkbibfootnotetext]
   {\usebibmacro{prenote}}
   {\usedriver
@@ -951,7 +956,9 @@ x&=y           &  w &=z              &  a&=b+c\\
 
 ## listings
 
-### listing style
+<https://www.overleaf.com/learn/latex/Code_listing>
+
+style
 
 ```tex
 \usepackage{listings}
@@ -982,18 +989,24 @@ x&=y           &  w &=z              &  a&=b+c\\
 \lstset{style=mystyle}
 ```
 
-### example
+file
 
 ```tex
 \lstinputlisting[language=bash,caption=]{file}
 ```
+
+code block
 
 ```tex
 \begin{lstlisting}[language=bash]
 \end{lstlisting}
 ```
 
-<https://www.overleaf.com/learn/latex/Code_listing>
+inline
+
+```tex
+\lstinline{for}
+```
 
 ### Note in beamer
 
@@ -1027,8 +1040,6 @@ x&=y           &  w &=z              &  a&=b+c\\
 
 ## table
 
-### basic
-
 ```tex
 \begin{table}[ht]
     \centering
@@ -1044,25 +1055,22 @@ x&=y           &  w &=z              &  a&=b+c\\
 \end{table}
 ```
 
-### multirow
+multirow
 
 ```tex
 \usepackage{multirow}
 
-\begin{block}{}
-    \begin{table}[ht]
+\begin{table}[ht]
     \centering
     \begin{tabular}{c|cc}
     \hline
         &\multicolumn{2}{c}{} \\
     \hline
-    \multirow{2}{*}{}
-        &   &   \\
-        &   &   \\
+    \multirow{2}{*}{}   &   &   \\
+                        &   &   \\
     \hline
     \end{tabular}
-    \end{table}
-\end{block}
+\end{table}
 ```
 
 ## figure
