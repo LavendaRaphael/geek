@@ -660,15 +660,15 @@ git reset HEAD^
 
 ## tar
 
-压　缩：`tar -jcv -f filename.tar.bz2 要被压缩的文件或目录名称`
-查　询：`tar -jtv -f filename.tar.bz2`
-解压缩：`tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录`
-`-j`  ：透过 bzip2 的支持进行压缩/解压缩：此时档名最好为`*.tar.bz2`
-`-z`  ：透过 gzip  的支持进行压缩/解压缩：此时档名最好为`*.tar.gz`
-`-v`  #Verbosely list files processed.
-`-c`  #压缩
-`-t`  #查询
-`-f`  #压缩文件
+压　缩：`tar -jcv -f filename.tar.bz2 要被压缩的文件或目录名称`  
+查　询：`tar -jtv -f filename.tar.bz2`  
+解压缩：`tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录`  
+`-j`  ：透过 bzip2 的支持进行压缩/解压缩：此时档名最好为`*.tar.bz2`  
+`-z`  ：透过 gzip  的支持进行压缩/解压缩：此时档名最好为`*.tar.gz`  
+`-v`  #Verbosely list files processed.  
+`-c`  #压缩  
+`-t`  #查询  
+`-f`  #压缩文件  
 <http://cn.linux.vbird.org/linux_basic/0240tarcompress.php>
 
 ```sh
