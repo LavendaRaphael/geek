@@ -6,8 +6,9 @@
 
 - [Windows](#windows)
   - [重装前](#重装前)
+  - [ssh-client](#ssh-client)
   - [wsl2](#wsl2)
-  - [硬盘存储占用无法释放](#硬盘存储占用无法释放)
+    - [硬盘存储占用无法释放](#硬盘存储占用无法释放)
     - [安装](#安装)
     - [文件系统权限](#文件系统权限)
     - [wsl命令](#wsl命令)
@@ -65,9 +66,17 @@
 - tampermonkey
 - displayfusion
 
+## ssh-client
+
+- xshell
+  - 无wsl支持
+- Windterm
+  - 各种bug
+- MobaXterm
+
 ## wsl2
 
-## 硬盘存储占用无法释放
+### 硬盘存储占用无法释放
 
 <https://loesspie.com/2021/01/27/wsl2-compact-disk-win10/>
 
