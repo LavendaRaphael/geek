@@ -423,6 +423,13 @@ adsorption
 \fullcite{}
 ```
 
+fullcite in section 失效问题
+
+```tex
+\section{\fullcite{}}
+\fullcite{}
+```
+
 #### footnote
 
 ```tex
