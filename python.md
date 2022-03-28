@@ -33,10 +33,20 @@
 ## class
 
 ```py
-class Class_test():
+class class_test():
     class_viariable = 1
     def __init__(self):
         self.instance_viaralbe = 2
+```
+
+```py
+class class_():
+    @property
+    def (self):
+        return self._
+    @.setter
+    def (self, value):
+        self._ = value
 ```
 
 ## def
