@@ -70,8 +70,10 @@
 
 - xshell
   - 无wsl支持
+  - vim 显示异常
 - Windterm
-  - 各种bug
+  - vim显示
+  - 文献传输
 - MobaXterm
 
 ## wsl2
