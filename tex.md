@@ -67,7 +67,6 @@
     - [gather](#gather)
     - [big bracket](#big-bracket)
   - [listings](#listings)
-    - [Note in beamer](#note-in-beamer)
     - [multicol](#multicol)
     - [listing内命令](#listing内命令)
   - [proof](#proof)
@@ -1015,7 +1014,7 @@ inline
 \lstinline{for}
 ```
 
-### Note in beamer
+Note in beamer
 
 ```tex
 \begin{frame}[fragile]

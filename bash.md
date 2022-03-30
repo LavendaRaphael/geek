@@ -614,8 +614,8 @@ mogrify -crop +0+100 -crop -0-60 -format png -path new *.png
 <https://github.com/git/git/blob/master/INSTALL>
 
 ```sh
-make prefix=$homedir/software/
-make prefix=$homedir/software/ install
+make prefix=$homedir/
+make prefix=$homedir/ install
 ```
 
 ### gitignore
