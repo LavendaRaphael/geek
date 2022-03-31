@@ -621,7 +621,7 @@ make prefix=$homedir/ install
 ### gitignore
 
 ```sh
-git config --global core.excludesfile $software/src/gitignore/Python.gitignore
+git config --global core.excludesfile $homedir/software/gitignore/Python.gitignore
 ```
 
 ### 构建
