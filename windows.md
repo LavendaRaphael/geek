@@ -13,8 +13,8 @@
     - [文件系统权限](#文件系统权限)
     - [wsl命令](#wsl命令)
     - [link](#link)
-      - [ssh自启](#ssh自启)
-      - [外部局域网访问](#外部局域网访问)
+    - [ssh自启](#ssh自启)
+    - [外部局域网访问](#外部局域网访问)
     - [screen](#screen)
     - [latexworkshop](#latexworkshop)
   - [proxy](#proxy)
@@ -29,9 +29,6 @@
     - [smartraPDF](#smartrapdf)
   - [aria2](#aria2)
   - [bugs](#bugs)
-  - [cmd](#cmd)
-    - [调用cmd](#调用cmd)
-    - [mklink](#mklink)
   - [Chromeos](#chromeos)
   - [邮件客户端](#邮件客户端)
   - [文献管理](#文献管理)
@@ -54,7 +51,6 @@
 
 <!-- /code_chunk_output -->
 
-
 ## 重装前
 
 - Originlab deactive
@@ -65,6 +61,13 @@
 - sharpkeys
 - tampermonkey
 - displayfusion
+
+## Onedrive
+
+### symbolink
+
+- wsl `link`: 不支持同步，红叉
+- powersehll `New-Item`: 会同步 link 内所有内容
 
 ## ssh-client
 
@@ -118,7 +121,7 @@ ln -s /mnt/c/Users/feife/OneDrive/Doc/script/server.me.sh ~/server.me.sh
 ln -s /mnt/c/Users/feife/OneDrive/SynTemp ~/SynTemp
 ```
 
-#### ssh自启
+### ssh自启
 
 ```bash
 sudo vim /etc/init.wsl
@@ -135,22 +138,21 @@ sudo chmod 700 /etc/init.wsl
 
 <https://juejin.im/post/6847902218226499598>
 
-#### 外部局域网访问
+### 外部局域网访问
 
-ps脚本可执行
+<https://gist.github.com/daehahn/497fa04c0156b1a762c70ff3f9f7edae>  
+<https://www.hanselman.com/blog/how-to-ssh-into-wsl2-on-windows-10-from-an-external-machine>
+
+开机自启  
+<https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.1>  
+<https://www.zhihu.com/question/40596907>
 
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
 ```
 
-windows
-
-- 计算机管理 - 任务计划程序 - 任务计划程序库 - 新文件夹 'me' - 导入 `C:\Users\laven\OneDrive\arxive\myscript\ubuntu.xml`
-
-<https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.1>
-<https://www.zhihu.com/question/40596907>
-<https://gist.github.com/daehahn/497fa04c0156b1a762c70ff3f9f7edae>
-<https://www.hanselman.com/blog/how-to-ssh-into-wsl2-on-windows-10-from-an-external-machine>
+计算机管理 - 任务计划程序 - 任务计划程序库 - 新文件夹 'me' - 导入 `C:\Users\laven\OneDrive\arxive\myscript\ubuntu.xml`
+  
 
 ### screen
 
@@ -224,23 +226,6 @@ error 代码: 0x000001F7
 开启自动代理
 
 win+r WSReset.exe
-
-## cmd
-
-### 调用cmd
-
-```
-cmd /Cl
-```
-
-### mklink
-<https://liam.page/2018/12/10/mklink-in-Windows/>
-删除虚拟的链接目录，并不会删除远程文件夹真实文件，注意千万不能用del，del会删除远程的真实文件。
-
-```cmd
-rmdir d:\recivefiles
-rmdir d:\develop
-```
 
 ## Chromeos
 

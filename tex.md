@@ -17,12 +17,16 @@
     - [documentclass](#documentclass)
   - [tikz](#tikz)
   - [font](#font)
+    - [Blod](#blod)
+    - [fonttype](#fonttype)
+    - [fontsize](#fontsize)
   - [中文](#中文)
   - [cite](#cite)
     - [biblatex](#biblatex)
       - [autocite](#autocite)
       - [fullcite](#fullcite)
       - [footnote](#footnote)
+      - [footnotetext](#footnotetext)
       - [footcite](#footcite)
       - [footcitetext](#footcitetext)
       - [footfullcite](#footfullcite)
@@ -312,22 +316,35 @@ adsorption
 
 ## font
 
-% <https://en.wikibooks.org/wiki/LaTeX/Fonts>
+<https://en.wikibooks.org/wiki/LaTeX/Fonts>
+
+### Blod
+
+global bold
 
 ```tex
-%-------------------------------------------------------------------------------------[global bold]
 \renewcommand{\seriesdefault}{\bfdefault}
+```
 
-%-------------------------------------------------------[math bold]
+math bold  
+<https://tex.stackexchange.com/questions/376665>
+
+```tex
 \mathversion{bold}
+```
 
-% https://tex.stackexchange.com/questions/376665/how-to-make-math-text-thick-globally-besides-mathversionbold
+### fonttype
 
-%-------------------------------------------------------------------------------------[fonttype]
-% need XeLaTeX
+need XeLaTeX
+
+```tex
 \setmainfont{Arial}
+```
 
-%-------------------------------------------------------[math fonttype]
+math fonttype  
+<https://tex.stackexchange.com/questions/469775/how-to-use-math-mode-and-siunitx-with-arial>
+
+```tex
 \usepackage{unicode-math}
 
 \setmathfont{GFSNeohellenicMath.otf}
@@ -335,32 +352,47 @@ adsorption
 \setmathfont[range=it]{Arial Italic}
 \setmathfont[range=bfup]{Arial Bold}
 \setmathfont[range=bfit]{Arial Bold Italic}
+```
 
-% https://tex.stackexchange.com/questions/469775/how-to-use-math-mode-and-siunitx-with-arial
+### fontsize
 
-%-------------------------------------------------------------------------------------[global fontsize]
+global fontsize
+
+```tex
 \documentclass[12pt]{article}
+```
 
+```tex
 \renewcommand{\small}{\fontsize{12pt}{0pt}\selectfont}
+```
 
-%-------------------------------------------------------------------------------------[equation & table]
+equation \& table
 
+```tex
 \begin{small}
     \begin{table}
     \end{table}
 \end{small}
 
+\begin{table}
+    \small
+\end{table}
+
 \begin{small}
     \[
     \]
 \end{small}
-%-------------------------------------------------------------------------------------[print fontsize]
+```
+
+print fontsize
+
+```tex
 \makeatletter
 \newcommand\thefontsize{\f@size pt}
 \makeatother
-
-% https://tex.stackexchange.com/questions/24599/what-point-pt-font-size-are-large-etc
 ```
+
+<https://tex.stackexchange.com/questions/24599/what-point-pt-font-size-are-large-etc>
 
 ## 中文
 
@@ -440,6 +472,13 @@ fullcite in section 失效问题
 ```tex
 % 7pt 字号，9pt baselineskip
 \renewcommand{\footnotesize}{\fontsize{7pt}{9pt}\selectfont}
+```
+
+#### footnotetext
+
+```tex
+\addtocounter{footnote}{1}
+\footnotetext{test1}
 ```
 
 #### footcite
