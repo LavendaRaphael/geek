@@ -5,6 +5,8 @@
 <!-- code_chunk_output -->
 
 - [python](#python)
+  - [string](#string)
+    - [leading zeros](#leading-zeros)
   - [class](#class)
   - [def](#def)
     - [Mutable default parameter](#mutable-default-parameter)
@@ -29,6 +31,19 @@
     - [render](#render)
 
 <!-- /code_chunk_output -->
+
+## string
+
+### leading zeros
+
+<https://stackoverflow.com/questions/134934/display-number-with-leading-zeros>
+
+```py
+number = 1
+print("%02d" % (number,))
+print("{:02d}".format(number))
+print(f"{number:02d}")
+```
 
 ## class
 
