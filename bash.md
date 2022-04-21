@@ -9,6 +9,8 @@
   - [system](#system)
   - [gpu](#gpu)
   - [conda](#conda)
+    - [换源](#换源)
+    - [create](#create)
   - [font](#font)
   - [loop](#loop)
     - [array](#array)
@@ -135,11 +137,13 @@ cheatsheet
 
 <https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf>
 
-换源
+### 换源
 
-<https://docs.conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html>
+<https://docs.conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html>  
+<https://www.jianshu.com/p/e17ccafaa2f0>
 
-`.conda/.condarc`
+`conda config --show channels`  
+`vim .conda/.condarc`
 
 ```yaml
 channels:
@@ -147,15 +151,18 @@ channels:
   - https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
   - https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/
 ssl_verify: true
+channel_priority: flexible
 ```
 
-create
+`conda clean`
+
+### create
 
 ```sh
 conda create -p /path/to/envname
 ```
 
-`.conda/.condarc`
+`vim .conda/.condarc`
 
 ```yaml
 envs_dirs:
