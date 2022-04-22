@@ -6,6 +6,8 @@
 
 - [Windows](#windows)
   - [重装前](#重装前)
+  - [Onedrive](#onedrive)
+    - [symbolink](#symbolink)
   - [ssh-client](#ssh-client)
   - [wsl2](#wsl2)
     - [硬盘存储占用无法释放](#硬盘存储占用无法释放)
@@ -157,8 +159,7 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
 ### screen
 
 ```shell
-sudo screen
-sudo chmod 777 /run/screen/
+export SCREENDIR=$HOME/.screen
 ```
 
 <https://github.com/microsoft/WSL/issues/1245>
