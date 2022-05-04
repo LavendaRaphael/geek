@@ -66,10 +66,13 @@
 
 ## Onedrive
 
+### exclude
+
+<https://blog.csdn.net/weixin_51402817/article/details/113803344>
+
 ### symbolink
 
-- wsl `link`: 不支持同步，红叉
-- powersehll `New-Item`: 会同步 link 内所有内容
+会同步 link 内所有内容
 
 ## ssh-client
 
@@ -118,7 +121,6 @@ wsl --shutdown
 
 ```bash
 ln -s /mnt/c/Users/feife/OneDrive/Research ~/Research
-ln -s /mnt/c/Users/feife/OneDrive/Doc ~/Doc
 ln -s /mnt/c/Users/feife/OneDrive/Doc/script/server.me.sh ~/server.me.sh
 ln -s /mnt/c/Users/feife/OneDrive/SynTemp ~/SynTemp
 ```
