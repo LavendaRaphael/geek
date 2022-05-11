@@ -25,7 +25,7 @@
     - [biblatex](#biblatex)
       - [autocite](#autocite)
       - [fullcite](#fullcite)
-      - [footnote](#footnote)
+    - [footnote](#footnote)
       - [footnotetext](#footnotetext)
       - [footcite](#footcite)
       - [footcitetext](#footcitetext)
@@ -451,6 +451,8 @@ print fontsize
 #### fullcite
 
 ```tex
+\usepackage[style=nature]{biblatex}
+
 \fullcite{}
 ```
 
@@ -461,7 +463,7 @@ fullcite in section 失效问题
 \fullcite{}
 ```
 
-#### footnote
+### footnote
 
 ```tex
 \footnote{}
@@ -477,14 +479,20 @@ fullcite in section 失效问题
 #### footnotetext
 
 ```tex
+\footnotemark
+\footnotemark
+\addtocounter{footnote}{-2}
+
 \addtocounter{footnote}{1}
 \footnotetext{test1}
+\addtocounter{footnote}{1}
+\footnotetext{test2}
 ```
 
 #### footcite
 
 ```tex
-\usepackage[style=verbose,doi=false,url=false]{biblatex}
+\usepackage[style=nature,doi=false,url=false]{biblatex}
 ```
 
 多引用,
@@ -499,30 +507,16 @@ fullcite in section 失效问题
 }
 ```
 
-notitle
-
-```tex
-\AtEveryBibitem{\clearfield{title}}
-\AtEveryCitekey{\clearfield{title}}
-```
-
 #### footcitetext
 
 ```tex
-\footnotemark
-\footnotemark
-\addtocounter{footnote}{-2}
-
-\addtocounter{footnote}{1}
 \footcitetext{test1}
-\addtocounter{footnote}{1}
-\footcitetext{test2}
 ```
 
 #### footfullcite
 
 ```tex
-\usepackage[style=chem-acs,doi=false,url=false]{biblatex}
+\usepackage[style=nature,doi=false,url=false]{biblatex}
 ```
 
 多引用`,`
@@ -542,6 +536,10 @@ notitle
 <https://tex.stackexchange.com/questions/420162/footfullcite-not-showing-when-used-within-a-wrapfigure>
 
 ```tex
+\newcommand*\publistbasestyle{nature}
+\usepackage[bibstyle=publist,linktitleall=true,isbn=false,doi=false,url=false,eprint=false,plauthorhandling=highlight,boldyear=false,nameorder=given-family]{biblatex}
+\plauthorname[Feifei]{Tian}
+\renewcommand{\footnotesize}{\fontsize{7pt}{9pt}\selectfont}
 \DeclareCiteCommand{\footfullcitetext}[\mkbibfootnotetext]
   {\usebibmacro{prenote}}
   {\usedriver
@@ -549,9 +547,11 @@ notitle
      {\thefield{entrytype}}}
   {\multicitedelim}
   {\usebibmacro{postnote}}
-```
+\newrobustcmd*{\footfullcitetextallauthor}{%
+  \AtNextCite{\AtEachCitekey{\defcounter{maxnames}{999}}}%
+  \footfullcitetext}
 
-```tex
+\addtocounter{footnote}{1}
 \footfullcitetext{test1}
 ```
 
