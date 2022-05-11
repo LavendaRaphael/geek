@@ -6,6 +6,8 @@
 
 - [TEX](#tex)
   - [常见错误](#常见错误)
+  - [journal abbr](#journal-abbr)
+  - [intall sty](#intall-sty)
   - [unit](#unit)
   - [chem](#chem)
   - [timer](#timer)
@@ -103,6 +105,14 @@
 \_
 \&
 ```
+
+## journal abbr
+
+<https://github.com/compholio/jabbrv.git>
+
+## intall sty
+
+<https://zhuanlan.zhihu.com/p/113124407>
 
 ## unit
 
