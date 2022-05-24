@@ -1,3 +1,22 @@
+# Android
+
+## rmx2117
+
+- unlock: realme ui 2.0
+  - <https://c.realme.com/in/post-details/1476520599785316352>
+- recovery: android 11
+  - <https://github.com/sundaqiang/android_device_realme_RMX2173-pbrp>
+  - not to wipe before flash
+- fastbootd
+
+```sh
+adb kill-server
+fastboot flash system <.img>
+```
+
+- wipe
+- root: c16
+
 ## google锁区
 
 <https://zhuanlan.zhihu.com/p/346523474>  
