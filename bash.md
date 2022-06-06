@@ -14,8 +14,9 @@
   - [font](#font)
   - [loop](#loop)
     - [array](#array)
-  - [apt](#apt)
+  - [Apt](#apt)
     - [basic](#basic)
+    - [换源](#换源-1)
   - [x11](#x11)
     - [VcXsrv](#vcxsrv)
   - [赋值](#赋值)
@@ -47,7 +48,6 @@
     - [变量](#变量)
     - [替换](#替换-2)
     - [printf](#printf)
-  - [ubuntu换源](#ubuntu换源)
   - [ssh](#ssh)
   - [dns](#dns)
   - [find](#find)
@@ -196,7 +196,7 @@ break [n]
 continue [n]
 ```
 
-## apt
+## Apt
 
 ### basic
 
@@ -207,6 +207,19 @@ sudo apt update
 sudo apt upgrade
 sudo apt autoremove
 sudo apt remove <>
+```
+
+### 换源
+
+`ubuntumirror_test.sh`
+
+```bash
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+sudo sed -i 's/http:\/\/archive.ubuntu.com/https:\/\/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+sudo sed -i 's/http:\/\/security.ubuntu.com/https:\/\/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+do-release-upgrade
+sudo apt update
+sudo apt upgrade
 ```
 
 ## x11
@@ -453,20 +466,6 @@ awk '{$1=$1"abc"}1' test.dat
 
 ```sh
 awk '{printf "%15.8f\n", $5/2}' a.out
-```
-
-## ubuntu换源
-
-`ubuntumirror_test.sh`
-
-```bash
-sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
-sudo sed -i 's/archive.ubuntu.com/ftp.sjtu.edu.cn/g' /etc/apt/sources.list
-sudo sed -i 's/security.ubuntu.com/ftp.sjtu.edu.cn/g' /etc/apt/sources.list
-sudo sed -i 's/#http/#https/g' /etc/apt/sources.list
-do-release-upgrade
-sudo apt update
-sudo apt upgrade
 ```
 
 ## ssh
