@@ -5,6 +5,7 @@
 <!-- code_chunk_output -->
 
 - [python](#python)
+  - [Format](#format)
   - [Numpy](#numpy)
     - [mask](#mask)
   - [Matplotlib](#matplotlib)
@@ -34,6 +35,12 @@
     - [render](#render)
 
 <!-- /code_chunk_output -->
+
+## Format
+
+```py
+print(f'{math.pi:.3f}')
+```
 
 ## Numpy
 
