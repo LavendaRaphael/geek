@@ -5,6 +5,8 @@
 <!-- code_chunk_output -->
 
 - [python](#python)
+  - [Path](#path)
+    - [exist](#exist)
   - [Format](#format)
   - [Numpy](#numpy)
     - [mask](#mask)
@@ -20,8 +22,8 @@
   - [File](#file)
     - [open](#open)
     - [read](#read)
-  - [font](#font)
-  - [misc](#misc)
+  - [Font](#font)
+  - [Misc](#misc)
     - [raise](#raise)
     - [delete file](#delete-file)
     - [import](#import)
@@ -36,7 +38,19 @@
 
 <!-- /code_chunk_output -->
 
+## Path
+
+### exist
+
+```py
+import os.path
+os.path.exists(file_path/dir_path)
+os.path.isfile(file_path)
+```
+
 ## Format
+
+<https://www.runoob.com/python/att-string-format.html>
 
 ```py
 print(f'{math.pi:.3f}')
@@ -171,13 +185,13 @@ next( file_open )
 
 Note: `.readline()` can't used with `.next()`.
 
-## font
+## Font
 
 ```bash
 rm -r ~/.cache/matplotlib/
 ```
 
-## misc
+## Misc
 
 ### raise
 
