@@ -9,6 +9,7 @@
     - [exist](#exist)
   - [Format](#format)
   - [Numpy](#numpy)
+    - [array](#array)
     - [mask](#mask)
   - [Matplotlib](#matplotlib)
   - [string](#string)
@@ -57,6 +58,12 @@ print(f'{math.pi:.3f}')
 ```
 
 ## Numpy
+
+### array
+
+```py
+numpy.arange()
+```
 
 ### mask
 
