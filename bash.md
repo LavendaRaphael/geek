@@ -624,6 +624,14 @@ make prefix=$homedir/
 make prefix=$homedir/ install
 ```
 
+```sh
+export CC=icc
+make configure
+./configure --prefix=$homedir
+make
+make install
+```
+
 ### gitignore
 
 ```sh

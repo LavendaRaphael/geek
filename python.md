@@ -28,11 +28,12 @@
     - [raise](#raise)
     - [delete file](#delete-file)
     - [import](#import)
-  - [pip](#pip)
+  - [Pip](#pip)
     - [换源](#换源)
     - [config](#config)
     - [install](#install)
     - [update](#update)
+    - [offline](#offline)
   - [ase](#ase)
     - [gif](#gif)
     - [render](#render)
@@ -235,7 +236,7 @@ from a import A
 b=A.aaa
 ```
 
-## pip
+## Pip
 
 <https://pip.pypa.io/en/stable/user_guide/>
 
@@ -274,6 +275,10 @@ python -m pip install --user --upgrade pip
 python -m pip install --user robotframework==2.8.7
 python -m pip uninstall [options] <package>
 ```
+
+### offline
+
+<https://imshuai.com/python-pip-install-package-offline-tensorflow>
 
 ## ase
 
