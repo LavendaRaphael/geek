@@ -72,11 +72,11 @@
     - [align](#align)
     - [gather](#gather)
     - [big bracket](#big-bracket)
-  - [listings](#listings)
+  - [Listings](#listings)
     - [multicol](#multicol)
     - [listing内命令](#listing内命令)
   - [proof](#proof)
-  - [table](#table)
+  - [Table](#table)
   - [figure](#figure)
     - [basic](#basic)
     - [position](#position)
@@ -1009,7 +1009,7 @@ x&=y           &  w &=z              &  a&=b+c\\
 \end{align}
 ```
 
-## listings
+## Listings
 
 <https://www.overleaf.com/learn/latex/Code_listing>
 
@@ -1093,7 +1093,7 @@ Note in beamer
 \usepackage{amssymb,amsthm}
 ```
 
-## table
+## Table
 
 ```tex
 \begin{table}[ht]
