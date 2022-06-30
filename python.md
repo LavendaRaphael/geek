@@ -9,6 +9,7 @@
     - [exist](#exist)
   - [Format](#format)
   - [Numpy](#numpy)
+    - [readtxt](#readtxt)
     - [array](#array)
     - [mask](#mask)
   - [Matplotlib](#matplotlib)
@@ -59,6 +60,12 @@ print(f'{math.pi:.3f}')
 ```
 
 ## Numpy
+
+### readtxt
+
+```py
+numpy.genfromtxt('file', names=True, usecols=(1,2))
+```
 
 ### array
 

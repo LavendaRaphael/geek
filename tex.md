@@ -123,6 +123,8 @@
 
 ## chem
 
+<https://mhchem.github.io/MathJax-mhchem/>
+
 ```tex
 \usepackage[version=4]{mhchem}
 ```

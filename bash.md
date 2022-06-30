@@ -5,6 +5,8 @@
 <!-- code_chunk_output -->
 
 - [bash](#bash)
+  - [后台](#后台)
+  - [CPU](#cpu)
   - [mpi](#mpi)
   - [system](#system)
   - [gpu](#gpu)
@@ -103,6 +105,14 @@
     - [chmod](#chmod)
 
 <!-- /code_chunk_output -->
+
+## 后台
+
+<https://www.myfreax.com/how-to-run-linux-commands-in-background/>
+
+## CPU
+
+<https://www.cnblogs.com/emanlee/p/3587571.html>
 
 ## mpi
 
