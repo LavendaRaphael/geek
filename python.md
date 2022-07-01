@@ -157,6 +157,8 @@ json.dump( obj, fp, indent=None )
 
 ## subprocess
 
+<https://stackoverflow.com/questions/4256107/running-bash-commands-in-python>
+
 ```python
 import subprocess
 subprocess.run( ['python','test.py'] )

@@ -5,6 +5,7 @@
 <!-- code_chunk_output -->
 
 - [bash](#bash)
+  - [Variable](#variable)
   - [后台](#后台)
   - [CPU](#cpu)
   - [mpi](#mpi)
@@ -105,6 +106,28 @@
     - [chmod](#chmod)
 
 <!-- /code_chunk_output -->
+
+## Variable
+
+Check exist
+
+```sh
+if [ -z ${var+x} ]; 
+then
+    echo "var is unset"; 
+else 
+    echo "var is set to '$var'"; 
+fi
+```
+
+```sh
+if [ -z "$var" ]; 
+then 
+    echo "var is blank"; 
+else 
+    echo "var is set to '$var'"; 
+fi
+```
 
 ## 后台
 
