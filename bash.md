@@ -5,6 +5,7 @@
 <!-- code_chunk_output -->
 
 - [bash](#bash)
+  - [嵌入脚本](#嵌入脚本)
   - [Variable](#variable)
   - [后台](#后台)
   - [CPU](#cpu)
@@ -107,6 +108,14 @@
 
 <!-- /code_chunk_output -->
 
+## 嵌入脚本
+
+```sh
+python << EOF
+print('Hello')
+EOF
+```
+
 ## Variable
 
 Check exist
@@ -135,7 +144,12 @@ fi
 
 ## CPU
 
-<https://www.cnblogs.com/emanlee/p/3587571.html>
+<https://www.cnblogs.com/emanlee/p/3587571.html>  
+<https://www.cnblogs.com/ggjucheng/archive/2013/01/14/2859613.html>
+
+```sh
+lscpu
+```
 
 ## mpi
 
