@@ -5,8 +5,8 @@
 <!-- code_chunk_output -->
 
 - [python](#python)
+  - [Tar](#tar)
   - [Path](#path)
-    - [exist](#exist)
   - [Format](#format)
   - [Numpy](#numpy)
     - [readtxt](#readtxt)
@@ -41,9 +41,19 @@
 
 <!-- /code_chunk_output -->
 
+## Tar
+
+```py
+import tarfile
+with tarfile.open('file.tar','w') as tar:
+    tar.add('file')
+
+tarfile.open('file.tar').extractall(path='./')
+```
+
 ## Path
 
-### exist
+exist
 
 ```py
 import os.path
