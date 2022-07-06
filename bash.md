@@ -23,9 +23,6 @@
     - [换源](#换源-1)
   - [x11](#x11)
     - [VcXsrv](#vcxsrv)
-  - [赋值](#赋值)
-    - [缺省](#缺省)
-    - [赋值](#赋值-1)
   - [vim](#vim)
     - [替换](#替换)
     - [换行替换](#换行替换)
@@ -34,7 +31,7 @@
   - [sed](#sed)
     - [行替换](#行替换)
     - [替换](#替换-1)
-  - [if](#if)
+  - [If](#if)
     - [true or false](#true-or-false)
     - [文件是否存在](#文件是否存在)
   - [awk](#awk)
@@ -80,31 +77,31 @@
     - [contribution 不显示](#contribution-不显示)
     - [撤销commit](#撤销commit)
   - [tar](#tar)
-  - [misc](#misc)
-    - [alias](#alias)
-    - [chmod递归权限](#chmod递归权限)
-    - [截取snapshot](#截取snapshot)
-    - [du](#du)
-    - [pbs](#pbs)
-    - [bash, mv不包括](#bash-mv不包括)
-    - [case](#case)
-    - [sort](#sort)
-    - [array](#array-1)
-    - [退格乱码](#退格乱码)
-    - [中止](#中止)
-    - [判断](#判断)
-    - [while](#while)
-    - [传参](#传参)
-    - [奇怪字符](#奇怪字符)
-    - [提取目录名](#提取目录名)
-    - [root](#root)
-    - [zip](#zip)
-    - [calculation](#calculation)
-    - [字符串截取](#字符串截取)
-    - [查杀进程](#查杀进程)
-    - [bashrc](#bashrc)
-    - [screen](#screen)
-    - [chmod](#chmod)
+  - [alias](#alias)
+  - [du](#du)
+  - [Cp](#cp)
+  - [Printf](#printf-1)
+  - [Download](#download)
+  - [case](#case)
+  - [sort](#sort)
+  - [array](#array-1)
+    - [for](#for)
+    - [max](#max)
+    - [seq](#seq)
+  - [退格乱码](#退格乱码)
+  - [Exit](#exit)
+  - [while](#while)
+  - [传参](#传参)
+  - [奇怪字符](#奇怪字符)
+  - [提取目录名](#提取目录名)
+  - [root](#root)
+  - [zip](#zip)
+  - [Calculation](#calculation)
+  - [字符串截取](#字符串截取)
+  - [查杀进程](#查杀进程)
+  - [Bashrc](#bashrc)
+  - [screen](#screen)
+  - [chmod](#chmod)
 
 <!-- /code_chunk_output -->
 
@@ -136,6 +133,19 @@ then
 else 
     echo "var is set to '$var'"; 
 fi
+```
+
+缺省
+
+- `${a-defaultvalue}` a如果没有定义，则表达式返回默认值，否则返回a的值；
+- `${a:-defaultvalue}` a没有定义或者为空字符串，则表达式返回默认值，否则返回a的值；
+
+赋值
+
+```bash
+$()
+
+``
 ```
 
 ## 后台
@@ -277,23 +287,6 @@ libGL error: No matching fbConfigs or visuals found
 libGL error: failed to load driver: swrast
 去勾选 Native opengl
 
-## 赋值
-
-### 缺省
-
-`${a-defaultvalue}`
-a如果没有定义，则表达式返回默认值，否则返回a的值；
-`${a:-defaultvalue}`
-a没有定义或者为空字符串，则表达式返回默认值，否则返回a的值；
-
-### 赋值
-
-```bash
-$()
-
-``
-```
-
 ## vim
 
 ### 替换
@@ -348,7 +341,7 @@ $()
 `sed -i 's/book/books/g' file`
 sed i直接编辑，s替换，g全面替换
 
-## if
+## If
 
 <https://wangdoc.com/bash/condition.html>
 
@@ -747,9 +740,7 @@ tar -ztvf /root/etc.tar.gz | grep 'shadow'
 tar -zxvf /root/etc.tar.gz etc/shadow
 ```
 
-## misc
-
-### alias
+## alias
 
 ```sh
 shopt -s expand_aliases
@@ -761,70 +752,39 @@ if true;then
 fi
 ```
 
-<https://unix.stackexchange.com/questions/531960/why-doesnt-alias-work-inside-if>
-
+<https://unix.stackexchange.com/questions/531960/why-doesnt-alias-work-inside-if>  
 <https://www.cnblogs.com/fnlingnzb-learner/p/10649971.html>
 
-### chmod递归权限
-
-```sh
-chmod -R 700 tianff/
-```
-
-### 截取snapshot
-
-```sh
-more +2034867 water.pos|head -n 97 >> POSCAR
-```
-
-### du
+## du
 
 ```sh
 sudo du -h --exclude="mnt*" --exclude="proc*" -d 1 /
 ```
 
-### pbs
-
-```sh
-qstat -ls
-bjobs
-pestat |grep SBP
-qselect -u <username> | xargs qdel
-```
-
-### bash, mv不包括
+## Cp
 
 ```sh
 shopt -s extglob
 cp -r !(Filename1 | FoldernameX | Filename2) Dest/
-screen -dmS name
-screen -ls
-screen -r name
 ```
 
-<https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/index.html> #screen
+<https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/index.html> 
+
+## Printf
 
 ```sh
-printf "crystal_%03d" $x #格式输出001
-
-ls a*/t.d #通配符
-head t.d
-clear #清屏
-sz #下载
-rz #上传
-more #逐页显示文件内容
-cp ../e.f90 . #拷贝到当前目录
-gfortran e.f90 -o e.x #编译fortran
-cd #进入用户主目录
-cd - #返回进入此目录之前所在的目录
-pwd #显示当前目录
-grep ! scf.out | tail -1 #管道
+printf "crystal_%03d" $x
 printf "%5.4f\n","123.12345" #“%5.4lf”指定输出宽度为5，精度为4，由于实际长度超过5故应该按实际位数输出，小数位数超过4位部分被截去。
-mpif90 test.f90 -o test.x -llapack #链接静态库
-diff log2014.log log2013.log -yw #文件内容比较
 ```
 
-### case
+## Download
+
+```sh
+sz #下载
+rz #上传
+```
+
+## case
 
 ```sh
 case expression in  
@@ -846,9 +806,7 @@ case expression in
 esac
 ```
 
-### sort
-
-去重
+## sort
 
 ```sh
 cat test
@@ -860,9 +818,9 @@ a
 b
 ```
 
-### array
+## array
 
-#### for
+### for
 
 ```sh
 x=(0 1 2)
@@ -872,13 +830,13 @@ x='0 1 2'
 for i in $x
 ```
 
-#### max
+### max
 
 ```sh
 echo ${#x[@]}
 ```
 
-#### seq
+### seq
 
 ```sh
 x=$(seq 0 0.001 0.01)
@@ -899,7 +857,7 @@ echo ${x}
 $ f1 f2
 ```
 
-### 退格乱码
+## 退格乱码
 
 #### python
 
@@ -917,19 +875,13 @@ stty erase ^H
 
 <https://blog.imdst.com/bash-shell-tui-ge-jian-luan-ma/>
 
-### 中止
+## Exit
 
 ```sh
 exit
 ```
 
-### 判断
-
-```sh
-true
-```
-
-### while
+## while
 
 ```sh
 while true
@@ -938,7 +890,7 @@ do
 done
 ```
 
-### 传参
+## 传参
 
 ```sh
 $1
@@ -946,53 +898,51 @@ $1
 
 `shift` 参数减一
 
-### 奇怪字符
+## 奇怪字符
 
 ```sh
 cat -v test.sh #查看
 cat old_filename | tr -d "\r" > new_filename 行尾 ^M 替换
-
-sed 's/<copy and paste>/<type what you want>/g' -i <datfile> #普遍替换
 ```
 
-### 提取目录名
+## 提取目录名
 
 ```sh
 dirname a/b
 basename a/b
 ```
 
-### root
+## root
 
 `sudo -s` 打开root shell
 `su`      切换到root
 
-### zip
+## zip
 
 ```sh
 zip -r filename.zip folder
 ```
 
-### calculation
+## Calculation
 
 ```sh
 answer=$(((3 / 2) + (3 % 2 > 0))) #取整
 ```
 
-#### bc
+bc
 
 ```sh
 bc <<< "3.4+7/8-(5.94*3.14)"
 echo "scal=4;0.0527*$x+1"|bc
 ```
 
-#### minus
+minus
 
 ```sh
 bc <<< "(-1)-(-1)"
 ```
 
-### 字符串截取
+## 字符串截取
 
 ```sh
 ${string: start :length} 从 string 字符串的左边第 start 个字符开始，向右截取 length 个字符。
@@ -1009,7 +959,7 @@ ${string%%chars*} 从 string 字符串最后一次出现 *chars 的位置开始�
 
 <https://kodango.com/a-strange-echo-result>
 
-### 查杀进程
+## 查杀进程
 
 ```sh
 ll /proc/PID
@@ -1018,17 +968,9 @@ kill -s 9 PID
 
 <https://blog.csdn.net/spring21st/article/details/50561550>
 
-### bashrc
+## Bashrc
 
-#### 问题
-
-SFTP无法连接
-
-#### 来源
-
-`.bashrc`中存在`echo`导致scp和sftp连接失败
-
-#### 解决
+存在`echo`导致scp和sftp连接失败
 
 ```sh
 if [ $TERM == "xterm" ] || [ $TERM == "xterm-256color" ]; then
@@ -1038,7 +980,7 @@ fi
 
 <https://qastack.cn/server/485487/use-bashrc-without-breaking-sftp>
 
-### screen
+## screen
 
 <https://www.cnblogs.com/mchina/archive/2013/01/30/2880680.html>
 
@@ -1050,9 +992,9 @@ screen -d -r yourname -> 结束当前session并回到yourname这个session
 C-a d -> detach，暂时离开当前session，将目前的 screen session (可能含有多个 windows) 丢到后台执行，并会回到还没进 screen 时的状态，此时在 screen session 里，每个 window 内运行的 process (无论是前台/后台)都在继续执行，即使 logout 也不影响。
 ```
 
-### chmod
+## chmod
 
-```
+```txt
 4 r
 2 w
 1 x
