@@ -5,6 +5,7 @@
 <!-- code_chunk_output -->
 
 - [bash](#bash)
+  - [Timer](#timer)
   - [嵌入脚本](#嵌入脚本)
   - [Variable](#variable)
   - [后台](#后台)
@@ -104,6 +105,15 @@
   - [chmod](#chmod)
 
 <!-- /code_chunk_output -->
+
+## Timer
+
+<https://unix.stackexchange.com/questions/53841/how-to-use-a-timer-in-bash>
+
+```sh
+start=$SECONDS
+duration=$(( SECONDS - start ))
+```
 
 ## 嵌入脚本
 
