@@ -25,10 +25,9 @@
     - [open](#open)
     - [read](#read)
   - [Font](#font)
-  - [Misc](#misc)
-    - [raise](#raise)
-    - [delete file](#delete-file)
-    - [import](#import)
+  - [Raise](#raise)
+    - [Delete file](#delete-file)
+  - [Import](#import)
   - [Pip](#pip)
     - [换源](#换源)
     - [config](#config)
@@ -219,15 +218,13 @@ Note: `.readline()` can't used with `.next()`.
 rm -r ~/.cache/matplotlib/
 ```
 
-## Misc
-
-### raise
+## Raise
 
 ```python
 raise [exceptionName [(reason)]]
 ```
 
-### delete file
+### Delete file
 
 ```py
 import os
@@ -237,7 +234,7 @@ os.remove('test.x')   ## file
 shutil.rmtree('temp') ## folder
 ```
 
-### import
+## Import
 
 a.py
 
