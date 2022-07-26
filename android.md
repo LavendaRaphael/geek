@@ -1,23 +1,23 @@
 # Android
 
-## rmx2117
+## Script
+
+- Anjian
+  - Root 模式：识图不兼容 android12
+  - 无障碍模式：无法使用脚本，无代码程序没有高级逻辑
+
+## Rmx2117
 
 - unlock: realme ui 2.0
   - <https://c.realme.com/in/post-details/1476520599785316352>
 - recovery: android 11
   - <https://github.com/sundaqiang/android_device_realme_RMX2173-pbrp>
   - not to wipe before flash
-- fastbootd
-
-```sh
-adb kill-server
-fastboot flash system <.img>
-```
 
 - wipe
 - root: c16
 
-## google锁区
+## Google锁区
 
 <https://zhuanlan.zhihu.com/p/346523474>  
 <https://www.fakenamegenerator.com/gen-random-us-us.php>

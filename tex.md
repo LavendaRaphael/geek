@@ -6,10 +6,10 @@
 
 - [TEX](#tex)
   - [常见错误](#常见错误)
-  - [journal abbr](#journal-abbr)
-  - [intall sty](#intall-sty)
-  - [unit](#unit)
-  - [chem](#chem)
+  - [Biber.conf](#biberconf)
+  - [Sty](#sty)
+  - [Unit](#unit)
+  - [Chem](#chem)
   - [timer](#timer)
   - [TOC](#toc)
   - [template](#template)
@@ -18,12 +18,12 @@
     - [include](#include)
     - [documentclass](#documentclass)
   - [tikz](#tikz)
-  - [font](#font)
+  - [Font](#font)
     - [Blod](#blod)
     - [fonttype](#fonttype)
     - [fontsize](#fontsize)
   - [中文](#中文)
-  - [cite](#cite)
+  - [Cite](#cite)
     - [biblatex](#biblatex)
       - [autocite](#autocite)
       - [fullcite](#fullcite)
@@ -106,22 +106,53 @@
 \&
 ```
 
-## journal abbr
+## Biber.conf
 
-<https://github.com/compholio/jabbrv.git>
+```xml
+<config>
+  <sourcemap>
+    <maps datatype="bibtex" map_overwrite="1">
+      <map>
+        <map_step
+          map_field_source="journal"
+          map_match="Advanced Functional Materials"
+          map_replace="Adv. Funct. Mater." />
+        <map_step
+          map_field_source="journal"
+          map_match="Proceedings of the National Academy of Sciences"
+          map_replace="Proc. Natl. Acad. Sci." />
+      </map>
+    </maps>
+  </sourcemap>
+</config>
+```
 
-## intall sty
+```json
+"latex-workshop.latex.tools": [
+    {
+        "name": "biber",
+        "command": "biber",
+        "args": [
+            "--configfile",
+            "C:/Users/feife/OneDrive/research/Doc/biber.conf",
+            "%DOCFILE%"
+        ]
+    }
+]
+```
+
+## Sty
 
 <https://zhuanlan.zhihu.com/p/113124407>
 
-## unit
+## Unit
 
 ```tex
 \usepackage{siunitx}
 \SI{0.97}{g.cm^{-3}}
 ```
 
-## chem
+## Chem
 
 <https://mhchem.github.io/MathJax-mhchem/>
 
@@ -326,7 +357,7 @@ adsorption
 % https://stackoverflow.com/questions/29963701/latex-flowchart-line-crossing-line
 ```
 
-## font
+## Font
 
 <https://en.wikibooks.org/wiki/LaTeX/Fonts>
 
@@ -439,7 +470,7 @@ print fontsize
     \fi\fi
 ```
 
-## cite
+## Cite
 
 ### biblatex
 
