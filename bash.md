@@ -5,6 +5,7 @@
 <!-- code_chunk_output -->
 
 - [bash](#bash)
+  - [Gcc](#gcc)
   - [Timer](#timer)
   - [嵌入脚本](#嵌入脚本)
   - [Variable](#variable)
@@ -70,7 +71,7 @@
     - [gif2png](#gif2png)
     - [mp42png](#mp42png)
     - [批量裁切](#批量裁切)
-  - [git](#git)
+  - [Git](#git)
     - [install-user](#install-user)
     - [gitignore](#gitignore)
     - [构建](#构建)
@@ -105,6 +106,36 @@
   - [chmod](#chmod)
 
 <!-- /code_chunk_output -->
+
+## Gcc
+
+<https://wiki.cheng-group.net/wiki/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/gcc>  
+<https://ftp.gnu.org/gnu/gcc/>
+
+```sh
+cd gcc-x.x.x
+./contrib/download_prerequisites
+cd ..
+```
+
+```sh
+mkdir gcc_compile
+cd gcc_compile
+../gcc-x.x.x/configure --prefix=${homedir}/install/gcc-x.x.x --disable-multilib
+make -j 4
+make install
+```
+
+```sh
+install_dir=${homedir}/install/gcc-12.1.0
+
+export PATH="${install_dir}/bin:$PATH"
+export CPATH="${install_dir}/include:$CPATH"
+export LIBRARY_PATH="${install_dir}/lib:$LIBRARY_PATH"
+export LIBRARY_PATH="${install_dir}/lib64:$LIBRARY_PATH"
+export LD_LIBRARY_PATH="${install_dir}/lib:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="${install_dir}/lib64:$LD_LIBRARY_PATH"
+```
 
 ## Timer
 
@@ -663,22 +694,26 @@ mogrify -crop +0+100 -crop -0-60 -format png -path new *.png
 +left+top    -right-bottom
 ```
 
-## git
+## Git
 
 ### install-user
 
 <https://github.com/git/git/blob/master/INSTALL>
 
 ```sh
-make prefix=$homedir/
-make prefix=$homedir/ install
+git clone https://github.com/git/git.git git-2.37.1 --depth 1 -b v2.37.1
+cd git-2.37.1
 ```
 
 ```sh
-export CC=icc
+make prefix=../git-2.37.1_install
+make prefix=../git-2.37.1_install install
+```
+
+```sh
 make configure
-./configure --prefix=$homedir
-make
+./configure --prefix=${homedir}/software/git-2.37.1_install
+make -j 4
 make install
 ```
 
