@@ -7,10 +7,10 @@
 - [Windows](#windows)
   - [重装前](#重装前)
   - [Onedrive](#onedrive)
+    - [exclude](#exclude)
     - [symbolink](#symbolink)
   - [ssh-client](#ssh-client)
   - [wsl2](#wsl2)
-    - [硬盘存储占用无法释放](#硬盘存储占用无法释放)
     - [安装](#安装)
     - [文件系统权限](#文件系统权限)
     - [wsl命令](#wsl命令)
@@ -19,6 +19,7 @@
     - [外部局域网访问](#外部局域网访问)
     - [screen](#screen)
     - [latexworkshop](#latexworkshop)
+    - [硬盘存储占用无法释放](#硬盘存储占用无法释放)
   - [proxy](#proxy)
     - [Win-gui](#win-gui)
       - [v2rayN](#v2rayn)
@@ -87,10 +88,6 @@
 
 ## wsl2
 
-### 硬盘存储占用无法释放
-
-<https://loesspie.com/2021/01/27/wsl2-compact-disk-win10/>
-
 ### 安装
 
 <https://docs.microsoft.com/en-us/windows/wsl/install>
@@ -156,7 +153,6 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
 ```
 
 计算机管理 - 任务计划程序 - 任务计划程序库 - 新文件夹 'me' - 导入 `C:\Users\laven\OneDrive\arxive\myscript\ubuntu.xml`
-  
 
 ### screen
 
@@ -177,6 +173,10 @@ export PATH=~/software/texlive/2021/bin/x86_64-linux:$PATH
 ```
 
 <https://github.com/James-Yu/LaTeX-Workshop/wiki/Install#using-wsl>
+
+### 硬盘存储占用无法释放
+
+<https://loesspie.com/2021/01/27/wsl2-compact-disk-win10/>
 
 ## proxy
 
