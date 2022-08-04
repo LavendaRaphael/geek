@@ -22,8 +22,6 @@
   - [subprocess](#subprocess)
   - [copy](#copy)
   - [File](#file)
-    - [open](#open)
-    - [read](#read)
   - [Font](#font)
   - [Raise](#raise)
     - [Delete file](#delete-file)
@@ -186,13 +184,12 @@ print( id(a), id(b), id(c) )
 
 ## File
 
-### open
-
 <https://docs.python.org/3/library/functions.html#open>
 
 ```py
 with open('file', 'r') as file_open:
 ```
+
 |mode   |file exist |No file|r or w 
 |:---:  |:-:        |:-:    |:---:  
 |`'r'`  |open       |error  |r
@@ -201,8 +198,6 @@ with open('file', 'r') as file_open:
 |`'r+'` |open       |error  |rw
 |`'w+'` |clear      |create |rw
 |`'a+'` |open       |create |rw
-
-### read
 
 ```py
 file_open.readline()
