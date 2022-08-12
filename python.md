@@ -13,8 +13,6 @@
     - [array](#array)
     - [mask](#mask)
   - [Matplotlib](#matplotlib)
-  - [string](#string)
-    - [leading zeros](#leading-zeros)
   - [class](#class)
   - [def](#def)
     - [Mutable default parameter](#mutable-default-parameter)
@@ -109,20 +107,6 @@ ax.set_ylim((None,None))
 fig.set_size_inches(7, 6)
 fig.savefig('', bbox_inches='tight')
 pyplot.show()
-
-```
-
-## string
-
-### leading zeros
-
-<https://stackoverflow.com/questions/134934/display-number-with-leading-zeros>
-
-```py
-number = 1
-print("%02d" % (number,))
-print("{:02d}".format(number))
-print(f"{number:02d}")
 ```
 
 ## class
