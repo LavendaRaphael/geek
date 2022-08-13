@@ -90,7 +90,9 @@
 
 ### 安装
 
-<https://docs.microsoft.com/en-us/windows/wsl/install>
+<https://docs.microsoft.com/en-us/windows/wsl/install>  
+<https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support>  
+<https://www.how2shout.com/linux/how-to-upgrade-wsl-2-or-1-ubuntu-20-04-to-22-04-lts/>
 
 ### 文件系统权限
 
