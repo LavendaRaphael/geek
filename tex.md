@@ -956,8 +956,8 @@ $
     \begin{alertblock}{}
     \end{alertblock}
 
-    \begin{examples}
-    \end{examples}
+    \begin{exampleblock}{}
+    \end{exampleblock}
 
 \end{frame}
 ```
