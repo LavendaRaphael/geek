@@ -14,10 +14,10 @@
   - [mpi](#mpi)
   - [system](#system)
   - [gpu](#gpu)
-  - [conda](#conda)
+  - [Conda](#conda)
     - [换源](#换源)
     - [create](#create)
-  - [font](#font)
+  - [Font](#font)
   - [loop](#loop)
     - [array](#array)
   - [Apt](#apt)
@@ -229,11 +229,15 @@ export CUDA_VISIBLE_DEVICES="7"
 nvidia-smi
 ```
 
-## conda
+## Conda
 
 cheatsheet
 
 <https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf>
+
+```sh
+conda update -n base conda
+```
 
 ### 换源
 
@@ -267,7 +271,7 @@ envs_dirs:
   - /path/to
 ```
 
-## font
+## Font
 
 ```bash
 sudo cp -r windowsfont/ /usr/local/share/fonts/
