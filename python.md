@@ -87,7 +87,7 @@ list_tof = (numpy.array([1,2]) == 1)
 ## Matplotlib
 
 ```py
-from matplotlib import pyplot
+from matplotlib import pyplot as plt
 import numpy
 import matplotlib
 
@@ -106,7 +106,26 @@ ax.set_xlim((None,None))
 ax.set_ylim((None,None))
 fig.set_size_inches(7, 6)
 fig.savefig('', bbox_inches='tight')
-pyplot.show()
+plt.show()
+```
+
+font
+
+```py
+from matplotlib import rc
+rc('font',**{'size':15, 'family':'sans-serif','sans-serif':['Arial']})
+```
+
+unicode
+
+```py
+'\N{Asterisk}'
+```
+
+mathtex
+
+```py
+r'$a_1$'
 ```
 
 ## class
