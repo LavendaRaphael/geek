@@ -95,7 +95,7 @@ matplotlib.rcParams['font.size']=15
 matplotlib.rcParams['font.family']='sans-serif'
 matplotlib.rcParams['font.sans-serif']=["Arial"]
 
-fig, ax = pyplot.subplots()
+fig, ax = plt.subplots()
 
 ax.plot( array_data[0], array_data[1], label = '', linewidth=2)
 
