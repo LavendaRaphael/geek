@@ -204,8 +204,6 @@ with open('file', 'r') as file_open:
 
 ```py
 file_open.readline()
-file_open.next()
-next( file_open )
 ```
 
 Note: `.readline()` can't used with `.next()`.
