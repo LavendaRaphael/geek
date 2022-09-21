@@ -14,7 +14,7 @@
     - [bug](#bug)
   - [读取行参数个数](#读取行参数个数)
   - [读取文件行数](#读取文件行数)
-  - [mpi](#mpi)
+  - [MPI](#mpi)
   - [模板](#模板)
   - [SUBROUTINE](#subroutine)
 
@@ -106,7 +106,7 @@ subroutine sub_nlines(file_unit,nlines)
 end subroutine sub_nlines
 ```
 
-## mpi
+## MPI
 
 ```fortan
 use mpi
@@ -174,7 +174,7 @@ endif
 
 重命名log文件，添加时间
 
-```fortan
+```fortran
 if (rank==0) then
     call system_clock (clock_end, clock_rate)
     write (errfile_unit, ' (A25, F)') 'Elapsed time (s)', (clock_end-clock_start)/real(clock_rate)
