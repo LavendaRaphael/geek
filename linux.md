@@ -5,6 +5,7 @@
 <!-- code_chunk_output -->
 
 - [bash](#bash)
+  - [删除空目录](#删除空目录)
   - [Gcc](#gcc)
   - [Timer](#timer)
   - [嵌入脚本](#嵌入脚本)
@@ -106,6 +107,12 @@
   - [chmod](#chmod)
 
 <!-- /code_chunk_output -->
+
+## 删除空目录
+
+```sh
+find ./ -type d -empty -delete
+```
 
 ## Gcc
 
