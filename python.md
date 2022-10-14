@@ -171,8 +171,8 @@ json.dump( obj, fp, indent=None )
 
 ```python
 import subprocess
-subprocess_echo = subprocess.run( ['echo','hello'] , shell=True ,stdout=subprocess.PIPE, encoding="utf-8")
-print(subprocess_echo.stdout)
+subprocess_results = subprocess.run( 'echo hello', shell=True, check=True, text=True, executable='/bin/bash')
+print(subprocess_results.stdout)
 ```
 
 ## copy
