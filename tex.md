@@ -579,7 +579,10 @@ fullcite in section 失效问题
 <https://tex.stackexchange.com/questions/420162/footfullcite-not-showing-when-used-within-a-wrapfigure>
 
 ```tex
-\newcommand*\publistbasestyle{nature}
+% with title
+%\newcommand*\publistbasestyle{nature}
+% no title
+\newcommand*\publistbasestyle{chem-acs}
 \usepackage[bibstyle=publist,linktitleall=true,isbn=false,doi=false,url=false,eprint=false,plauthorhandling=highlight,boldyear=false,nameorder=given-family]{biblatex}
 \plauthorname[Feifei]{Tian}
 \renewcommand{\footnotesize}{\fontsize{7pt}{9pt}\selectfont}

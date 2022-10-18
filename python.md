@@ -5,6 +5,7 @@
 <!-- code_chunk_output -->
 
 - [python](#python)
+  - [Loop](#loop)
   - [Tar](#tar)
   - [Path](#path)
   - [Format](#format)
@@ -35,6 +36,13 @@
     - [render](#render)
 
 <!-- /code_chunk_output -->
+
+## Loop
+
+```py
+for id, element in enumerate([1,2,3]):
+for i1, i2 in zip([1,2,3],[4,5,6]):
+```
 
 ## Tar
 
