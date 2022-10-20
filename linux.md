@@ -133,17 +133,6 @@ make -j 4
 make install
 ```
 
-```sh
-install_dir=${homedir}/install/gcc-12.1.0
-
-export PATH="${install_dir}/bin:$PATH"
-export CPATH="${install_dir}/include:$CPATH"
-export LIBRARY_PATH="${install_dir}/lib:$LIBRARY_PATH"
-export LIBRARY_PATH="${install_dir}/lib64:$LIBRARY_PATH"
-export LD_LIBRARY_PATH="${install_dir}/lib:$LD_LIBRARY_PATH"
-export LD_LIBRARY_PATH="${install_dir}/lib64:$LD_LIBRARY_PATH"
-```
-
 ## Timer
 
 <https://unix.stackexchange.com/questions/53841/how-to-use-a-timer-in-bash>
