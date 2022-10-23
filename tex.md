@@ -12,14 +12,13 @@
   - [Chem](#chem)
   - [timer](#timer)
   - [TOC](#toc)
-  - [template](#template)
-    - [beamer](#beamer)
-    - [article](#article)
-    - [include](#include)
-    - [documentclass](#documentclass)
-  - [tikz](#tikz)
+  - [Beamer](#beamer)
+  - [Article](#article)
+  - [Include](#include)
+  - [Documentclass](#documentclass)
+  - [Tikz](#tikz)
   - [Font](#font)
-    - [Blod](#blod)
+    - [blod](#blod)
     - [fonttype](#fonttype)
     - [fontsize](#fontsize)
   - [中文](#中文)
@@ -42,13 +41,13 @@
     - [首行缩进](#首行缩进)
     - [页边距](#页边距)
   - [filecontents](#filecontents)
-  - [logo](#logo)
+  - [Logo](#logo)
     - [method1](#method1)
     - [method2](#method2)
   - [换行](#换行)
-  - [comment](#comment)
-  - [date](#date)
-  - [item](#item)
+  - [Comment](#comment)
+  - [Date](#date)
+  - [Item](#item)
   - [symbol](#symbol)
     - [math](#math)
     - [overarc](#overarc)
@@ -63,9 +62,7 @@
     - [angstrom](#angstrom)
     - [arrow](#arrow)
     - [icon](#icon)
-  - [highlight](#highlight)
-    - [box](#box)
-    - [beamer](#beamer-1)
+  - [Highlight](#highlight)
   - [superlink](#superlink)
   - [double column](#double-column)
   - [equation](#equation)
@@ -198,19 +195,24 @@ adsorption
 \chapter*{test}
 ```
 
-## template
-
-### beamer
+## Beamer
 
 ```tex
-%---------------------------------------------------------------------------------------------------[Package]
 \documentclass[aspectratio=169]{beamer}
-\usepackage[T1]{fontenc}
+```
+
+```tex
 % [移除导航]
 \setbeamertemplate{navigation symbols}{}
+```
+
+```tex
 % [theme]
 \usetheme{Madrid}
 \usecolortheme{beaver}
+```
+
+```tex
 %---------------------------------------------------------------------------------------------------[Head]
 %[titleset]
 \title[] %optional
@@ -227,6 +229,10 @@ adsorption
 \date[] % (optional)
 {\today}
 
+\frame{\titlepage}
+```
+
+```tex
 %-------------------------------------------------------------------------------------[atbeginsection]
 \AtBeginSection[]
 {
@@ -263,57 +269,64 @@ adsorption
     ]
   \end{frame}
 }
-%-------------------------------------------------------------------------------------[begindocument]
-\begin{document}
-
-\frame{\titlepage}
 
 \begin{frame}
   \frametitle{Table of Contents}
   \tableofcontents[subsectionstyle=show/show/hide]
 \end{frame}
-%-------------------------------------------------------------------------------------[section]
+```
+
+```tex
 \section{First section}
 
 \begin{frame}{}
 
 \end{frame}
-
-%---------------------------------------------------------------------------------------------------[END]
-\end{document}
 ```
 
-### article
+```tex
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+\begin{block}{}
+\end{block}
+
+\begin{alertblock}{}
+\end{alertblock}
+
+\begin{exampleblock}{}
+\end{exampleblock}
+```
+
+## Article
 
 ```tex
-%---------------------------------------------------------------------------------------------------[Package]
 \documentclass[a4paper]{article}
-\usepackage[T1]{fontenc}
+```
 
+```tex
 \usepackage[cm]{fullpage}
+```
 
+```tex
 \title{}
 \author{}
 \date{}
-%-------------------------------------------------------------------------------------[begindocument]
-\begin{document}
 
 \maketitle
-
-\begin{abstract}
-\end{abstract}
-
-%---------------------------------------------------------------------------------------------------[END]
-\end{document}
 ```
 
-### include
+```tex
+\begin{abstract}
+\end{abstract}
+```
+
+## Include
 
 ```tex
 \input{~/codes/group/common/beamer_header}
 ```
 
-### documentclass
+## Documentclass
 
 <https://en.wikibooks.org/wiki/LaTeX/Document_Structure>
 |Command                            |Level  |Comment
@@ -326,7 +339,7 @@ adsorption
 |`\paragraph{''paragraph''}`        |4      |not in letters
 |`\subparagraph{''subparagraph''}`  |5      |not in letters
 
-## tikz
+## Tikz
 
 ```tex
 %-------------------------------------------------------------------------------------[flowchart]
@@ -361,7 +374,12 @@ adsorption
 
 <https://en.wikibooks.org/wiki/LaTeX/Fonts>
 
-### Blod
+
+```tex
+\usepackage[T1]{fontenc}
+```
+
+### blod
 
 global bold
 
@@ -596,6 +614,13 @@ fullcite in section 失效问题
 \newrobustcmd*{\footfullcitetextallauthor}{%
   \AtNextCite{\AtEachCitekey{\defcounter{maxnames}{999}}}%
   \footfullcitetext}
+\newrobustcmd*{\fullciteallauthor}{%
+  \AtNextCite{\AtEachCitekey{\defcounter{maxnames}{999}}}%
+  \fullcite}
+
+%-------------[Exclude my reference]
+\DeclareBibliographyCategory{fullcited}
+\newcommand{\mybibexclude}[1]{\addtocategory{fullcited}{#1}}
 
 \addtocounter{footnote}{1}
 \footfullcitetext{test1}
@@ -701,7 +726,7 @@ fullcite in section 失效问题
 \end{filecontents}
 ```
 
-## logo
+## Logo
 
 ### method1
 
@@ -742,7 +767,7 @@ fullcite in section 失效问题
 - `\par` 等同于空行
 - `\\` 对齐时使用
 
-## comment
+## Comment
 
 ```tex
 \usepackage{comment}
@@ -751,7 +776,7 @@ fullcite in section 失效问题
 \end{comment}
 ```
 
-## date
+## Date
 
 ```tex
 \usepackage[USenglish,UKenglish,french,spanish,italian]{babel}
@@ -765,7 +790,7 @@ fullcite in section 失效问题
 
 <https://tex.stackexchange.com/questions/141824/how-to-write-a-non-today-date-in-latex-with-localization-formatting>
 
-## item
+## Item
 
 <https://www.overleaf.com/learn/latex/lists>
 
@@ -917,14 +942,11 @@ $
 \faGlobe
 ```
 
-## highlight
-
-### box
-
-<https://texample.net/tikz/examples/boxes-with-text-and-math/>
-<https://tex.stackexchange.com/questions/521148/how-can-i-get-the-definition-and-theorem-environment-like-these-in-latex-package>
+## Highlight
 
 ```tex
+% <https://texample.net/tikz/examples/boxes-with-text-and-math/>  
+% <https://tex.stackexchange.com/questions/521148/how-can-i-get-the-definition-and-theorem-environment-like-these-in-latex-package>
 \usepackage{xcolor}
 \definecolor{amber}{rgb}{1.0, 0.49, 0.0}
 
@@ -946,23 +968,8 @@ $
 \mybox{0.5\textwidth}{some title}{something}
 ```
 
-### beamer
-
 ```tex
-\begin{frame}{}
-
-    \alert{something}
-
-    \begin{block}{}
-    \end{block}
-
-    \begin{alertblock}{}
-    \end{alertblock}
-
-    \begin{exampleblock}{}
-    \end{exampleblock}
-
-\end{frame}
+\alert{something}
 ```
 
 ## superlink
