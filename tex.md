@@ -63,7 +63,7 @@
     - [arrow](#arrow)
     - [icon](#icon)
   - [Highlight](#highlight)
-  - [superlink](#superlink)
+  - [Superlink](#superlink)
   - [double column](#double-column)
   - [equation](#equation)
     - [align](#align)
@@ -74,7 +74,7 @@
     - [listing内命令](#listing内命令)
   - [proof](#proof)
   - [Table](#table)
-  - [figure](#figure)
+  - [Figure](#figure)
     - [basic](#basic)
     - [position](#position)
     - [gif](#gif)
@@ -972,7 +972,7 @@ $
 \alert{something}
 ```
 
-## superlink
+## Superlink
 
 ```tex
 % 放到 usepackage 最后
@@ -1171,7 +1171,7 @@ multirow
 \end{table}
 ```
 
-## figure
+## Figure
 
 ### basic
 

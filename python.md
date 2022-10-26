@@ -14,7 +14,7 @@
     - [array](#array)
     - [mask](#mask)
   - [Matplotlib](#matplotlib)
-  - [class](#class)
+  - [Class](#class)
   - [def](#def)
     - [Mutable default parameter](#mutable-default-parameter)
   - [json](#json)
@@ -77,6 +77,7 @@ print(f'{math.pi:.3f}')
 ### readtxt
 
 ```py
+numpy.loadtxt('file')
 numpy.genfromtxt('file', names=True, usecols=(1,2))
 ```
 
@@ -96,12 +97,6 @@ list_tof = (numpy.array([1,2]) == 1)
 
 ```py
 from matplotlib import pyplot as plt
-import numpy
-import matplotlib
-
-matplotlib.rcParams['font.size']=15
-matplotlib.rcParams['font.family']='sans-serif'
-matplotlib.rcParams['font.sans-serif']=["Arial"]
 
 fig, ax = plt.subplots()
 
@@ -124,6 +119,13 @@ from matplotlib import rc
 rc('font',**{'size':15, 'family':'sans-serif','sans-serif':['Arial']})
 ```
 
+```py
+import matplotlib
+matplotlib.rcParams['font.size']=15
+matplotlib.rcParams['font.family']='sans-serif'
+matplotlib.rcParams['font.sans-serif']=["Arial"]
+```
+
 unicode
 
 ```py
@@ -136,7 +138,7 @@ mathtex
 r'$a_1$'
 ```
 
-## class
+## Class
 
 ```py
 class class_test():
