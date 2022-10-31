@@ -24,14 +24,16 @@
   - [中文](#中文)
   - [Cite](#cite)
     - [biblatex](#biblatex)
-      - [autocite](#autocite)
-      - [fullcite](#fullcite)
-    - [footnote](#footnote)
-      - [footnotetext](#footnotetext)
-      - [footcite](#footcite)
-      - [footcitetext](#footcitetext)
-      - [footfullcite](#footfullcite)
-      - [footfullcitetext](#footfullcitetext)
+    - [style](#style)
+    - [autocite](#autocite)
+    - [fullcite](#fullcite)
+    - [fullciteallauthor](#fullciteallauthor)
+  - [Footnote](#footnote)
+    - [footnotetext](#footnotetext)
+    - [footcite](#footcite)
+    - [footcitetext](#footcitetext)
+    - [footfullcite](#footfullcite)
+    - [footfullcitetext](#footfullcitetext)
   - [variable](#variable)
   - [0补全](#0补全)
   - [loop](#loop)
@@ -501,7 +503,16 @@ print fontsize
 \printbibliography
 ```
 
-#### autocite
+### style
+
+```tex
+\usepackage[style=phys]{biblatex}
+\usepackage[style=chem-acs]{biblatex}
+\usepackage[style=nature]{biblatex}
+\usepackage[style=science]{biblatex}
+```
+
+### autocite
 
 ```tex
 \usepackage[style=phys,autocite=plain]{biblatex}
@@ -509,7 +520,7 @@ print fontsize
 \autocite{}
 ```
 
-#### fullcite
+### fullcite
 
 ```tex
 \usepackage[style=nature]{biblatex}
@@ -524,7 +535,21 @@ fullcite in section 失效问题
 \fullcite{}
 ```
 
-### footnote
+### fullciteallauthor
+
+```tex
+\newcommand*\publistbasestyle{nature}
+\usepackage[bibstyle=publist,linktitleall=true,isbn=false,doi=false,url=false,eprint=false,plauthorhandling=highlight,boldyear=false,nameorder=given-family]{biblatex}
+\plauthorname[Feifei]{Tian}
+\newrobustcmd*{\fullciteallauthor}{%
+  \AtNextCite{\AtEachCitekey{\defcounter{maxnames}{999}}}%
+  \fullcite}
+
+\addtocounter{footnote}{1}
+\footfullcitetext{test1}
+```
+
+## Footnote
 
 ```tex
 \footnote{}
@@ -537,20 +562,17 @@ fullcite in section 失效问题
 \renewcommand{\footnotesize}{\fontsize{7pt}{9pt}\selectfont}
 ```
 
-#### footnotetext
+### footnotetext
 
 ```tex
 \footnotemark
-\footnotemark
-\addtocounter{footnote}{-2}
 
 \addtocounter{footnote}{1}
+
 \footnotetext{test1}
-\addtocounter{footnote}{1}
-\footnotetext{test2}
 ```
 
-#### footcite
+### footcite
 
 ```tex
 \usepackage[style=nature,doi=false,url=false]{biblatex}
@@ -568,13 +590,13 @@ fullcite in section 失效问题
 }
 ```
 
-#### footcitetext
+### footcitetext
 
 ```tex
 \footcitetext{test1}
 ```
 
-#### footfullcite
+### footfullcite
 
 ```tex
 \usepackage[style=nature,doi=false,url=false]{biblatex}
@@ -592,18 +614,11 @@ fullcite in section 失效问题
 }
 ```
 
-#### footfullcitetext
+### footfullcitetext
 
 <https://tex.stackexchange.com/questions/420162/footfullcite-not-showing-when-used-within-a-wrapfigure>
 
 ```tex
-% with title
-%\newcommand*\publistbasestyle{nature}
-% no title
-\newcommand*\publistbasestyle{chem-acs}
-\usepackage[bibstyle=publist,linktitleall=true,isbn=false,doi=false,url=false,eprint=false,plauthorhandling=highlight,boldyear=false,nameorder=given-family]{biblatex}
-\plauthorname[Feifei]{Tian}
-\renewcommand{\footnotesize}{\fontsize{7pt}{9pt}\selectfont}
 \DeclareCiteCommand{\footfullcitetext}[\mkbibfootnotetext]
   {\usebibmacro{prenote}}
   {\usedriver
@@ -611,16 +626,6 @@ fullcite in section 失效问题
      {\thefield{entrytype}}}
   {\multicitedelim}
   {\usebibmacro{postnote}}
-\newrobustcmd*{\footfullcitetextallauthor}{%
-  \AtNextCite{\AtEachCitekey{\defcounter{maxnames}{999}}}%
-  \footfullcitetext}
-\newrobustcmd*{\fullciteallauthor}{%
-  \AtNextCite{\AtEachCitekey{\defcounter{maxnames}{999}}}%
-  \fullcite}
-
-%-------------[Exclude my reference]
-\DeclareBibliographyCategory{fullcited}
-\newcommand{\mybibexclude}[1]{\addtocategory{fullcited}{#1}}
 
 \addtocounter{footnote}{1}
 \footfullcitetext{test1}
