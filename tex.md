@@ -34,15 +34,13 @@
     - [footcitetext](#footcitetext)
     - [footfullcite](#footfullcite)
     - [footfullcitetext](#footfullcitetext)
-  - [variable](#variable)
+  - [Variable](#variable)
   - [0补全](#0补全)
   - [loop](#loop)
   - [fileexist](#fileexist)
   - [html](#html)
-  - [pagesize](#pagesize)
-    - [首行缩进](#首行缩进)
-    - [页边距](#页边距)
-  - [filecontents](#filecontents)
+  - [Pagesize](#pagesize)
+  - [Filecontents](#filecontents)
   - [Logo](#logo)
     - [method1](#method1)
     - [method2](#method2)
@@ -66,7 +64,7 @@
     - [icon](#icon)
   - [Highlight](#highlight)
   - [Superlink](#superlink)
-  - [double column](#double-column)
+  - [Column](#column)
   - [equation](#equation)
     - [align](#align)
     - [gather](#gather)
@@ -297,6 +295,12 @@ adsorption
 
 \begin{exampleblock}{}
 \end{exampleblock}
+```
+
+```tex
+\begin{frame}[allowframebreaks]
+    \printbibliography
+\end{frame}
 ```
 
 ## Article
@@ -631,7 +635,7 @@ fullcite in section 失效问题
 \footfullcitetext{test1}
 ```
 
-## variable
+## Variable
 
 <https://www.overleaf.com/learn/latex/Commands>
 
@@ -697,27 +701,26 @@ fullcite in section 失效问题
 <https://gist.github.com/a-rodin/fef3f543412d6e1ec5b6cf55bf197d7b>
 <https://github.com/TeamMeow/vscode-math-to-image>
 
-## pagesize
+## Pagesize
 
 ```tex
 \usepackage[margin=0in,paperwidth=3.25in,paperheight=1.75in]{geometry}
 ```
 
-### 首行缩进
+首行缩进
 
 ```tex
 \parindent 0in
 ```
 
-### 页边距
+页边距
 
 ```tex
 \usepackage{geometry}
 \geometry{a4paper,left=0cm,right=0cm,top=0cm,bottom=0cm}
 ```
 
-
-## filecontents
+## Filecontents
 
 强制 overwrite
 
@@ -939,7 +942,7 @@ $
 ### icon
 
 ```tex
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
 
 \faPhone
 \faEnvelope
@@ -996,7 +999,9 @@ $
 \url{.com}
 ```
 
-## double column
+## Column
+
+Only in beamer
 
 ```tex
 \begin{frame}{}
