@@ -90,7 +90,13 @@ numpy.arange()
 ### mask
 
 ```py
-list_tof = (numpy.array([1,2]) == 1)
+np_array = np.array([
+    [1, 1, 1],
+    [0, 1, 2],
+    [1, 0, 3],
+])
+list_tof = (np_array[:,0]== 1) & (np_array[:,1]== 1)
+np_array[ list_tof ]
 ```
 
 ## Matplotlib
