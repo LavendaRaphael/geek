@@ -303,6 +303,16 @@ adsorption
 \end{frame}
 ```
 
+中文
+
+<https://www.zhihu.com/question/265338022>
+
+```tex
+\documentclass[aspectratio=169]{ctexbeamer}
+\usefonttheme{serif}
+\setCJKmainfont{FandolSong}
+```
+
 ## Article
 
 ```tex
@@ -463,16 +473,21 @@ print fontsize
 
 ## 中文
 
-```tex
-%-------------------------------------------------------------------------------------[documentclass]
-\documentclass{ctexart}
-%-------------------------------------------------------------------------------------[cn]
-\usepackage{ctex}
-% or
-\usepackage{xeCJK}
-%-------------------------------------------------------------------------------------[字体]
-% bakama 禁用
+<https://www.ctan.org/pkg/ctex>
 
+```tex
+\documentclass{ctexart}
+\usepackage[T1]{fontenc}
+```
+
+```tex
+\documentclass{article}
+\usepackage{ctex}
+```
+
+字体
+
+```tex
 % 加黑宋体
 \setCJKmainfont{FandolSong}
 
@@ -483,10 +498,17 @@ print fontsize
 \kai 楷体
 
 % https://www.kancloud.cn/digest/latexeverywhere/181885
+```
 
-%-------------------------------------------------------------------------------------[date]
+日期
+
+```tex
 \zhdate{2021/2/22}
-%-------------------------------------------------------------------------------------[Bakoma CN]
+```
+
+Bakoma
+
+```tex
 % Immitate PDFTeX only for CTEX/expl3
 \ifdefined\XeTeXversion\else\ifdefined\pdftexversion\else
         \newcount\pdftexversion\pdftexversion=140

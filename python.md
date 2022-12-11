@@ -15,10 +15,9 @@
     - [mask](#mask)
   - [Matplotlib](#matplotlib)
   - [Class](#class)
-  - [def](#def)
-    - [Mutable default parameter](#mutable-default-parameter)
+  - [Def](#def)
   - [json](#json)
-  - [subprocess](#subprocess)
+  - [Subprocess](#subprocess)
   - [copy](#copy)
   - [File](#file)
   - [Font](#font)
@@ -163,9 +162,11 @@ class class_():
         self._ = value
 ```
 
-## def
+## Def
 
-### Mutable default parameter
+<https://www.liaoxuefeng.com/wiki/1016959663602400/1017261630425888>
+
+默认参数必须指向不变对象！
 
 ```py
 def def_x(a=None):
@@ -181,7 +182,7 @@ json.load( fp )
 json.dump( obj, fp, indent=None )
 ```
 
-## subprocess
+## Subprocess
 
 <https://stackoverflow.com/questions/4256107/running-bash-commands-in-python>
 
