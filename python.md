@@ -162,6 +162,10 @@ class class_():
         self._ = value
 ```
 
+colormaps
+
+<https://towardsdatascience.com/creating-colormaps-in-matplotlib-4d4de78a04b8>
+
 ## Def
 
 <https://www.liaoxuefeng.com/wiki/1016959663602400/1017261630425888>
