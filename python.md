@@ -101,19 +101,35 @@ np_array[ list_tof ]
 ## Matplotlib
 
 ```py
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
+import matplotlib as mpl
+
+mpl.rcParams['font.size']=12
+mpl.rcParams['pdf.fonttype'] = 42
+mpl.rcParams['ps.fonttype'] = 42
+mpl.rcParams['font.family'] = 'Arial'
 
 fig, ax = plt.subplots()
 
 ax.plot( array_data[0], array_data[1], label = '', linewidth=2)
 
-ax.legend()
 ax.set_xlabel('')
 ax.set_ylabel('')
 ax.set_xlim((None,None))
 ax.set_ylim((None,None))
-fig.set_size_inches(7, 6)
-fig.savefig('', bbox_inches='tight')
+ax.legend(
+    loc = 'upper center',
+    frameon = False,
+    title = 'title',
+    handlelength = 1.0,
+    labelspacing = 0.1,
+)
+
+fig.set_tight_layout(True)
+cm = 1/2.54
+fig.set_size_inches(8.9*cm,7.5*cm)
+fig.savefig('', dpi=450)
+
 plt.show()
 ```
 
@@ -121,14 +137,46 @@ font
 
 ```py
 from matplotlib import rc
-rc('font',**{'size':15, 'family':'sans-serif','sans-serif':['Arial']})
+rc('font',**{'size':12, 'family':'sans-serif','sans-serif':['Arial']})
 ```
 
 ```py
-import matplotlib
-matplotlib.rcParams['font.size']=15
-matplotlib.rcParams['font.family']='sans-serif'
-matplotlib.rcParams['font.sans-serif']=["Arial"]
+import matplotlib as mpl
+mpl.rcParams['font.size']=12
+
+mpl.rcParams['pdf.fonttype'] = 42
+mpl.rcParams['ps.fonttype'] = 42
+
+mpl.rcParams['font.family'] = 'Arial'
+
+mpl.rcParams['font.family']='sans-serif'
+mpl.rcParams['font.sans-serif']=["Arial"]
+```
+
+dpi
+
+```py
+mpl.rcParams['figure.dpi'] = 450
+fig.savefig(str_save, dpi=450)
+```
+
+figsize
+
+```py
+cm = 1/2.54
+fig.set_size_inches(8.9*cm,7.5*cm)
+fig, ax = plt.subplots(figsize=(8.9*cm,7.5*cm))
+```
+
+legend
+
+```py
+ax.legend(
+    loc = 'upper center',
+    frameon = False,
+    title = 'title',
+    handlelength = 1.0
+)
 ```
 
 unicode
@@ -165,6 +213,28 @@ class class_():
 colormaps
 
 <https://towardsdatascience.com/creating-colormaps-in-matplotlib-4d4de78a04b8>
+
+Colors
+
+```py
+import matplotlib.colors as mcolors
+print(mcolors.TABLEAU_COLORS)
+```
+
+```py
+{
+    'tab:blue': '#1f77b4', 
+    'tab:orange': '#ff7f0e', 
+    'tab:green': '#2ca02c', 
+    'tab:red': '#d62728', 
+    'tab:purple': '#9467bd', 
+    'tab:brown': '#8c564b', 
+    'tab:pink': '#e377c2', 
+    'tab:gray': '#7f7f7f', 
+    'tab:olive': '#bcbd22', 
+    'tab:cyan': '#17becf'
+}
+```
 
 ## Def
 

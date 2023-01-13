@@ -45,6 +45,7 @@
     - [method1](#method1)
     - [method2](#method2)
   - [换行](#换行)
+  - [空行](#空行)
   - [Comment](#comment)
   - [Date](#date)
   - [Item](#item)
@@ -797,6 +798,15 @@ fullcite in section 失效问题
 - `\par` 等同于空行
 - `\\` 对齐时使用
 
+## 空行
+
+```tex
+\smallskip
+\medskip
+\bigskip
+\vskip{0.5in}
+```
+
 ## Comment
 
 ```tex
@@ -1241,20 +1251,18 @@ multirow
 
 ```tex
 \usepackage{subcaption}
-\newcommand{\subfigwid}{0.495}
 
-\renewcommand{\subfigwid}{0.495}
 \begin{figure}
     \centering
     %
-    \begin{subfigure}[b]{\subfigwid\textwidth}
+    \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[height=0.8\textheight]{graph1}
         \caption{}
         \label{fig:}
     \end{subfigure}
     %
-    \begin{subfigure}[b]{\subfigwid\textwidth}
+    \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[height=0.8\textheight]{graph3}
         \caption{}
