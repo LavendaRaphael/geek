@@ -4,35 +4,35 @@
 
 <!-- code_chunk_output -->
 
-- [python](#python)
-  - [Loop](#loop)
-  - [Tar](#tar)
-  - [Path](#path)
-  - [Format](#format)
-  - [Numpy](#numpy)
-    - [readtxt](#readtxt)
-    - [array](#array)
-    - [mask](#mask)
-  - [Matplotlib](#matplotlib)
-  - [Class](#class)
-  - [Def](#def)
-  - [json](#json)
-  - [Subprocess](#subprocess)
-  - [copy](#copy)
-  - [File](#file)
-  - [Font](#font)
-  - [Raise](#raise)
-    - [Delete file](#delete-file)
-  - [Import](#import)
-  - [Pip](#pip)
-    - [换源](#换源)
-    - [config](#config)
-    - [install](#install)
-    - [update](#update)
-    - [offline](#offline)
-  - [ase](#ase)
-    - [gif](#gif)
-    - [render](#render)
+- [python](#-python-)
+  - [Loop](#-loop-)
+  - [Tar](#-tar-)
+  - [Path](#-path-)
+  - [Format](#-format-)
+  - [Numpy](#-numpy-)
+    - [readtxt](#-readtxt-)
+    - [array](#-array-)
+    - [mask](#-mask-)
+  - [Matplotlib](#-matplotlib-)
+  - [Class](#-class-)
+  - [Def](#-def-)
+  - [json](#-json-)
+  - [Subprocess](#-subprocess-)
+  - [copy](#-copy-)
+  - [File](#-file-)
+  - [Font](#-font-)
+  - [Raise](#-raise-)
+    - [Delete file](#-delete-file-)
+  - [Import](#-import-)
+  - [Pip](#-pip-)
+    - [换源](#-换源-)
+    - [config](#-config-)
+    - [install](#-install-)
+    - [update](#-update-)
+    - [offline](#-offline-)
+  - [ase](#-ase-)
+    - [gif](#-gif-)
+    - [render](#-render-)
 
 <!-- /code_chunk_output -->
 
@@ -135,6 +135,8 @@ plt.show()
 
 font
 
+必须放在 fig 实例化之前
+
 ```py
 from matplotlib import rc
 rc('font',**{'size':12, 'family':'sans-serif','sans-serif':['Arial']})
@@ -151,6 +153,30 @@ mpl.rcParams['font.family'] = 'Arial'
 
 mpl.rcParams['font.family']='sans-serif'
 mpl.rcParams['font.sans-serif']=["Arial"]
+```
+
+Constrained layout
+
+```py
+mpl.rcParams['figure.constrained_layout.use'] = True
+```
+
+Tight layout
+
+```py
+fig.set_tight_layout(True)
+plt.tight_layout()
+mpl.rcParams["figure.autolayout"] = True
+
+fig.set_tight_layout(False)
+fig.subplots_adjust(
+    left = ,
+    right = ,
+    bottom = ,
+    top = ,
+    wspace = ,
+    hspace = ,
+)
 ```
 
 dpi
