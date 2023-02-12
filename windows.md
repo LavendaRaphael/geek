@@ -4,53 +4,50 @@
 
 <!-- code_chunk_output -->
 
-- [Windows](#windows)
-  - [重装前](#重装前)
-  - [Onedrive](#onedrive)
-    - [exclude](#exclude)
-    - [symbolink](#symbolink)
-  - [ssh-client](#ssh-client)
-  - [wsl2](#wsl2)
-    - [安装](#安装)
-    - [文件系统权限](#文件系统权限)
-    - [wsl命令](#wsl命令)
-    - [link](#link)
-    - [ssh自启](#ssh自启)
-    - [外部局域网访问](#外部局域网访问)
-    - [screen](#screen)
-    - [latexworkshop](#latexworkshop)
-    - [硬盘存储占用无法释放](#硬盘存储占用无法释放)
-  - [proxy](#proxy)
-    - [Win-gui](#win-gui)
-      - [v2rayN](#v2rayn)
-      - [SwitchOmega](#switchomega)
-      - [SSR](#ssr)
-      - [clash](#clash)
-  - [词典](#词典)
-    - [有道](#有道)
-  - [reader](#reader)
-    - [smartraPDF](#smartrapdf)
-  - [aria2](#aria2)
-  - [bugs](#bugs)
-  - [Chromeos](#chromeos)
-  - [邮件客户端](#邮件客户端)
-  - [文献管理](#文献管理)
-    - [endnote](#endnote)
-      - [shortage](#shortage)
-      - [notes](#notes)
-    - [sciwheel](#sciwheel)
-    - [Mendeley](#mendeley)
-  - [andoid emulator](#andoid-emulator)
-    - [ss代理应用](#ss代理应用)
-    - [浏览器代理](#浏览器代理)
-    - [雷电4.0](#雷电40)
-    - [mumu 6.0](#mumu-60)
-    - [AVD](#avd)
-    - [vs-emulator](#vs-emulator)
-  - [word](#word)
-    - [bug](#bug)
-  - [anjian](#anjian)
-    - [notes](#notes-1)
+- [Windows](#-windows)
+  - [重装前](#-重装前)
+  - [Onedrive](#-onedrive)
+    - [exclude](#-exclude)
+    - [symbolink](#-symbolink)
+  - [ssh-client](#-ssh-client)
+  - [wsl2](#-wsl2)
+    - [安装](#-安装)
+    - [文件系统权限](#-文件系统权限)
+    - [wsl命令](#-wsl命令)
+    - [link](#-link)
+    - [ssh自启](#-ssh自启)
+    - [外部局域网访问](#-外部局域网访问)
+    - [screen](#-screen)
+    - [latexworkshop](#-latexworkshop)
+    - [硬盘存储占用无法释放](#-硬盘存储占用无法释放)
+  - [proxy](#-proxy)
+    - [Win-gui](#-win-gui)
+      - [v2rayN](#-v2rayn)
+      - [SwitchOmega](#-switchomega)
+      - [SSR](#-ssr)
+      - [clash](#-clash)
+  - [词典](#-词典)
+    - [有道](#-有道)
+  - [reader](#-reader)
+    - [smartraPDF](#-smartrapdf)
+  - [aria2](#-aria2)
+  - [bugs](#-bugs)
+  - [Chromeos](#-chromeos)
+  - [邮件客户端](#-邮件客户端)
+  - [文献管理](#-文献管理)
+    - [Zotero](#-zotero)
+    - [Endnote](#-endnote)
+    - [Sciwheel](#-sciwheel)
+    - [Mendeley](#-mendeley)
+  - [安卓模拟器](#-安卓模拟器)
+    - [雷电4.0](#-雷电40)
+    - [mumu 6.0](#-mumu-60)
+    - [AVD](#-avd)
+    - [vs-emulator](#-vs-emulator)
+  - [word](#-word)
+    - [bug](#-bug)
+  - [anjian](#-anjian)
+    - [notes](#-notes)
 
 <!-- /code_chunk_output -->
 
@@ -274,32 +271,27 @@ recovery镜像
 
 ## 邮件客户端
 
-foxmail
-
-来信图标不消除
-
-em client
-
-文字检索功能失效
-
-网易邮箱
-
-联系人
-
-outlook uwp
-
-插入图片显示异常
+- foxmail
+  - 来信图标不消除
+- em client
+  - 文字检索功能失效
+- 网易邮箱
+  - 联系人
+- outlook uwp
+  - 插入图片显示异常
 
 ## 文献管理
 
-### endnote
+### Zotero
 
-#### shortage
+### Endnote
+
+缺点
 
 - 文献缩写不规范，格式老旧更新慢
-- 没有浏览器插件
+- click.endnote与endnoteonline账号不统一
 
-#### notes
+注意
 
 - output style
   - modify
@@ -309,7 +301,7 @@ outlook uwp
   - <https://jcr.incites.thomsonreuters.com/JCRLandingPageAction.action>
   - <https://www.ncbi.nlm.nih.gov/nlmcatalog/journals>
 
-### sciwheel
+### Sciwheel
 
 - word插件卡的不能自理
 - 删除文献删不干净
@@ -317,23 +309,23 @@ outlook uwp
 
 ### Mendeley
 
-- word插件，PRB 引用格式不符
+- word插件消失，PRB 引用格式不符
 - 排序自动被重置
 - 文献看不到归属分组
 
-## andoid emulator
+## 安卓模拟器
 
-### ss代理应用
+ss代理应用
 
-Proxifier
-服务器：127.0.0.1
-代理规则：联网软件
-缺陷：模拟器内浏览器无法通过代理
+- Proxifier
+- 服务器：127.0.0.1
+- 代理规则：联网软件
+- 缺陷：模拟器内浏览器无法通过代理
 
-### 浏览器代理
+浏览器代理
 
-Wifi代理获取pc本地ip
-ipconfig
+- Wifi代理获取pc本地ip
+- ipconfig
 
 ### 雷电4.0
 
