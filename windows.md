@@ -284,6 +284,8 @@ recovery镜像
 
 ### Zotero
 
+- 没法像 mendeley 一样对已有文献用doi自动更新
+
 ### Endnote
 
 缺点
