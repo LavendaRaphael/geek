@@ -4,35 +4,44 @@
 
 <!-- code_chunk_output -->
 
-- [python](#-python-)
-  - [Loop](#-loop-)
-  - [Tar](#-tar-)
-  - [Path](#-path-)
-  - [Format](#-format-)
-  - [Numpy](#-numpy-)
-    - [readtxt](#-readtxt-)
-    - [array](#-array-)
-    - [mask](#-mask-)
-  - [Matplotlib](#-matplotlib-)
-  - [Class](#-class-)
-  - [Def](#-def-)
-  - [json](#-json-)
-  - [Subprocess](#-subprocess-)
-  - [copy](#-copy-)
-  - [File](#-file-)
-  - [Font](#-font-)
-  - [Raise](#-raise-)
-    - [Delete file](#-delete-file-)
-  - [Import](#-import-)
-  - [Pip](#-pip-)
-    - [换源](#-换源-)
-    - [config](#-config-)
-    - [install](#-install-)
-    - [update](#-update-)
-    - [offline](#-offline-)
-  - [ase](#-ase-)
-    - [gif](#-gif-)
-    - [render](#-render-)
+- [python](#python)
+  - [Loop](#loop)
+  - [Tar](#tar)
+  - [Path](#path)
+  - [Format](#format)
+  - [Numpy](#numpy)
+    - [readtxt](#readtxt)
+    - [array](#array)
+    - [mask](#mask)
+  - [Matplotlib](#matplotlib)
+    - [colorbar](#colorbar)
+    - [font](#font)
+    - [Constrained layout](#constrained-layout)
+    - [Tight layout](#tight-layout)
+    - [dpi](#dpi)
+    - [figsize](#figsize)
+      - [legend](#legend)
+    - [unicode](#unicode)
+    - [mathtex](#mathtex)
+  - [Class](#class)
+  - [Def](#def)
+  - [json](#json)
+  - [Subprocess](#subprocess)
+  - [copy](#copy)
+  - [File](#file)
+  - [Font](#font-1)
+  - [Raise](#raise)
+    - [Delete file](#delete-file)
+  - [Import](#import)
+  - [Pip](#pip)
+    - [换源](#换源)
+    - [config](#config)
+    - [install](#install)
+    - [update](#update)
+    - [offline](#offline)
+  - [ase](#ase)
+    - [gif](#gif)
+    - [render](#render)
 
 <!-- /code_chunk_output -->
 
@@ -133,7 +142,17 @@ fig.savefig('', dpi=450)
 plt.show()
 ```
 
-font
+### colorbar
+
+```py
+norm = plt.Normalize(0, 1)
+cmap = 'coolwarm'
+ax.scatter( , c=0.5, cmap=cmap, norm=norm, alpha=0.5)
+smap = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
+fig.colorbar(smap)
+```
+
+### font
 
 必须放在 fig 实例化之前
 
@@ -155,13 +174,13 @@ mpl.rcParams['font.family']='sans-serif'
 mpl.rcParams['font.sans-serif']=["Arial"]
 ```
 
-Constrained layout
+### Constrained layout
 
 ```py
 mpl.rcParams['figure.constrained_layout.use'] = True
 ```
 
-Tight layout
+### Tight layout
 
 ```py
 fig.set_tight_layout(True)
@@ -179,14 +198,14 @@ fig.subplots_adjust(
 )
 ```
 
-dpi
+### dpi
 
 ```py
 mpl.rcParams['figure.dpi'] = 450
 fig.savefig(str_save, dpi=450)
 ```
 
-figsize
+### figsize
 
 ```py
 cm = 1/2.54
@@ -194,7 +213,7 @@ fig.set_size_inches(8.9*cm,7.5*cm)
 fig, ax = plt.subplots(figsize=(8.9*cm,7.5*cm))
 ```
 
-legend
+#### legend
 
 ```py
 ax.legend(
@@ -205,13 +224,13 @@ ax.legend(
 )
 ```
 
-unicode
+### unicode
 
 ```py
 '\N{Asterisk}'
 ```
 
-mathtex
+### mathtex
 
 ```py
 r'$a_1$'
