@@ -14,6 +14,7 @@
     - [array](#array)
     - [mask](#mask)
   - [Matplotlib](#matplotlib)
+    - [rasterize](#rasterize)
     - [colorbar](#colorbar)
     - [font](#font)
     - [Constrained layout](#constrained-layout)
@@ -134,12 +135,17 @@ ax.legend(
     labelspacing = 0.1,
 )
 
-fig.set_tight_layout(True)
 cm = 1/2.54
 fig.set_size_inches(8.9*cm,7.5*cm)
 fig.savefig('', dpi=450)
 
 plt.show()
+```
+
+### rasterize
+
+```py
+ax.scatter(rasterized=True)
 ```
 
 ### colorbar
