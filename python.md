@@ -17,6 +17,7 @@
     - [rasterize](#rasterize)
     - [colorbar](#colorbar)
     - [font](#font)
+    - [Text](#text)
     - [Constrained layout](#constrained-layout)
     - [Tight layout](#tight-layout)
     - [dpi](#dpi)
@@ -178,6 +179,24 @@ mpl.rcParams['font.family'] = 'Arial'
 
 mpl.rcParams['font.family']='sans-serif'
 mpl.rcParams['font.sans-serif']=["Arial"]
+```
+
+### Text
+
+sub/superscipt
+
+```py
+'$_x$'
+'$_\mathregular{x}$'
+```
+
+bold
+
+```py
+ax.text(
+    r'a$_\bf{x}$',
+    fontweight = 'bold'
+)
 ```
 
 ### Constrained layout
