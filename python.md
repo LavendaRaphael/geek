@@ -14,6 +14,7 @@
     - [array](#array)
     - [mask](#mask)
   - [Matplotlib](#matplotlib)
+    - [arrow](#arrow)
     - [rasterize](#rasterize)
     - [colorbar](#colorbar)
     - [font](#font)
@@ -141,6 +142,48 @@ fig.set_size_inches(8.9*cm,7.5*cm)
 fig.savefig('', dpi=450)
 
 plt.show()
+```
+
+### arrow
+
+```py
+ax.arrow(x, y, dx, dy, **kwargs)
+```
+
+```py
+import matplotlib.patches as mpatches
+arrow = mpatches.FancyArrow(
+    x = 0.1+dx/2-0.01,
+    y = 0.3,
+    dx = 0.2-dx,
+    dy = 0,
+    width = 0,
+    length_includes_head = True,
+    head_width = 0.1,
+    head_length = 0.2-dx+0.02,
+    overhang = 0.5,
+    lw = 0,
+)
+ax.add_patch(arrow)
+```
+
+```py
+import matplotlib.patches as mpatches
+arrow = mpatches.FancyArrowPatch(
+    posA=None, 
+    posB=None, 
+    path=None, 
+    arrowstyle='simple', 
+    connectionstyle='arc3', 
+    patchA=None, 
+    patchB=None, 
+    shrinkA=2, 
+    shrinkB=2, 
+    mutation_scale=1, 
+    mutation_aspect=1, 
+    **kwargs
+)
+ax.add_patch(arrow)
 ```
 
 ### rasterize
