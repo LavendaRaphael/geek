@@ -4,57 +4,57 @@
 
 <!-- code_chunk_output -->
 
-- [Windows](#-windows)
-  - [重装前](#-重装前)
-  - [Onedrive](#-onedrive)
-    - [exclude](#-exclude)
-    - [symbolink](#-symbolink)
-  - [ssh-client](#-ssh-client)
-  - [wsl2](#-wsl2)
-    - [安装](#-安装)
-    - [文件系统权限](#-文件系统权限)
-    - [wsl命令](#-wsl命令)
-    - [link](#-link)
-    - [ssh自启](#-ssh自启)
-    - [外部局域网访问](#-外部局域网访问)
-    - [screen](#-screen)
-    - [latexworkshop](#-latexworkshop)
-    - [硬盘存储占用无法释放](#-硬盘存储占用无法释放)
-  - [proxy](#-proxy)
-    - [Win-gui](#-win-gui)
-      - [v2rayN](#-v2rayn)
-      - [SwitchOmega](#-switchomega)
-      - [SSR](#-ssr)
-      - [clash](#-clash)
-  - [词典](#-词典)
-    - [有道](#-有道)
-  - [reader](#-reader)
-    - [smartraPDF](#-smartrapdf)
-  - [aria2](#-aria2)
-  - [bugs](#-bugs)
-  - [Chromeos](#-chromeos)
-  - [邮件客户端](#-邮件客户端)
-  - [文献管理](#-文献管理)
-    - [Zotero](#-zotero)
-    - [Endnote](#-endnote)
-    - [Sciwheel](#-sciwheel)
-    - [Mendeley](#-mendeley)
-  - [安卓模拟器](#-安卓模拟器)
-    - [雷电4.0](#-雷电40)
-    - [mumu 6.0](#-mumu-60)
-    - [AVD](#-avd)
-    - [vs-emulator](#-vs-emulator)
-  - [word](#-word)
-    - [bug](#-bug)
-  - [anjian](#-anjian)
-    - [notes](#-notes)
+- [Windows](#windows)
+  - [重装前](#重装前)
+  - [Onedrive](#onedrive)
+    - [exclude](#exclude)
+    - [symbolink](#symbolink)
+  - [ssh-client](#ssh-client)
+  - [wsl2](#wsl2)
+    - [安装](#安装)
+    - [文件系统权限](#文件系统权限)
+    - [wsl命令](#wsl命令)
+    - [link](#link)
+    - [ssh自启](#ssh自启)
+    - [外部局域网访问](#外部局域网访问)
+    - [screen](#screen)
+    - [latexworkshop](#latexworkshop)
+    - [硬盘存储占用无法释放](#硬盘存储占用无法释放)
+  - [proxy](#proxy)
+    - [Win-gui](#win-gui)
+      - [v2rayN](#v2rayn)
+      - [SwitchOmega](#switchomega)
+      - [SSR](#ssr)
+      - [clash](#clash)
+  - [词典](#词典)
+    - [有道](#有道)
+  - [PDF](#pdf)
+    - [Adobe](#adobe)
+    - [smartraPDF](#smartrapdf)
+  - [aria2](#aria2)
+  - [bugs](#bugs)
+  - [Chromeos](#chromeos)
+  - [邮件客户端](#邮件客户端)
+  - [文献管理](#文献管理)
+    - [Zotero](#zotero)
+    - [Endnote](#endnote)
+    - [Sciwheel](#sciwheel)
+    - [Mendeley](#mendeley)
+  - [安卓模拟器](#安卓模拟器)
+    - [雷电4.0](#雷电40)
+    - [mumu 6.0](#mumu-60)
+    - [AVD](#avd)
+    - [vs-emulator](#vs-emulator)
+  - [word](#word)
+    - [bug](#bug)
+  - [anjian](#anjian)
+    - [notes](#notes)
 
 <!-- /code_chunk_output -->
 
 ## 重装前
 
 - Originlab deactive
-- SwichOmega bakup
 - eudic bakup
 - xshell
 - anjian
@@ -202,12 +202,19 @@ export PATH=~/software/texlive/2021/bin/x86_64-linux:$PATH
 
 转圈圈
 
-## reader
+## PDF
+
+### Adobe
+
+- GenP
+  - <https://www.reddit.com/r/GenP/wiki/patchmethods>
+  - <https://www.reddit.com/r/GenP/wiki/redditgenpguides>
+  - ACROPOLIS
+    - 注意设置CMD代理
 
 ### smartraPDF
-
-字符不显示
-底色红
+  - 字符不显示
+  - 底色红
 
 ## aria2
 
