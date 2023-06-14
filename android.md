@@ -1,5 +1,10 @@
 # Android
 
+## Playstore
+
+- chrome，android system webview 无法更新
+  - 清楚store数据
+
 ## Script
 
 - Anjian
