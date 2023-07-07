@@ -17,6 +17,7 @@
     - [link](#link)
     - [ssh自启](#ssh自启)
     - [外部局域网访问](#外部局域网访问)
+    - [开机自启](#开机自启)
     - [screen](#screen)
     - [latexworkshop](#latexworkshop)
     - [硬盘存储占用无法释放](#硬盘存储占用无法释放)
@@ -136,6 +137,10 @@ service ssh start
 sudo chmod 700 /etc/init.wsl
 ```
 
+```bat
+wsl -d Ubuntu -u root /etc/init.wsl
+```
+
 <https://juejin.im/post/6847902218226499598>
 
 ### 外部局域网访问
@@ -151,7 +156,20 @@ sudo chmod 700 /etc/init.wsl
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
 ```
 
-计算机管理 - 任务计划程序 - 任务计划程序库 - 新文件夹 'me' - 导入 `C:\Users\laven\OneDrive\arxive\myscript\ubuntu.xml`
+### 开机自启
+
+计算机管理 - 任务计划程序 - 任务计划程序库 - 新文件夹 'me'- 
+
+ubuntu.me.bat
+
+```bat
+wsl --shutdown
+wsl -d Ubuntu -u root /etc/init.wsl
+
+PowerShell C:\Users\feife\OneDrive\Mydoc\Script\wsl2-network.ps1
+
+pause>nul
+```
 
 ### screen
 

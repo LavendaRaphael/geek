@@ -29,6 +29,8 @@
     - [fullcite](#fullcite)
     - [fullciteallauthor](#fullciteallauthor)
   - [Footnote](#footnote)
+    - [no line](#no-line)
+    - [no number](#no-number)
     - [footnotetext](#footnotetext)
     - [footcite](#footcite)
     - [footcitetext](#footcitetext)
@@ -80,6 +82,7 @@
     - [position](#position)
     - [gif](#gif)
     - [subfigure](#subfigure)
+    - [minipage](#minipage)
     - [wrap figure](#wrap-figure)
     - [overpic](#overpic)
   - [软件体验](#软件体验)
@@ -587,6 +590,23 @@ fullcite in section 失效问题
 ```tex
 % 7pt 字号，9pt baselineskip
 \renewcommand{\footnotesize}{\fontsize{7pt}{9pt}\selectfont}
+```
+
+### no line
+
+```tex
+\renewcommand*\footnoterule{}
+```
+
+### no number
+
+<https://tex.stackexchange.com/questions/250221/supressing-the-footnote-number>
+```tex
+\makeatletter
+\def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
+\makeatother
+
+\blfootnote{text}
 ```
 
 ### footnotetext
@@ -1271,6 +1291,24 @@ multirow
     %
     \caption{}
     \label{fig:}
+\end{figure}
+```
+
+### minipage
+
+```latex
+\begin{figure}
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{example-image-a} % first figure itself
+        \caption{first figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{example-image-b} % second figure itself
+        \caption{second figure}
+    \end{minipage}
 \end{figure}
 ```
 

@@ -14,6 +14,7 @@
     - [array](#array)
     - [mask](#mask)
   - [Matplotlib](#matplotlib)
+    - [ticks](#ticks)
     - [arrow](#arrow)
     - [rasterize](#rasterize)
     - [colorbar](#colorbar)
@@ -142,6 +143,19 @@ fig.set_size_inches(8.9*cm,7.5*cm)
 fig.savefig('', dpi=450)
 
 plt.show()
+```
+
+### ticks
+
+ticks step
+
+```py
+import matplotlib.ticker as mticker
+ax.yaxis.set_major_locator(mticker.MultipleLocator(1))
+```
+
+```py
+ax.tick_params(labelleft=False)
 ```
 
 ### arrow
