@@ -5,6 +5,7 @@
 <!-- code_chunk_output -->
 
 - [bash](#bash)
+  - [传输](#传输)
   - [删除空目录](#删除空目录)
   - [Gcc](#gcc)
   - [Timer](#timer)
@@ -58,7 +59,7 @@
     - [避开目录](#避开目录)
     - [第一次终止](#第一次终止)
     - [不显示权限不足](#不显示权限不足)
-    - [-mindepth -maxdepth](#-mindepth-maxdepth)
+    - [-mindepth -maxdepth](#-mindepth--maxdepth)
   - [grep](#grep)
     - [多字符匹配](#多字符匹配)
     - [正则表达式](#正则表达式)
@@ -107,6 +108,12 @@
   - [chmod](#chmod)
 
 <!-- /code_chunk_output -->
+
+## 传输
+
+```sh
+rsync -av -e "ssh -p 22112" local_dir user@10.15.22.110:remote_dir
+```
 
 ## 删除空目录
 

@@ -1103,6 +1103,13 @@ x&=y           &  w &=z              &  a&=b+c\\
 \end{gather}
 ```
 
+```tex
+\begin{gather}
+    \begin{gathered}
+    \end{gathered}
+\end{gather}
+```
+
 ### big bracket
 
 ```tex

@@ -5,9 +5,10 @@
 <!-- code_chunk_output -->
 
 - [python](#python)
+  - [Glob](#glob)
   - [Loop](#loop)
   - [Tar](#tar)
-  - [Path](#path)
+  - [Os](#os)
   - [Format](#format)
   - [Numpy](#numpy)
     - [readtxt](#readtxt)
@@ -49,6 +50,14 @@
 
 <!-- /code_chunk_output -->
 
+## Glob
+
+```py
+import glob
+
+glog.glob('**/a.test', recursive=True)
+```
+
 ## Loop
 
 ```py
@@ -66,14 +75,16 @@ with tarfile.open('file.tar','w') as tar:
 tarfile.open('file.tar').extractall(path='./')
 ```
 
-## Path
+## Os
 
 exist
 
 ```py
-import os.path
+import os
+
 os.path.exists(file_path/dir_path)
 os.path.isfile(file_path)
+os.makedirs()
 ```
 
 ## Format
@@ -389,8 +400,8 @@ json.dump( obj, fp, indent=None )
 
 ```python
 import subprocess
-subprocess_results = subprocess.run( 'echo hello', shell=True, check=True, text=True, executable='/bin/bash')
-print(subprocess_results.stdout)
+results = subprocess.run( 'echo hello', shell=True, check=True, text=True, stdout=subprocess.PIPE, executable='/bin/bash')
+print(sresults.stdout)
 ```
 
 ## copy
