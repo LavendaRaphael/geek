@@ -736,8 +736,6 @@ git config --global core.excludesfile $homedir/software/gitignore/Python.gitigno
 git config --global http.proxy http://
 
 git clone https://github.com/LavendaRaphael/common.git
-git clone https://github.com/LavendaRaphael/group.git
-git clone https://github.com/LavendaRaphael/course.git
 git config --global user.email "feifei.tian.cn@gmail.com"
 git config --global user.name "LavendaRaphael"
 git config --global -l

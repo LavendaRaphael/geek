@@ -22,13 +22,7 @@
     - [latexworkshop](#latexworkshop)
     - [硬盘存储占用无法释放](#硬盘存储占用无法释放)
   - [proxy](#proxy)
-    - [Win-gui](#win-gui)
-      - [v2rayN](#v2rayn)
-      - [SwitchOmega](#switchomega)
-      - [SSR](#ssr)
-      - [clash](#clash)
   - [词典](#词典)
-    - [有道](#有道)
   - [PDF](#pdf)
     - [Adobe](#adobe)
     - [smartraPDF](#smartrapdf)
@@ -117,9 +111,7 @@ wsl --shutdown
 ### link
 
 ```bash
-ln -s /mnt/c/Users/feife/OneDrive/Research ~/Research
-ln -s /mnt/c/Users/feife/OneDrive/Doc/script/server.me.sh ~/server.me.sh
-ln -s /mnt/c/Users/feife/OneDrive/SynTemp ~/SynTemp
+ln -s /mnt/c/Users/feife/OneDrive/Research ~/research
 ```
 
 ### ssh自启
@@ -158,9 +150,9 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
 
 ### 开机自启
 
-计算机管理 - 任务计划程序 - 任务计划程序库 - 新文件夹 'me'- 
+计算机管理 - 任务计划程序 - 任务计划程序库 - 新文件夹 'me'
 
-ubuntu.me.bat
+`ubuntu.me.bat`
 
 ```bat
 wsl --shutdown
@@ -197,29 +189,20 @@ export PATH=~/software/texlive/2021/bin/x86_64-linux:$PATH
 
 ## proxy
 
-### Win-gui
-
-#### v2rayN
-
-#### SwitchOmega
-
-- 莫名屏蔽 journal web
-
-#### SSR
-
-- 没有官方客户端
-- 无法批量ping
-
-#### clash
-
-- git代理: 关闭 service mode, socks代理失效
+- v2rayN
+- SwitchOmega
+  - 莫名屏蔽 journal web
+- SSR
+  - 没有官方客户端
+  - 无法批量ping
+- clash
+  - git代理: 关闭 service mode, socks代理失效
 
 ## 词典
 
-### 有道
-
-转圈圈
-
+- 有道
+  - 转圈圈
+  
 ## PDF
 
 ### Adobe
