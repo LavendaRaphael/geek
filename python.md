@@ -15,6 +15,7 @@
     - [array](#array)
     - [mask](#mask)
   - [Matplotlib](#matplotlib)
+  - [gui](#gui)
     - [ticks](#ticks)
     - [arrow](#arrow)
     - [rasterize](#rasterize)
@@ -154,6 +155,14 @@ fig.set_size_inches(8.9*cm,7.5*cm)
 fig.savefig('', dpi=450)
 
 plt.show()
+```
+
+## gui
+
+<https://stackoverflow.com/questions/56656777/userwarning-matplotlib-is-currently-using-agg-which-is-a-non-gui-backend-so>
+
+```py
+sudo apt install python3-tk
 ```
 
 ### ticks

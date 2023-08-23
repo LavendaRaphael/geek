@@ -5,6 +5,7 @@
 <!-- code_chunk_output -->
 
 - [bash](#bash)
+  - [初始化](#初始化)
   - [传输](#传输)
   - [删除空目录](#删除空目录)
   - [Gcc](#gcc)
@@ -108,6 +109,35 @@
   - [chmod](#chmod)
 
 <!-- /code_chunk_output -->
+
+## 初始化
+
+```sh
+git clone https://github.com/LavendaRaphael/common.git
+git clone https://github.com/LavendaRaphael/modulefiles.git
+```
+
+`.config/.tianff`
+
+```sh
+export homedir=/home/faye
+```
+
+`.local/bin/bashrc.sh`
+
+```sh
+source ~/.config/.tianff
+module use ${homedir}/codes/modulefiles
+
+module add environ
+module add wsl
+
+module list
+
+source ${homedir}/codes/common/environ.sh
+
+source /opt/intel/oneapi/setvars.sh
+```
 
 ## 传输
 
