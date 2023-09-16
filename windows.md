@@ -58,6 +58,24 @@
 - tampermonkey
 - displayfusion
 
+## Windows家庭版转专业版
+
+<https://www.heu8.net/jiaocheng/3445.html>
+
+## Windows激活
+
+<https://github.com/massgravel/Microsoft-Activation-Scripts>
+
+## Office
+
+Office_Tool_Plus
+
+<https://www.coolhub.top/archives/14/comment-page-13>
+
+- KMS 只能激活批量 (Volume) 许可证
+
+`ospp /insLicID Standard2021Volume /sethst:kms.loli.best /setprt:1688 /act`
+
 ## 安卓摄像头
 
 |APP|清晰度|水印|广告|
