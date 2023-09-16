@@ -239,6 +239,9 @@ export PATH=~/software/texlive/2021/bin/x86_64-linux:$PATH
   - <https://www.reddit.com/r/GenP/wiki/redditgenpguides>
   - ACROPOLIS
     - 注意设置CMD代理
+    - `set http_proxy=http://127.0.0.1:10808`
+    - `set https_proxy=http://127.0.0.1:10808`
+
 
 ### smartraPDF
   - 字符不显示
