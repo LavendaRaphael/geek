@@ -6,6 +6,7 @@
 
 - [Windows](#windows)
   - [重装前](#重装前)
+  - [安卓摄像头](#安卓摄像头)
   - [Onedrive](#onedrive)
     - [exclude](#exclude)
     - [symbolink](#symbolink)
@@ -56,6 +57,14 @@
 - sharpkeys
 - tampermonkey
 - displayfusion
+
+## 安卓摄像头
+
+|APP|清晰度|水印|广告|
+|---|---|---|---|
+|DroidCam|1920*1080|||
+|Iriun|3840*2160|较小||
+|Ivcam|3840*2160|明显|有|
 
 ## Onedrive
 
