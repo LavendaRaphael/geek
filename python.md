@@ -494,7 +494,7 @@ b=A.aaa
 ### 换源
 
 ```bash
-python -m pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+python -m pip config set global.index-url https://pypi.mirrors.ustc.edu.cn/simple
 ```
 
 ### config

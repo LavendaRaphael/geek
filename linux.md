@@ -1,10 +1,10 @@
-# bash
+# Linux
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=3 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [bash](#bash)
+- [Linux](#linux)
   - [初始化](#初始化)
   - [传输](#传输)
   - [删除空目录](#删除空目录)

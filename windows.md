@@ -6,28 +6,31 @@
 
 - [Windows](#windows)
   - [重装前](#重装前)
+  - [Windows家庭版转专业版](#windows家庭版转专业版)
+  - [Windows激活](#windows激活)
+  - [Office](#office)
   - [安卓摄像头](#安卓摄像头)
   - [Onedrive](#onedrive)
     - [exclude](#exclude)
     - [symbolink](#symbolink)
   - [ssh-client](#ssh-client)
-  - [wsl2](#wsl2)
+  - [Wsl2](#wsl2)
     - [安装](#安装)
     - [文件系统权限](#文件系统权限)
     - [wsl命令](#wsl命令)
-    - [link](#link)
     - [ssh自启](#ssh自启)
     - [外部局域网访问](#外部局域网访问)
     - [开机自启](#开机自启)
     - [screen](#screen)
     - [latexworkshop](#latexworkshop)
     - [硬盘存储占用无法释放](#硬盘存储占用无法释放)
+    - [vscode counter](#vscode-counter)
   - [proxy](#proxy)
   - [词典](#词典)
   - [PDF](#pdf)
-    - [Adobe](#adobe)
+    - [adobe](#adobe)
     - [smartraPDF](#smartrapdf)
-  - [aria2](#aria2)
+  - [Aria2](#aria2)
   - [bugs](#bugs)
   - [Chromeos](#chromeos)
   - [邮件客户端](#邮件客户端)
@@ -105,7 +108,7 @@ Office_Tool_Plus
 - MobaXterm
   - 无法双服务器直接传输
 
-## wsl2
+## Wsl2
 
 ### 安装
 
@@ -135,12 +138,6 @@ wsl --update
 wsl --shutdown
 ```
 
-### link
-
-```bash
-ln -s /mnt/c/Users/feife/OneDrive/Research ~/research
-```
-
 ### ssh自启
 
 ```bash
@@ -148,7 +145,6 @@ sudo vim /etc/init.wsl
 ```
 
 ```bash
-#!/bin/bash
 service ssh start
 ```
 
@@ -214,6 +210,10 @@ export PATH=~/software/texlive/2021/bin/x86_64-linux:$PATH
 
 <https://loesspie.com/2021/01/27/wsl2-compact-disk-win10/>
 
+### vscode counter
+
+<https://github.com/uctakeoff/vscode-counter/issues/26>
+
 ## proxy
 
 - v2rayN
@@ -232,7 +232,7 @@ export PATH=~/software/texlive/2021/bin/x86_64-linux:$PATH
   
 ## PDF
 
-### Adobe
+### adobe
 
 - GenP
   - <https://www.reddit.com/r/GenP/wiki/patchmethods>
@@ -242,16 +242,18 @@ export PATH=~/software/texlive/2021/bin/x86_64-linux:$PATH
     - `set http_proxy=http://127.0.0.1:10808`
     - `set https_proxy=http://127.0.0.1:10808`
 
-
 ### smartraPDF
-  - 字符不显示
-  - 底色红
 
-## aria2
+- 字符不显示
+- 底色红
+
+## Aria2
 
 <https://github.com/aria2/aria2/>
+
 <http://aria2c.com/usage.html>
-<https://zhuanlan.zhihu.com/p/21831960>
+
+- 魔改16线程限制：<https://github.com/aria2/aria2/issues/1039>
 
 ## bugs
 
