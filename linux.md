@@ -5,6 +5,7 @@
 <!-- code_chunk_output -->
 
 - [Linux](#linux)
+  - [Proxy](#proxy)
   - [初始化](#初始化)
   - [传输](#传输)
   - [删除空目录](#删除空目录)
@@ -109,6 +110,13 @@
   - [chmod](#chmod)
 
 <!-- /code_chunk_output -->
+
+## Proxy
+
+```sh
+export http_proxy="http://192.168.2.106:10808"
+export https_proxy="http://192.168.2.106:10808"
+```
 
 ## 初始化
 

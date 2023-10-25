@@ -493,8 +493,10 @@ b=A.aaa
 
 ### 换源
 
+<https://mirrors.cernet.edu.cn/list/pypi>
+
 ```bash
-python -m pip config set global.index-url https://pypi.mirrors.ustc.edu.cn/simple
+python -m pip config set global.index-url https://mirrors.bfsu.edu.cn/pypi/web/simple
 ```
 
 ### config
